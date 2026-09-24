@@ -1,5 +1,4 @@
-# From Screening to Differential Diagnosis
-### A 3D point cloud benchmark for craniofacial conditions
+### From Screening to Differential Diagnosis: A 3D point cloud benchmark for craniofacial conditions
 
 Code, subject-level split manifests, and result tables for the paper
 *"From Screening to Differential Diagnosis: A 3D Point Cloud Benchmark for
