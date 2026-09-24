@@ -1,0 +1,248 @@
+% ============================================================================
+% refs.bib — facebase_3d_encoder manuscript
+%
+% Adapted 2026-08-04 from projects/facebase_syndrome_dx/paper/refs.bib.
+%
+% !! BUG FIXED ON IMPORT — the source file placed "%% VERIFY" markers INSIDE
+% entries, on the same line as a field value. BibTeX has no comment syntax
+% inside an entry: "%" is an ordinary character, so parsing broke at the first
+% marker and every field after it was silently dropped. BibTeX reported
+% "empty title / journal / year" for 8 of 18 entries and rendered them with an
+% author list and nothing else. All markers are now standalone lines BETWEEN
+% entries, where "%" is genuinely ignored.
+%   -> The sibling project's refs.bib still has this bug. Flagged to Ting.
+%
+% Empty "volume = {}" / "pages = {}" fields were also removed rather than left
+% blank — a missing field is silent, an empty one warns on every build.
+%
+% VERIFY discipline: a marker means the field was never checked against the
+% source. Run the citation-audit skill before submission and delete each marker
+% as it is confirmed. A marker that is not maintained is worse than none.
+% ============================================================================
+
+% ---- 3D craniofacial phenotyping -------------------------------------------
+
+% VERIFY: author list (currently "and others"), volume, issue, pages.
+@article{aponte2024atlas,
+  author  = {Aponte, J. D. and others},
+  title   = {An interactive atlas of three-dimensional facial morphology},
+  journal = {The American Journal of Human Genetics},
+  year    = {2024}
+}
+
+% VERIFY: author list, volume, issue, pages.
+@article{bannister2020landmarking,
+  author  = {Bannister, J. J. and others},
+  title   = {Automated landmarking of three-dimensional facial surfaces},
+  journal = {Sensors},
+  year    = {2020}
+}
+
+% VERIFY: author list, volume, issue, pages.
+% NOTE: this is the 71%/47-class registered-SSM result the Discussion compares
+% against. Because that comparison is load-bearing, this entry in particular
+% must be confirmed against the source before submission.
+@article{bannister2022invertible,
+  author  = {Bannister, J. J. and others},
+  title   = {An invertible statistical shape model for 3D facial morphology},
+  journal = {IEEE Journal of Biomedical and Health Informatics},
+  year    = {2022}
+}
+
+% VERIFY: author list, volume, issue, pages.
+% Metadata read from the article 2026-08-19 (PMC10949379). Title and author list
+% replaced -- the previous entry carried a placeholder title ("Outlier detection for
+% craniofacial phenotyping") that is not this paper's title. No VERIFY outstanding.
+@article{bannister2022outlier,
+  author  = {Bannister, Jordan J. and Wilms, Matthias and Aponte, J. David and
+             Katz, David C. and Klein, Ophir D. and Bernier, Fran\c{c}ois P. J. and
+             Spritz, Richard A. and Hallgr\'{i}msson, Benedikt and Forkert, Nils D.},
+  title   = {Detecting 3{D} Syndromic Faces as Outliers using Unsupervised
+             Normalizing Flow Models},
+  journal = {Artificial Intelligence in Medicine},
+  volume  = {134},
+  pages   = {102425},
+  year    = {2022},
+  doi     = {10.1016/j.artmed.2022.102425}
+}
+
+% Title/authors/volume/pages/DOI read directly from the source PDF 2026-07-27.
+% This is the closest comparator to our own setting: FaceBase data, 3D, and an
+% unregistered PCA+MLP baseline. No VERIFY outstanding.
+@article{bannister2023,
+  author  = {Bannister, Jordan J. and Wilms, Matthias and Aponte, J. David and
+             Katz, David C. and Klein, Ophir D. and Bernier, Francois P. and
+             Spritz, Richard A. and Hallgr{\'\i}msson, Benedikt and Forkert, Nils D.},
+  title   = {Comparing 2D and 3D representations for face-based genetic syndrome diagnosis},
+  journal = {European Journal of Human Genetics},
+  year    = {2023},
+  volume  = {31},
+  pages   = {1010--1016},
+  doi     = {10.1038/s41431-023-01308-w}
+}
+
+% CORRECTED 2026-07-27: was keyed `hammond2020` with author "Hammond, P." — the
+% source PDF is Hallgrimsson et al. Authors/title read directly from the PDF.
+% VERIFY: tail of the author list (currently truncated to "and others"),
+% volume, issue, pages.
+@article{hallgrimsson2020,
+  author  = {Hallgr{\'\i}msson, Benedikt and Aponte, J. David and Katz, David C. and
+             Bannister, Jordan J. and Riccardi, Sheri L. and Mahasuwan, Nick and
+             McInnes, Brenda L. and Ferrara, Tracey M. and Lipman, Danika M. and
+             others},
+  title   = {Automated syndrome diagnosis by three-dimensional facial imaging},
+  journal = {Genetics in Medicine},
+  year    = {2020}
+}
+
+% VERIFY: author list, exact title, volume, pages.
+@article{mahdi2022multiscale,
+  author  = {Mahdi, S. S. and others},
+  title   = {A multiscale analysis of 3D facial shape for syndrome delineation},
+  journal = {IEEE Access},
+  year    = {2022}
+}
+
+% VERIFY: author list, exact title, volume, pages.
+% NOTE: this is the 87.2% balanced-accuracy / 52-class result cited as the
+% current ceiling. Load-bearing for the Discussion — confirm before submission.
+@article{mahdi2024phenotype,
+  author  = {Mahdi, S. S. and others},
+  title   = {A 3D facial phenotype space for syndrome analysis},
+  journal = {IEEE Access},
+  year    = {2024}
+}
+
+% ---- 2D facial gestalt ------------------------------------------------------
+
+% VERIFY: full author list (currently truncated).
+@article{gurovich2019deepgestalt,
+  author  = {Gurovich, Yaron and Hanani, Yair and Bar, Omri and others},
+  title   = {Identifying facial phenotypes of genetic disorders using deep learning},
+  journal = {Nature Medicine},
+  year    = {2019},
+  volume  = {25},
+  number  = {1},
+  pages   = {60--64}
+}
+
+% VERIFY: full author list (currently truncated), pages.
+@article{hsieh2022gestaltmatcher,
+  author  = {Hsieh, Tzung-Chien and others},
+  title   = {GestaltMatcher facilitates rare disease matching using facial phenotype descriptors},
+  journal = {Nature Genetics},
+  year    = {2022},
+  volume  = {54},
+  number  = {3},
+  pages   = {349--357}
+}
+
+% ---- 3D point-cloud backbones ----------------------------------------------
+
+@inproceedings{qi2017pointnet,
+  author    = {Qi, Charles R. and Su, Hao and Mo, Kaichun and Guibas, Leonidas J.},
+  title     = {PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation},
+  booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2017}
+}
+
+@inproceedings{qi2017pointnet2,
+  author    = {Qi, Charles R. and Yi, Li and Su, Hao and Guibas, Leonidas J.},
+  title     = {PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2017}
+}
+
+% VERIFY: pages.
+@article{wang2019dgcnn,
+  author  = {Wang, Yue and Sun, Yongbin and Liu, Ziwei and Sarma, Sanjay E. and
+             Bronstein, Michael M. and Solomon, Justin M.},
+  title   = {Dynamic Graph CNN for Learning on Point Clouds},
+  journal = {ACM Transactions on Graphics (TOG)},
+  year    = {2019},
+  volume  = {38},
+  number  = {5},
+  pages   = {1--12}
+}
+
+% ---- Handcrafted geometric shape descriptors (GeomMLP lineage) -------------
+%
+% NOTE: the 26-dimensional descriptor set used by our GeomMLP control is
+% defined in this paper (experiments/models/geom_mlp.py); it is not taken from
+% any of the three entries below. They are cited as the lineage the baseline
+% belongs to -- global shape statistics, covariance-eigenvalue features, and
+% classical craniofacial anthropometry -- NOT as its source. Do not let a
+% later edit turn these into "we use the descriptors of [X]".
+%
+% All three verified against publisher records 2026-08-18 (Frank): volume,
+% issue, pages and year confirmed. No VERIFY markers needed.
+
+@article{osada2002shape,
+  author  = {Osada, Robert and Funkhouser, Thomas and Chazelle, Bernard and
+             Dobkin, David},
+  title   = {Shape Distributions},
+  journal = {ACM Transactions on Graphics (TOG)},
+  year    = {2002},
+  volume  = {21},
+  number  = {4},
+  pages   = {807--832}
+}
+
+@article{weinmann2015semantic,
+  author  = {Weinmann, Martin and Jutzi, Boris and Hinz, Stefan and
+             Mallet, Cl{\'e}ment},
+  title   = {Semantic point cloud interpretation based on optimal
+             neighborhoods, relevant features and efficient classifiers},
+  journal = {ISPRS Journal of Photogrammetry and Remote Sensing},
+  year    = {2015},
+  volume  = {105},
+  pages   = {286--304}
+}
+
+@book{farkas1994anthropometry,
+  author    = {Farkas, Leslie G.},
+  title     = {Anthropometry of the Head and Face},
+  edition   = {2},
+  publisher = {Raven Press},
+  address   = {New York},
+  year      = {1994}
+}
+
+% ---- Retained from the sibling project, not currently cited here ------------
+% Kept because the Discussion may yet reference nearest-centroid inference.
+% If they are still uncited at submission, delete them rather than leaving
+% dead entries in the file.
+
+@inproceedings{snell2017prototypical,
+  author    = {Snell, Jake and Swersky, Kevin and Zemel, Richard},
+  title     = {Prototypical Networks for Few-shot Learning},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2017}
+}
+
+@article{wang2019simpleshot,
+  author  = {Wang, Yan and Chao, Wei-Lun and Weinberger, Kilian Q. and van der Maaten, Laurens},
+  title   = {SimpleShot: Revisiting Nearest-Neighbor Classification for Few-Shot Learning},
+  journal = {arXiv preprint arXiv:1911.04623},
+  year    = {2019}
+}
+
+% VERIFY entire entry — never read from a local PDF. Only cite if the
+% Introduction ends up quoting a rare-disease prevalence figure.
+@article{nguengang2020orphanet,
+  author  = {Nguengang Wakap, Stephanie and Lambert, Deborah M. and Olry, Annie and
+             Rodwell, Charlotte and Gueydan, Charlotte and Lanneau, Val{\'e}rie and
+             Murphy, Daniel and Le Cam, Yann and Rath, Ana},
+  title   = {Estimating cumulative point prevalence of rare diseases:
+             analysis of the {Orphanet} database},
+  journal = {European Journal of Human Genetics},
+  year    = {2020},
+  volume  = {28},
+  pages   = {165--173}
+}
+
+% ---- MISSING, must be added before submission ------------------------------
+% TODO: a citable reference for the FaceBase resource itself. The manuscript
+% names FaceBase throughout and cites nothing for it. Frank has NOT invented an
+% entry here — the correct record (and the per-dataset accession numbers for the
+% Data Availability statement) must come from the FaceBase site.

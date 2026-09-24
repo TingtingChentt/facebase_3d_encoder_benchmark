@@ -1,0 +1,5 @@
+encoder,max_abs_delta_encode,deterministic,modules_left_in_train_mode,sec_per_scan_cpu,n_probe,checkpoint
+geommlp,0.0,True,0,0.0004,32,experiments/runs/B2_corrected/geommlp/checkpoints/GeomMLP_B2_corrected_best.pt
+pointnet,0.0,True,0,0.0923,16,experiments/runs/B2_corrected/pointnet/checkpoints/PointNet_B2_corrected_best.pt
+dgcnn,0.0,True,0,1.1024,4,experiments/runs/B2_corrected/dgcnn/checkpoints/DGCNN_B2_corrected_best.pt
+pointnet2,1.8855526447296143,False,0,0.6042,8,experiments/runs/B2_corrected/pointnet2/checkpoints/PointNet2_B2_corrected_best.pt

@@ -1,0 +1,12 @@
+site,datasets,n_train,n_val,n_test,test_Unaffected,test_Cleft Lip,test_Cleft Palate,test_Cleft Lip and Palate,min_test_class,viable
+CL,FB-5A,5777,1017,79,54,11,1,13,1,False
+CO,FB-56,5258,925,690,528,31,0,131,0,False
+FC,FB-56+FB-5A,4774,840,1259,1157,11,47,44,11,True
+GW,FB-5A,5211,918,744,604,36,29,75,29,True
+LC,FB-56,5742,1011,120,85,8,10,17,8,True
+NG,FB-56,5490,966,417,407,4,3,3,3,False
+PH,FB-56+FB-5A,4178,735,1960,1568,82,46,264,46,True
+PR,FB-56+FB-5A,5342,942,589,458,26,24,81,24,True
+PT,FB-5A,5442,958,473,346,16,23,88,16,True
+SF,FB-5A,5740,1010,123,107,5,0,11,0,False
+TX,FB-5A,5487,967,419,324,19,1,75,1,False

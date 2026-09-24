@@ -1,0 +1,337 @@
+task,encoder,head,level,seed,metric,value,n_units,n_subjects
+XS_fix_PH,geommlp,softmax,scan,0,accuracy,0.38418367346938775,1960,1959
+XS_fix_PH,geommlp,softmax,scan,0,macro_f1,0.21502986643829863,1960,1959
+XS_fix_PH,geommlp,softmax,scan,0,macro_auc,0.49858915177982543,1960,1959
+XS_fix_PH,geommlp,softmax,scan,0,f1_class::Unaffected,0.5540308747855918,1960,1959
+XS_fix_PH,geommlp,softmax,scan,0,f1_class::Cleft Lip,0.07352941176470588,1960,1959
+XS_fix_PH,geommlp,softmax,scan,0,f1_class::Cleft Palate,0.022263450834879406,1960,1959
+XS_fix_PH,geommlp,softmax,scan,0,f1_class::Cleft Lip and Palate,0.21029572836801752,1960,1959
+XS_fix_PH,pointnet,softmax,scan,0,accuracy,0.5862244897959183,1960,1959
+XS_fix_PH,pointnet,softmax,scan,0,macro_f1,0.2731645274144336,1960,1959
+XS_fix_PH,pointnet,softmax,scan,0,macro_auc,0.5553779671164216,1960,1959
+XS_fix_PH,pointnet,softmax,scan,0,f1_class::Unaffected,0.7390833634067123,1960,1959
+XS_fix_PH,pointnet,softmax,scan,0,f1_class::Cleft Lip,0.026490066225165563,1960,1959
+XS_fix_PH,pointnet,softmax,scan,0,f1_class::Cleft Palate,0.03296703296703297,1960,1959
+XS_fix_PH,pointnet,softmax,scan,0,f1_class::Cleft Lip and Palate,0.29411764705882354,1960,1959
+XS_fix_PH,dgcnn,softmax,scan,0,accuracy,0.585204081632653,1960,1959
+XS_fix_PH,dgcnn,softmax,scan,0,macro_f1,0.262570111311046,1960,1959
+XS_fix_PH,dgcnn,softmax,scan,0,macro_auc,0.6135437960191237,1960,1959
+XS_fix_PH,dgcnn,softmax,scan,0,f1_class::Unaffected,0.7466473359913012,1960,1959
+XS_fix_PH,dgcnn,softmax,scan,0,f1_class::Cleft Lip,0.021052631578947368,1960,1959
+XS_fix_PH,dgcnn,softmax,scan,0,f1_class::Cleft Palate,0.018691588785046728,1960,1959
+XS_fix_PH,dgcnn,softmax,scan,0,f1_class::Cleft Lip and Palate,0.2638888888888889,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,0,accuracy,0.4801020408163265,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,0,macro_f1,0.27727546871619924,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,0,macro_auc,0.6377772785175713,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,0,f1_class::Unaffected,0.6536585365853659,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,0,f1_class::Cleft Lip,0.08588957055214724,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,0,f1_class::Cleft Palate,0.059964726631393295,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,0,f1_class::Cleft Lip and Palate,0.3095890410958904,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,1,accuracy,0.47244897959183674,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,1,macro_f1,0.2757496354912432,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,1,macro_auc,0.6369379557986002,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,1,f1_class::Unaffected,0.6426524764633648,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,1,f1_class::Cleft Lip,0.08383233532934131,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,1,f1_class::Cleft Palate,0.05944055944055944,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,1,f1_class::Cleft Lip and Palate,0.3170731707317073,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,2,accuracy,0.47244897959183674,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,2,macro_f1,0.28122295936886976,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,2,macro_auc,0.6428324426823739,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,2,f1_class::Unaffected,0.6419853539462979,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,2,f1_class::Cleft Lip,0.12269938650306748,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,2,f1_class::Cleft Palate,0.06007067137809187,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,2,f1_class::Cleft Lip and Palate,0.30013642564802184,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,3,accuracy,0.48367346938775513,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,3,macro_f1,0.2759418213879546,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,3,macro_auc,0.6409565170254974,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,3,f1_class::Unaffected,0.6580956207312173,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,3,f1_class::Cleft Lip,0.08484848484848485,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,3,f1_class::Cleft Palate,0.0673758865248227,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,3,f1_class::Cleft Lip and Palate,0.2934472934472934,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,4,accuracy,0.4857142857142857,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,4,macro_f1,0.29032798338275856,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,4,macro_auc,0.6366149706361701,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,4,f1_class::Unaffected,0.6574787190920146,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,4,f1_class::Cleft Lip,0.1282051282051282,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,4,f1_class::Cleft Palate,0.06260869565217392,1960,1959
+XS_fix_PH,pointnet2,softmax,scan,4,f1_class::Cleft Lip and Palate,0.31301939058171746,1960,1959
+XS_fix_FC,geommlp,softmax,scan,0,accuracy,0.5313741064336776,1259,1259
+XS_fix_FC,geommlp,softmax,scan,0,macro_f1,0.2124024160522196,1259,1259
+XS_fix_FC,geommlp,softmax,scan,0,macro_auc,0.6174935726698302,1259,1259
+XS_fix_FC,geommlp,softmax,scan,0,f1_class::Unaffected,0.6948968512486428,1259,1259
+XS_fix_FC,geommlp,softmax,scan,0,f1_class::Cleft Lip,0.0,1259,1259
+XS_fix_FC,geommlp,softmax,scan,0,f1_class::Cleft Palate,0.061855670103092786,1259,1259
+XS_fix_FC,geommlp,softmax,scan,0,f1_class::Cleft Lip and Palate,0.09285714285714286,1259,1259
+XS_fix_FC,pointnet,softmax,scan,0,accuracy,0.6298649722001588,1259,1259
+XS_fix_FC,pointnet,softmax,scan,0,macro_f1,0.2169844516285105,1259,1259
+XS_fix_FC,pointnet,softmax,scan,0,macro_auc,0.523527718792239,1259,1259
+XS_fix_FC,pointnet,softmax,scan,0,f1_class::Unaffected,0.7809812847749115,1259,1259
+XS_fix_FC,pointnet,softmax,scan,0,f1_class::Cleft Lip,0.0,1259,1259
+XS_fix_FC,pointnet,softmax,scan,0,f1_class::Cleft Palate,0.0,1259,1259
+XS_fix_FC,pointnet,softmax,scan,0,f1_class::Cleft Lip and Palate,0.08695652173913043,1259,1259
+XS_fix_FC,dgcnn,softmax,scan,0,accuracy,0.562351072279587,1259,1259
+XS_fix_FC,dgcnn,softmax,scan,0,macro_f1,0.21592158982153523,1259,1259
+XS_fix_FC,dgcnn,softmax,scan,0,macro_auc,0.4923740640932692,1259,1259
+XS_fix_FC,dgcnn,softmax,scan,0,f1_class::Unaffected,0.7204641350210971,1259,1259
+XS_fix_FC,dgcnn,softmax,scan,0,f1_class::Cleft Lip,0.0,1259,1259
+XS_fix_FC,dgcnn,softmax,scan,0,f1_class::Cleft Palate,0.05504587155963303,1259,1259
+XS_fix_FC,dgcnn,softmax,scan,0,f1_class::Cleft Lip and Palate,0.08817635270541083,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,0,accuracy,0.49007148530579825,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,0,macro_f1,0.1896208719845461,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,0,macro_auc,0.6044784674189116,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,0,f1_class::Unaffected,0.6561443066516347,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,0,f1_class::Cleft Lip,0.0,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,0,f1_class::Cleft Palate,0.0,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,0,f1_class::Cleft Lip and Palate,0.1023391812865497,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,1,accuracy,0.47736298649722003,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,1,macro_f1,0.18496878657822866,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,1,macro_auc,0.593195227960382,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,1,f1_class::Unaffected,0.6454545454545455,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,1,f1_class::Cleft Lip,0.0,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,1,f1_class::Cleft Palate,0.0,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,1,f1_class::Cleft Lip and Palate,0.0944206008583691,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,2,accuracy,0.4765687053216839,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,2,macro_f1,0.18465097402597402,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,2,macro_auc,0.5948337947606555,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,2,f1_class::Unaffected,0.6443181818181818,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,2,f1_class::Cleft Lip,0.0,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,2,f1_class::Cleft Palate,0.0,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,2,f1_class::Cleft Lip and Palate,0.09428571428571429,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,3,accuracy,0.48451151707704526,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,3,macro_f1,0.18527809190911895,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,3,macro_auc,0.595381986182768,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,3,f1_class::Unaffected,0.6535211267605634,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,3,f1_class::Cleft Lip,0.0,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,3,f1_class::Cleft Palate,0.0,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,3,f1_class::Cleft Lip and Palate,0.08759124087591241,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,4,accuracy,0.47180301826846704,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,4,macro_f1,0.18412672833338706,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,4,macro_auc,0.601654793882322,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,4,f1_class::Unaffected,0.6407322654462243,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,4,f1_class::Cleft Lip,0.0,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,4,f1_class::Cleft Palate,0.0,1259,1259
+XS_fix_FC,pointnet2,softmax,scan,4,f1_class::Cleft Lip and Palate,0.09577464788732394,1259,1259
+XS_fix_PR,geommlp,softmax,scan,0,accuracy,0.5432937181663837,589,589
+XS_fix_PR,geommlp,softmax,scan,0,macro_f1,0.30481655687832343,589,589
+XS_fix_PR,geommlp,softmax,scan,0,macro_auc,0.6214703515140628,589,589
+XS_fix_PR,geommlp,softmax,scan,0,f1_class::Unaffected,0.7031847133757961,589,589
+XS_fix_PR,geommlp,softmax,scan,0,f1_class::Cleft Lip,0.11940298507462686,589,589
+XS_fix_PR,geommlp,softmax,scan,0,f1_class::Cleft Palate,0.13333333333333333,589,589
+XS_fix_PR,geommlp,softmax,scan,0,f1_class::Cleft Lip and Palate,0.26334519572953735,589,589
+XS_fix_PR,pointnet,softmax,scan,0,accuracy,0.599320882852292,589,589
+XS_fix_PR,pointnet,softmax,scan,0,macro_f1,0.2571210898753531,589,589
+XS_fix_PR,pointnet,softmax,scan,0,macro_auc,0.5764239510590535,589,589
+XS_fix_PR,pointnet,softmax,scan,0,f1_class::Unaffected,0.7508690614136733,589,589
+XS_fix_PR,pointnet,softmax,scan,0,f1_class::Cleft Lip,0.0,589,589
+XS_fix_PR,pointnet,softmax,scan,0,f1_class::Cleft Palate,0.05714285714285714,589,589
+XS_fix_PR,pointnet,softmax,scan,0,f1_class::Cleft Lip and Palate,0.2204724409448819,589,589
+XS_fix_PR,dgcnn,softmax,scan,0,accuracy,0.6994906621392191,589,589
+XS_fix_PR,dgcnn,softmax,scan,0,macro_f1,0.32875102568700654,589,589
+XS_fix_PR,dgcnn,softmax,scan,0,macro_auc,0.7340530135402132,589,589
+XS_fix_PR,dgcnn,softmax,scan,0,f1_class::Unaffected,0.843644544431946,589,589
+XS_fix_PR,dgcnn,softmax,scan,0,f1_class::Cleft Lip,0.14285714285714285,589,589
+XS_fix_PR,dgcnn,softmax,scan,0,f1_class::Cleft Palate,0.0,589,589
+XS_fix_PR,dgcnn,softmax,scan,0,f1_class::Cleft Lip and Palate,0.3285024154589372,589,589
+XS_fix_PR,pointnet2,softmax,scan,0,accuracy,0.6366723259762309,589,589
+XS_fix_PR,pointnet2,softmax,scan,0,macro_f1,0.31299499017210797,589,589
+XS_fix_PR,pointnet2,softmax,scan,0,macro_auc,0.7035703969854821,589,589
+XS_fix_PR,pointnet2,softmax,scan,0,f1_class::Unaffected,0.7921760391198044,589,589
+XS_fix_PR,pointnet2,softmax,scan,0,f1_class::Cleft Lip,0.0,589,589
+XS_fix_PR,pointnet2,softmax,scan,0,f1_class::Cleft Palate,0.08333333333333333,589,589
+XS_fix_PR,pointnet2,softmax,scan,0,f1_class::Cleft Lip and Palate,0.3764705882352941,589,589
+XS_fix_PR,pointnet2,softmax,scan,1,accuracy,0.6162988115449916,589,589
+XS_fix_PR,pointnet2,softmax,scan,1,macro_f1,0.3115119300543655,589,589
+XS_fix_PR,pointnet2,softmax,scan,1,macro_auc,0.7070049046841587,589,589
+XS_fix_PR,pointnet2,softmax,scan,1,f1_class::Unaffected,0.7749077490774908,589,589
+XS_fix_PR,pointnet2,softmax,scan,1,f1_class::Cleft Lip,0.0,589,589
+XS_fix_PR,pointnet2,softmax,scan,1,f1_class::Cleft Palate,0.12987012987012986,589,589
+XS_fix_PR,pointnet2,softmax,scan,1,f1_class::Cleft Lip and Palate,0.3412698412698413,589,589
+XS_fix_PR,pointnet2,softmax,scan,2,accuracy,0.6247877758913413,589,589
+XS_fix_PR,pointnet2,softmax,scan,2,macro_f1,0.3242250895758816,589,589
+XS_fix_PR,pointnet2,softmax,scan,2,macro_auc,0.7117893433906552,589,589
+XS_fix_PR,pointnet2,softmax,scan,2,f1_class::Unaffected,0.7780487804878049,589,589
+XS_fix_PR,pointnet2,softmax,scan,2,f1_class::Cleft Lip,0.05714285714285714,589,589
+XS_fix_PR,pointnet2,softmax,scan,2,f1_class::Cleft Palate,0.1111111111111111,589,589
+XS_fix_PR,pointnet2,softmax,scan,2,f1_class::Cleft Lip and Palate,0.350597609561753,589,589
+XS_fix_PR,pointnet2,softmax,scan,3,accuracy,0.629881154499151,589,589
+XS_fix_PR,pointnet2,softmax,scan,3,macro_f1,0.3302336239136689,589,589
+XS_fix_PR,pointnet2,softmax,scan,3,macro_auc,0.7061137608851767,589,589
+XS_fix_PR,pointnet2,softmax,scan,3,f1_class::Unaffected,0.7754601226993865,589,589
+XS_fix_PR,pointnet2,softmax,scan,3,f1_class::Cleft Lip,0.0,589,589
+XS_fix_PR,pointnet2,softmax,scan,3,f1_class::Cleft Palate,0.17142857142857143,589,589
+XS_fix_PR,pointnet2,softmax,scan,3,f1_class::Cleft Lip and Palate,0.37404580152671757,589,589
+XS_fix_PR,pointnet2,softmax,scan,4,accuracy,0.6213921901528013,589,589
+XS_fix_PR,pointnet2,softmax,scan,4,macro_f1,0.32714470113837996,589,589
+XS_fix_PR,pointnet2,softmax,scan,4,macro_auc,0.6933375395673353,589,589
+XS_fix_PR,pointnet2,softmax,scan,4,f1_class::Unaffected,0.7750611246943765,589,589
+XS_fix_PR,pointnet2,softmax,scan,4,f1_class::Cleft Lip,0.05405405405405406,589,589
+XS_fix_PR,pointnet2,softmax,scan,4,f1_class::Cleft Palate,0.12987012987012986,589,589
+XS_fix_PR,pointnet2,softmax,scan,4,f1_class::Cleft Lip and Palate,0.34959349593495936,589,589
+XS_fix_GW,geommlp,softmax,scan,0,accuracy,0.3696236559139785,744,744
+XS_fix_GW,geommlp,softmax,scan,0,macro_f1,0.2039432378026352,744,744
+XS_fix_GW,geommlp,softmax,scan,0,macro_auc,0.5168293321220674,744,744
+XS_fix_GW,geommlp,softmax,scan,0,f1_class::Unaffected,0.5543237250554324,744,744
+XS_fix_GW,geommlp,softmax,scan,0,f1_class::Cleft Lip,0.10695187165775401,744,744
+XS_fix_GW,geommlp,softmax,scan,0,f1_class::Cleft Palate,0.0380952380952381,744,744
+XS_fix_GW,geommlp,softmax,scan,0,f1_class::Cleft Lip and Palate,0.1164021164021164,744,744
+XS_fix_GW,pointnet,softmax,scan,0,accuracy,0.7056451612903226,744,744
+XS_fix_GW,pointnet,softmax,scan,0,macro_f1,0.24393429998095412,744,744
+XS_fix_GW,pointnet,softmax,scan,0,macro_auc,0.509944017542922,744,744
+XS_fix_GW,pointnet,softmax,scan,0,f1_class::Unaffected,0.833605220228385,744,744
+XS_fix_GW,pointnet,softmax,scan,0,f1_class::Cleft Lip,0.0,744,744
+XS_fix_GW,pointnet,softmax,scan,0,f1_class::Cleft Palate,0.0,744,744
+XS_fix_GW,pointnet,softmax,scan,0,f1_class::Cleft Lip and Palate,0.14213197969543148,744,744
+XS_fix_GW,dgcnn,softmax,scan,0,accuracy,0.6384408602150538,744,744
+XS_fix_GW,dgcnn,softmax,scan,0,macro_f1,0.33121798535008967,744,744
+XS_fix_GW,dgcnn,softmax,scan,0,macro_auc,0.6743603388362532,744,744
+XS_fix_GW,dgcnn,softmax,scan,0,f1_class::Unaffected,0.7877145438121048,744,744
+XS_fix_GW,dgcnn,softmax,scan,0,f1_class::Cleft Lip,0.10714285714285714,744,744
+XS_fix_GW,dgcnn,softmax,scan,0,f1_class::Cleft Palate,0.1506849315068493,744,744
+XS_fix_GW,dgcnn,softmax,scan,0,f1_class::Cleft Lip and Palate,0.27932960893854747,744,744
+XS_fix_GW,pointnet2,softmax,scan,0,accuracy,0.5295698924731183,744,744
+XS_fix_GW,pointnet2,softmax,scan,0,macro_f1,0.28507735462698025,744,744
+XS_fix_GW,pointnet2,softmax,scan,0,macro_auc,0.6286857536316539,744,744
+XS_fix_GW,pointnet2,softmax,scan,0,f1_class::Unaffected,0.698284561049445,744,744
+XS_fix_GW,pointnet2,softmax,scan,0,f1_class::Cleft Lip,0.08955223880597014,744,744
+XS_fix_GW,pointnet2,softmax,scan,0,f1_class::Cleft Palate,0.0916030534351145,744,744
+XS_fix_GW,pointnet2,softmax,scan,0,f1_class::Cleft Lip and Palate,0.2608695652173913,744,744
+XS_fix_GW,pointnet2,softmax,scan,1,accuracy,0.49731182795698925,744,744
+XS_fix_GW,pointnet2,softmax,scan,1,macro_f1,0.25997245207462993,744,744
+XS_fix_GW,pointnet2,softmax,scan,1,macro_auc,0.6309700750413371,744,744
+XS_fix_GW,pointnet2,softmax,scan,1,f1_class::Unaffected,0.6735537190082644,744,744
+XS_fix_GW,pointnet2,softmax,scan,1,f1_class::Cleft Lip,0.058823529411764705,744,744
+XS_fix_GW,pointnet2,softmax,scan,1,f1_class::Cleft Palate,0.07407407407407407,744,744
+XS_fix_GW,pointnet2,softmax,scan,1,f1_class::Cleft Lip and Palate,0.2334384858044164,744,744
+XS_fix_GW,pointnet2,softmax,scan,2,accuracy,0.510752688172043,744,744
+XS_fix_GW,pointnet2,softmax,scan,2,macro_f1,0.28236955874757663,744,744
+XS_fix_GW,pointnet2,softmax,scan,2,macro_auc,0.6383086948912424,744,744
+XS_fix_GW,pointnet2,softmax,scan,2,f1_class::Unaffected,0.6756476683937824,744,744
+XS_fix_GW,pointnet2,softmax,scan,2,f1_class::Cleft Lip,0.02857142857142857,744,744
+XS_fix_GW,pointnet2,softmax,scan,2,f1_class::Cleft Palate,0.15602836879432624,744,744
+XS_fix_GW,pointnet2,softmax,scan,2,f1_class::Cleft Lip and Palate,0.2692307692307692,744,744
+XS_fix_GW,pointnet2,softmax,scan,3,accuracy,0.5255376344086021,744,744
+XS_fix_GW,pointnet2,softmax,scan,3,macro_f1,0.28543472972421335,744,744
+XS_fix_GW,pointnet2,softmax,scan,3,macro_auc,0.6556722263432007,744,744
+XS_fix_GW,pointnet2,softmax,scan,3,f1_class::Unaffected,0.6952965235173824,744,744
+XS_fix_GW,pointnet2,softmax,scan,3,f1_class::Cleft Lip,0.028169014084507043,744,744
+XS_fix_GW,pointnet2,softmax,scan,3,f1_class::Cleft Palate,0.15827338129496402,744,744
+XS_fix_GW,pointnet2,softmax,scan,3,f1_class::Cleft Lip and Palate,0.26,744,744
+XS_fix_GW,pointnet2,softmax,scan,4,accuracy,0.5188172043010753,744,744
+XS_fix_GW,pointnet2,softmax,scan,4,macro_f1,0.28173817629405895,744,744
+XS_fix_GW,pointnet2,softmax,scan,4,macro_auc,0.6411742345803512,744,744
+XS_fix_GW,pointnet2,softmax,scan,4,f1_class::Unaffected,0.6865364850976362,744,744
+XS_fix_GW,pointnet2,softmax,scan,4,f1_class::Cleft Lip,0.06666666666666667,744,744
+XS_fix_GW,pointnet2,softmax,scan,4,f1_class::Cleft Palate,0.09722222222222222,744,744
+XS_fix_GW,pointnet2,softmax,scan,4,f1_class::Cleft Lip and Palate,0.2765273311897106,744,744
+XS_fix_PT,geommlp,softmax,scan,0,accuracy,0.587737843551797,473,473
+XS_fix_PT,geommlp,softmax,scan,0,macro_f1,0.26361412555950664,473,473
+XS_fix_PT,geommlp,softmax,scan,0,macro_auc,0.5678258112699572,473,473
+XS_fix_PT,geommlp,softmax,scan,0,f1_class::Unaffected,0.763744427934621,473,473
+XS_fix_PT,geommlp,softmax,scan,0,f1_class::Cleft Lip,0.0,473,473
+XS_fix_PT,geommlp,softmax,scan,0,f1_class::Cleft Palate,0.07894736842105263,473,473
+XS_fix_PT,geommlp,softmax,scan,0,f1_class::Cleft Lip and Palate,0.21176470588235294,473,473
+XS_fix_PT,pointnet,softmax,scan,0,accuracy,0.693446088794926,473,473
+XS_fix_PT,pointnet,softmax,scan,0,macro_f1,0.23278963869811886,473,473
+XS_fix_PT,pointnet,softmax,scan,0,macro_auc,0.5095434346386196,473,473
+XS_fix_PT,pointnet,softmax,scan,0,f1_class::Unaffected,0.8223350253807107,473,473
+XS_fix_PT,pointnet,softmax,scan,0,f1_class::Cleft Lip,0.0,473,473
+XS_fix_PT,pointnet,softmax,scan,0,f1_class::Cleft Palate,0.05,473,473
+XS_fix_PT,pointnet,softmax,scan,0,f1_class::Cleft Lip and Palate,0.058823529411764705,473,473
+XS_fix_PT,dgcnn,softmax,scan,0,accuracy,0.6363636363636364,473,473
+XS_fix_PT,dgcnn,softmax,scan,0,macro_f1,0.2896193642864804,473,473
+XS_fix_PT,dgcnn,softmax,scan,0,macro_auc,0.6201134881312966,473,473
+XS_fix_PT,dgcnn,softmax,scan,0,f1_class::Unaffected,0.7879656160458453,473,473
+XS_fix_PT,dgcnn,softmax,scan,0,f1_class::Cleft Lip,0.0,473,473
+XS_fix_PT,dgcnn,softmax,scan,0,f1_class::Cleft Palate,0.058823529411764705,473,473
+XS_fix_PT,dgcnn,softmax,scan,0,f1_class::Cleft Lip and Palate,0.3116883116883117,473,473
+XS_fix_PT,pointnet2,softmax,scan,0,accuracy,0.6173361522198731,473,473
+XS_fix_PT,pointnet2,softmax,scan,0,macro_f1,0.35450214428996335,473,473
+XS_fix_PT,pointnet2,softmax,scan,0,macro_auc,0.6069191346206905,473,473
+XS_fix_PT,pointnet2,softmax,scan,0,f1_class::Unaffected,0.7658227848101266,473,473
+XS_fix_PT,pointnet2,softmax,scan,0,f1_class::Cleft Lip,0.13333333333333333,473,473
+XS_fix_PT,pointnet2,softmax,scan,0,f1_class::Cleft Palate,0.15,473,473
+XS_fix_PT,pointnet2,softmax,scan,0,f1_class::Cleft Lip and Palate,0.36885245901639346,473,473
+XS_fix_PT,pointnet2,softmax,scan,1,accuracy,0.6131078224101479,473,473
+XS_fix_PT,pointnet2,softmax,scan,1,macro_f1,0.32541249780586273,473,473
+XS_fix_PT,pointnet2,softmax,scan,1,macro_auc,0.6078698098952908,473,473
+XS_fix_PT,pointnet2,softmax,scan,1,f1_class::Unaffected,0.764612954186414,473,473
+XS_fix_PT,pointnet2,softmax,scan,1,f1_class::Cleft Lip,0.06666666666666667,473,473
+XS_fix_PT,pointnet2,softmax,scan,1,f1_class::Cleft Palate,0.1,473,473
+XS_fix_PT,pointnet2,softmax,scan,1,f1_class::Cleft Lip and Palate,0.37037037037037035,473,473
+XS_fix_PT,pointnet2,softmax,scan,2,accuracy,0.6257928118393234,473,473
+XS_fix_PT,pointnet2,softmax,scan,2,macro_f1,0.323325888228466,473,473
+XS_fix_PT,pointnet2,softmax,scan,2,macro_auc,0.5994739264357984,473,473
+XS_fix_PT,pointnet2,softmax,scan,2,f1_class::Unaffected,0.7765451664025357,473,473
+XS_fix_PT,pointnet2,softmax,scan,2,f1_class::Cleft Lip,0.06896551724137931,473,473
+XS_fix_PT,pointnet2,softmax,scan,2,f1_class::Cleft Palate,0.05263157894736842,473,473
+XS_fix_PT,pointnet2,softmax,scan,2,f1_class::Cleft Lip and Palate,0.3951612903225806,473,473
+XS_fix_PT,pointnet2,softmax,scan,3,accuracy,0.5856236786469344,473,473
+XS_fix_PT,pointnet2,softmax,scan,3,macro_f1,0.2943183326695872,473,473
+XS_fix_PT,pointnet2,softmax,scan,3,macro_auc,0.5966911974778021,473,473
+XS_fix_PT,pointnet2,softmax,scan,3,f1_class::Unaffected,0.75,473,473
+XS_fix_PT,pointnet2,softmax,scan,3,f1_class::Cleft Lip,0.06451612903225806,473,473
+XS_fix_PT,pointnet2,softmax,scan,3,f1_class::Cleft Palate,0.05,473,473
+XS_fix_PT,pointnet2,softmax,scan,3,f1_class::Cleft Lip and Palate,0.31275720164609055,473,473
+XS_fix_PT,pointnet2,softmax,scan,4,accuracy,0.6236786469344608,473,473
+XS_fix_PT,pointnet2,softmax,scan,4,macro_f1,0.343521706077949,473,473
+XS_fix_PT,pointnet2,softmax,scan,4,macro_auc,0.5993929025905066,473,473
+XS_fix_PT,pointnet2,softmax,scan,4,f1_class::Unaffected,0.7716535433070866,473,473
+XS_fix_PT,pointnet2,softmax,scan,4,f1_class::Cleft Lip,0.07692307692307693,473,473
+XS_fix_PT,pointnet2,softmax,scan,4,f1_class::Cleft Palate,0.15,473,473
+XS_fix_PT,pointnet2,softmax,scan,4,f1_class::Cleft Lip and Palate,0.37551020408163266,473,473
+XS_fix_LC,geommlp,softmax,scan,0,accuracy,0.6666666666666666,120,120
+XS_fix_LC,geommlp,softmax,scan,0,macro_f1,0.2223639455782313,120,120
+XS_fix_LC,geommlp,softmax,scan,0,macro_auc,0.4357790150758008,120,120
+XS_fix_LC,geommlp,softmax,scan,0,f1_class::Unaffected,0.8061224489795918,120,120
+XS_fix_LC,geommlp,softmax,scan,0,f1_class::Cleft Lip,0.0,120,120
+XS_fix_LC,geommlp,softmax,scan,0,f1_class::Cleft Palate,0.0,120,120
+XS_fix_LC,geommlp,softmax,scan,0,f1_class::Cleft Lip and Palate,0.08333333333333333,120,120
+XS_fix_LC,pointnet,softmax,scan,0,accuracy,0.6833333333333333,120,120
+XS_fix_LC,pointnet,softmax,scan,0,macro_f1,0.24652394614875303,120,120
+XS_fix_LC,pointnet,softmax,scan,0,macro_auc,0.47882641041853635,120,120
+XS_fix_LC,pointnet,softmax,scan,0,f1_class::Unaffected,0.8121827411167513,120,120
+XS_fix_LC,pointnet,softmax,scan,0,f1_class::Cleft Lip,0.0,120,120
+XS_fix_LC,pointnet,softmax,scan,0,f1_class::Cleft Palate,0.0,120,120
+XS_fix_LC,pointnet,softmax,scan,0,f1_class::Cleft Lip and Palate,0.17391304347826086,120,120
+XS_fix_LC,dgcnn,softmax,scan,0,accuracy,0.5583333333333333,120,120
+XS_fix_LC,dgcnn,softmax,scan,0,macro_f1,0.23659003831417624,120,120
+XS_fix_LC,dgcnn,softmax,scan,0,macro_auc,0.5159353989278854,120,120
+XS_fix_LC,dgcnn,softmax,scan,0,f1_class::Unaffected,0.7241379310344828,120,120
+XS_fix_LC,dgcnn,softmax,scan,0,f1_class::Cleft Lip,0.0,120,120
+XS_fix_LC,dgcnn,softmax,scan,0,f1_class::Cleft Palate,0.0,120,120
+XS_fix_LC,dgcnn,softmax,scan,0,f1_class::Cleft Lip and Palate,0.2222222222222222,120,120
+XS_fix_LC,pointnet2,softmax,scan,0,accuracy,0.6416666666666667,120,120
+XS_fix_LC,pointnet2,softmax,scan,0,macro_f1,0.2652020763811642,120,120
+XS_fix_LC,pointnet2,softmax,scan,0,macro_auc,0.5698056166420673,120,120
+XS_fix_LC,pointnet2,softmax,scan,0,f1_class::Unaffected,0.7849462365591398,120,120
+XS_fix_LC,pointnet2,softmax,scan,0,f1_class::Cleft Lip,0.0,120,120
+XS_fix_LC,pointnet2,softmax,scan,0,f1_class::Cleft Palate,0.0,120,120
+XS_fix_LC,pointnet2,softmax,scan,0,f1_class::Cleft Lip and Palate,0.27586206896551724,120,120
+XS_fix_LC,pointnet2,softmax,scan,1,accuracy,0.6666666666666666,120,120
+XS_fix_LC,pointnet2,softmax,scan,1,macro_f1,0.2735562310030395,120,120
+XS_fix_LC,pointnet2,softmax,scan,1,macro_auc,0.5460522993122668,120,120
+XS_fix_LC,pointnet2,softmax,scan,1,f1_class::Unaffected,0.8085106382978723,120,120
+XS_fix_LC,pointnet2,softmax,scan,1,f1_class::Cleft Lip,0.0,120,120
+XS_fix_LC,pointnet2,softmax,scan,1,f1_class::Cleft Palate,0.0,120,120
+XS_fix_LC,pointnet2,softmax,scan,1,f1_class::Cleft Lip and Palate,0.2857142857142857,120,120
+XS_fix_LC,pointnet2,softmax,scan,2,accuracy,0.6416666666666667,120,120
+XS_fix_LC,pointnet2,softmax,scan,2,macro_f1,0.25345950345950347,120,120
+XS_fix_LC,pointnet2,softmax,scan,2,macro_auc,0.5279608220163617,120,120
+XS_fix_LC,pointnet2,softmax,scan,2,f1_class::Unaffected,0.783068783068783,120,120
+XS_fix_LC,pointnet2,softmax,scan,2,f1_class::Cleft Lip,0.0,120,120
+XS_fix_LC,pointnet2,softmax,scan,2,f1_class::Cleft Palate,0.0,120,120
+XS_fix_LC,pointnet2,softmax,scan,2,f1_class::Cleft Lip and Palate,0.23076923076923078,120,120
+XS_fix_LC,pointnet2,softmax,scan,3,accuracy,0.6416666666666667,120,120
+XS_fix_LC,pointnet2,softmax,scan,3,macro_f1,0.25555327025915264,120,120
+XS_fix_LC,pointnet2,softmax,scan,3,macro_auc,0.5735182956677817,120,120
+XS_fix_LC,pointnet2,softmax,scan,3,f1_class::Unaffected,0.7914438502673797,120,120
+XS_fix_LC,pointnet2,softmax,scan,3,f1_class::Cleft Lip,0.0,120,120
+XS_fix_LC,pointnet2,softmax,scan,3,f1_class::Cleft Palate,0.0,120,120
+XS_fix_LC,pointnet2,softmax,scan,3,f1_class::Cleft Lip and Palate,0.23076923076923078,120,120
+XS_fix_LC,pointnet2,softmax,scan,4,accuracy,0.6166666666666667,120,120
+XS_fix_LC,pointnet2,softmax,scan,4,macro_f1,0.23251336898395722,120,120
+XS_fix_LC,pointnet2,softmax,scan,4,macro_auc,0.5088110539339301,120,120
+XS_fix_LC,pointnet2,softmax,scan,4,f1_class::Unaffected,0.7700534759358288,120,120
+XS_fix_LC,pointnet2,softmax,scan,4,f1_class::Cleft Lip,0.0,120,120
+XS_fix_LC,pointnet2,softmax,scan,4,f1_class::Cleft Palate,0.0,120,120
+XS_fix_LC,pointnet2,softmax,scan,4,f1_class::Cleft Lip and Palate,0.16,120,120

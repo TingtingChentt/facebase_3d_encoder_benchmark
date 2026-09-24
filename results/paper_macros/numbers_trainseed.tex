@@ -1,0 +1,1075 @@
+% ========================================================================
+% numbers_trainseed.tex — MACHINE-GENERATED. Do not hand-edit.
+%
+%   generator : facebench/eval/emit_numbers_trainseed.py
+%   sources   : results/trainseed_summary.csv  (1592 rows)
+%               results/contrast_tests_trainseed.csv  (660 rows)
+%
+% 100 runs = 5 tasks x 4 encoders x 5 TRAINING seeds. The data split is
+% frozen at seed 42 in every run, so the test subjects are byte-identical
+% across seeds and \tsXSD is retraining variance alone.
+%
+%   \tsX        mean over the 5 retrained models
+%   \tsXSD      SD across those models        (retraining variance)
+%   \tsXCI      mean 95% bootstrap CI over test subjects (cohort variance)
+%   \tsXRange   [min, max] over the 5 models
+%   \tsXLegZ    z of the published single run within the 5-model distribution
+% The variance sources are reported side by side and NEVER pooled.
+% ========================================================================
+
+% ---- point estimates ----------------------------------------------------
+% trainseed_summary.csv | C_corrected/pointnet2/softmax/scan/accuracy | n_train_seeds=5 n_units=3639 | published=0.903
+\newcommand{\tsCombAcc}{0.905}
+\newcommand{\tsCombAccSD}{0.003}
+\newcommand{\tsCombAccCI}{95\% CI 0.895 to 0.915}
+\newcommand{\tsCombAccCIb}{[0.895, 0.915]}
+\newcommand{\tsCombAccRange}{0.902--0.909}
+\newcommand{\tsCombAccPct}{90.5\%}
+\newcommand{\tsCombAccLegZ}{$-0.93$}
+
+% trainseed_summary.csv | C_corrected/pointnet2/softmax/scan/macro_auc | n_train_seeds=5 n_units=3639 | published=0.960
+\newcommand{\tsCombAuc}{0.963}
+\newcommand{\tsCombAucSD}{0.002}
+\newcommand{\tsCombAucCI}{95\% CI 0.955 to 0.969}
+\newcommand{\tsCombAucCIb}{[0.955, 0.969]}
+\newcommand{\tsCombAucRange}{0.960--0.965}
+\newcommand{\tsCombAucPct}{96.3\%}
+\newcommand{\tsCombAucLegZ}{$-1.17$}
+
+% trainseed_summary.csv | A2_fix/pointnet2/softmax/scan/accuracy | n_train_seeds=5 n_units=1030 | published=0.830
+\newcommand{\tsOfcBinAcc}{0.795}
+\newcommand{\tsOfcBinAccSD}{0.023}
+\newcommand{\tsOfcBinAccCI}{95\% CI 0.773 to 0.815}
+\newcommand{\tsOfcBinAccCIb}{[0.773, 0.815]}
+\newcommand{\tsOfcBinAccRange}{0.767--0.818}
+\newcommand{\tsOfcBinAccPct}{79.5\%}
+\newcommand{\tsOfcBinAccLegZ}{+1.51}
+
+% trainseed_summary.csv | A2_fix/pointnet2/softmax/scan/macro_auc | n_train_seeds=5 n_units=1030 | published=0.849
+\newcommand{\tsOfcBinAuc}{0.843}
+\newcommand{\tsOfcBinAucSD}{0.010}
+\newcommand{\tsOfcBinAucCI}{95\% CI 0.813 to 0.871}
+\newcommand{\tsOfcBinAucCIb}{[0.813, 0.871]}
+\newcommand{\tsOfcBinAucRange}{0.828--0.852}
+\newcommand{\tsOfcBinAucPct}{84.3\%}
+\newcommand{\tsOfcBinAucLegZ}{+0.58}
+
+% trainseed_summary.csv | A2_fix/dgcnn/softmax/scan/accuracy | n_train_seeds=5 n_units=1030 | published=0.812
+\newcommand{\tsOfcBinAccDG}{0.820}
+\newcommand{\tsOfcBinAccDGSD}{0.021}
+\newcommand{\tsOfcBinAccDGCI}{95\% CI 0.796 to 0.842}
+\newcommand{\tsOfcBinAccDGCIb}{[0.796, 0.842]}
+\newcommand{\tsOfcBinAccDGRange}{0.786--0.842}
+\newcommand{\tsOfcBinAccDGPct}{82.0\%}
+\newcommand{\tsOfcBinAccDGLegZ}{$-0.40$}
+
+% trainseed_summary.csv | A2_fix/dgcnn/softmax/scan/macro_auc | n_train_seeds=5 n_units=1030 | published=0.805
+\newcommand{\tsOfcBinAucDG}{0.831}
+\newcommand{\tsOfcBinAucDGSD}{0.033}
+\newcommand{\tsOfcBinAucDGCI}{95\% CI 0.798 to 0.861}
+\newcommand{\tsOfcBinAucDGCIb}{[0.798, 0.861]}
+\newcommand{\tsOfcBinAucDGRange}{0.774--0.857}
+\newcommand{\tsOfcBinAucDGPct}{83.1\%}
+\newcommand{\tsOfcBinAucDGLegZ}{$-0.79$}
+
+% trainseed_summary.csv | A2_fix/geommlp/softmax/scan/accuracy | n_train_seeds=5 n_units=1030 | published=0.685
+\newcommand{\tsOfcBinAccGM}{0.722}
+\newcommand{\tsOfcBinAccGMSD}{0.018}
+\newcommand{\tsOfcBinAccGMCI}{95\% CI 0.693 to 0.749}
+\newcommand{\tsOfcBinAccGMCIb}{[0.693, 0.749]}
+\newcommand{\tsOfcBinAccGMRange}{0.701--0.743}
+\newcommand{\tsOfcBinAccGMPct}{72.2\%}
+\newcommand{\tsOfcBinAccGMLegZ}{$-2.02$}
+
+% trainseed_summary.csv | A2_fix/geommlp/softmax/scan/macro_auc | n_train_seeds=5 n_units=1030 | published=0.649
+\newcommand{\tsOfcBinAucGM}{0.653}
+\newcommand{\tsOfcBinAucGMSD}{0.002}
+\newcommand{\tsOfcBinAucGMCI}{95\% CI 0.609 to 0.695}
+\newcommand{\tsOfcBinAucGMCIb}{[0.609, 0.695]}
+\newcommand{\tsOfcBinAucGMRange}{0.651--0.656}
+\newcommand{\tsOfcBinAucGMPct}{65.3\%}
+\newcommand{\tsOfcBinAucGMLegZ}{$-2.41$}
+
+% trainseed_summary.csv | A2_fix/pointnet/softmax/scan/accuracy | n_train_seeds=5 n_units=1030 | published=0.774
+\newcommand{\tsOfcBinAccPN}{0.736}
+\newcommand{\tsOfcBinAccPNSD}{0.058}
+\newcommand{\tsOfcBinAccPNCI}{95\% CI 0.709 to 0.763}
+\newcommand{\tsOfcBinAccPNCIb}{[0.709, 0.763]}
+\newcommand{\tsOfcBinAccPNRange}{0.642--0.799}
+\newcommand{\tsOfcBinAccPNPct}{73.6\%}
+\newcommand{\tsOfcBinAccPNLegZ}{+0.66}
+
+% trainseed_summary.csv | A2_fix/pointnet/softmax/scan/macro_auc | n_train_seeds=5 n_units=1030 | published=0.543
+\newcommand{\tsOfcBinAucPN}{0.712}
+\newcommand{\tsOfcBinAucPNSD}{0.046}
+\newcommand{\tsOfcBinAucPNCI}{95\% CI 0.672 to 0.752}
+\newcommand{\tsOfcBinAucPNCIb}{[0.672, 0.752]}
+\newcommand{\tsOfcBinAucPNRange}{0.658--0.768}
+\newcommand{\tsOfcBinAucPNPct}{71.2\%}
+\newcommand{\tsOfcBinAucPNLegZ}{$-3.70$}
+
+% trainseed_summary.csv | A2/pointnet2/softmax/scan/accuracy | n_train_seeds=5 n_units=1030 | published=0.830
+\newcommand{\tsOfcBinAccES}{0.697}
+\newcommand{\tsOfcBinAccESSD}{0.047}
+\newcommand{\tsOfcBinAccESCI}{95\% CI 0.671 to 0.723}
+\newcommand{\tsOfcBinAccESCIb}{[0.671, 0.723]}
+\newcommand{\tsOfcBinAccESRange}{0.641--0.765}
+\newcommand{\tsOfcBinAccESPct}{69.7\%}
+\newcommand{\tsOfcBinAccESLegZ}{+2.83}
+
+% trainseed_summary.csv | A2/pointnet2/softmax/scan/macro_auc | n_train_seeds=5 n_units=1030 | published=0.849
+\newcommand{\tsOfcBinAucES}{0.544}
+\newcommand{\tsOfcBinAucESSD}{0.031}
+\newcommand{\tsOfcBinAucESCI}{95\% CI 0.499 to 0.587}
+\newcommand{\tsOfcBinAucESCIb}{[0.499, 0.587]}
+\newcommand{\tsOfcBinAucESRange}{0.509--0.589}
+\newcommand{\tsOfcBinAucESPct}{54.4\%}
+\newcommand{\tsOfcBinAucESLegZ}{+9.95}
+
+% trainseed_summary.csv | A2/dgcnn/softmax/scan/accuracy | n_train_seeds=5 n_units=1030 | published=0.812
+\newcommand{\tsOfcBinAccDGES}{0.805}
+\newcommand{\tsOfcBinAccDGESSD}{0.025}
+\newcommand{\tsOfcBinAccDGESCI}{95\% CI 0.781 to 0.829}
+\newcommand{\tsOfcBinAccDGESCIb}{[0.781, 0.829]}
+\newcommand{\tsOfcBinAccDGESRange}{0.764--0.826}
+\newcommand{\tsOfcBinAccDGESPct}{80.5\%}
+\newcommand{\tsOfcBinAccDGESLegZ}{+0.25}
+
+% trainseed_summary.csv | A2/dgcnn/softmax/scan/macro_auc | n_train_seeds=5 n_units=1030 | published=0.805
+\newcommand{\tsOfcBinAucDGES}{0.767}
+\newcommand{\tsOfcBinAucDGESSD}{0.105}
+\newcommand{\tsOfcBinAucDGESCI}{95\% CI 0.729 to 0.801}
+\newcommand{\tsOfcBinAucDGESCIb}{[0.729, 0.801]}
+\newcommand{\tsOfcBinAucDGESRange}{0.592--0.851}
+\newcommand{\tsOfcBinAucDGESPct}{76.7\%}
+\newcommand{\tsOfcBinAucDGESLegZ}{+0.37}
+
+% trainseed_summary.csv | A1_fix/geommlp/softmax/scan/macro_auc | n_train_seeds=5 n_units=1029 | published=0.599
+\newcommand{\tsOfcFourAucGM}{0.590}
+\newcommand{\tsOfcFourAucGMSD}{0.016}
+\newcommand{\tsOfcFourAucGMCI}{95\% CI 0.544 to 0.635}
+\newcommand{\tsOfcFourAucGMCIb}{[0.544, 0.635]}
+\newcommand{\tsOfcFourAucGMRange}{0.572--0.612}
+\newcommand{\tsOfcFourAucGMPct}{59.0\%}
+\newcommand{\tsOfcFourAucGMLegZ}{+0.59}
+
+% trainseed_summary.csv | A1_fix/geommlp/softmax/scan/accuracy | n_train_seeds=5 n_units=1029 | published=0.566
+\newcommand{\tsOfcFourAccGM}{0.582}
+\newcommand{\tsOfcFourAccGMSD}{0.014}
+\newcommand{\tsOfcFourAccGMCI}{95\% CI 0.551 to 0.612}
+\newcommand{\tsOfcFourAccGMCIb}{[0.551, 0.612]}
+\newcommand{\tsOfcFourAccGMRange}{0.564--0.602}
+\newcommand{\tsOfcFourAccGMPct}{58.2\%}
+\newcommand{\tsOfcFourAccGMLegZ}{$-1.13$}
+
+% trainseed_summary.csv | A1_fix/pointnet2/softmax/scan/accuracy | n_train_seeds=5 n_units=1029 | published=0.731
+\newcommand{\tsOfcFourAccPt}{0.633}
+\newcommand{\tsOfcFourAccPtSD}{0.108}
+\newcommand{\tsOfcFourAccPtCI}{95\% CI 0.607 to 0.659}
+\newcommand{\tsOfcFourAccPtCIb}{[0.607, 0.659]}
+\newcommand{\tsOfcFourAccPtRange}{0.479--0.738}
+\newcommand{\tsOfcFourAccPtPct}{63.3\%}
+\newcommand{\tsOfcFourAccPtLegZ}{+0.90}
+
+% trainseed_summary.csv | A1_fix/pointnet2/softmax/scan/macro_auc | n_train_seeds=5 n_units=1029 | published=0.573
+\newcommand{\tsOfcFourAucPt}{0.622}
+\newcommand{\tsOfcFourAucPtSD}{0.057}
+\newcommand{\tsOfcFourAucPtCI}{95\% CI 0.582 to 0.661}
+\newcommand{\tsOfcFourAucPtCIb}{[0.582, 0.661]}
+\newcommand{\tsOfcFourAucPtRange}{0.576--0.713}
+\newcommand{\tsOfcFourAucPtPct}{62.2\%}
+\newcommand{\tsOfcFourAucPtLegZ}{$-0.85$}
+
+% trainseed_summary.csv | A1_fix/dgcnn/softmax/scan/accuracy | n_train_seeds=5 n_units=1029 | published=0.768
+\newcommand{\tsOfcFourAccDG}{0.698}
+\newcommand{\tsOfcFourAccDGSD}{0.101}
+\newcommand{\tsOfcFourAccDGCI}{95\% CI 0.671 to 0.725}
+\newcommand{\tsOfcFourAccDGCIb}{[0.671, 0.725]}
+\newcommand{\tsOfcFourAccDGRange}{0.543--0.789}
+\newcommand{\tsOfcFourAccDGPct}{69.8\%}
+\newcommand{\tsOfcFourAccDGLegZ}{+0.69}
+
+% trainseed_summary.csv | A1_fix/dgcnn/softmax/scan/macro_auc | n_train_seeds=5 n_units=1029 | published=0.551
+\newcommand{\tsOfcFourAucDG}{0.684}
+\newcommand{\tsOfcFourAucDGSD}{0.024}
+\newcommand{\tsOfcFourAucDGCI}{95\% CI 0.644 to 0.722}
+\newcommand{\tsOfcFourAucDGCIb}{[0.644, 0.722]}
+\newcommand{\tsOfcFourAucDGRange}{0.656--0.711}
+\newcommand{\tsOfcFourAucDGPct}{68.4\%}
+\newcommand{\tsOfcFourAucDGLegZ}{$-5.47$}
+
+% trainseed_summary.csv | A1_fix/pointnet/softmax/scan/accuracy | n_train_seeds=5 n_units=1029 | published=0.747
+\newcommand{\tsOfcFourAccPnet}{0.737}
+\newcommand{\tsOfcFourAccPnetSD}{0.076}
+\newcommand{\tsOfcFourAccPnetCI}{95\% CI 0.710 to 0.763}
+\newcommand{\tsOfcFourAccPnetCIb}{[0.710, 0.763]}
+\newcommand{\tsOfcFourAccPnetRange}{0.602--0.779}
+\newcommand{\tsOfcFourAccPnetPct}{73.7\%}
+\newcommand{\tsOfcFourAccPnetLegZ}{+0.14}
+
+% trainseed_summary.csv | A1_fix/pointnet/softmax/scan/macro_auc | n_train_seeds=5 n_units=1029 | published=0.505
+\newcommand{\tsOfcFourAucPnet}{0.531}
+\newcommand{\tsOfcFourAucPnetSD}{0.045}
+\newcommand{\tsOfcFourAucPnetCI}{95\% CI 0.487 to 0.574}
+\newcommand{\tsOfcFourAucPnetCIb}{[0.487, 0.574]}
+\newcommand{\tsOfcFourAucPnetRange}{0.469--0.567}
+\newcommand{\tsOfcFourAucPnetPct}{53.1\%}
+\newcommand{\tsOfcFourAucPnetLegZ}{$-0.57$}
+
+% trainseed_summary.csv | A1_fix/dgcnn/softmax/scan/macro_f1 | n_train_seeds=5 n_units=1029 | published=0.261
+\newcommand{\tsOfcFourFoneDG}{0.300}
+\newcommand{\tsOfcFourFoneDGSD}{0.023}
+\newcommand{\tsOfcFourFoneDGCI}{95\% CI 0.269 to 0.333}
+\newcommand{\tsOfcFourFoneDGCIb}{[0.269, 0.333]}
+\newcommand{\tsOfcFourFoneDGRange}{0.267--0.326}
+\newcommand{\tsOfcFourFoneDGPct}{30.0\%}
+\newcommand{\tsOfcFourFoneDGLegZ}{$-1.67$}
+
+% trainseed_summary.csv | A1_fix/pointnet2/softmax/scan/macro_f1 | n_train_seeds=5 n_units=1029 | published=0.255
+\newcommand{\tsOfcFourFonePt}{0.263}
+\newcommand{\tsOfcFourFonePtSD}{0.031}
+\newcommand{\tsOfcFourFonePtCI}{95\% CI 0.243 to 0.283}
+\newcommand{\tsOfcFourFonePtCIb}{[0.243, 0.283]}
+\newcommand{\tsOfcFourFonePtRange}{0.231--0.315}
+\newcommand{\tsOfcFourFonePtPct}{26.3\%}
+\newcommand{\tsOfcFourFonePtLegZ}{$-0.23$}
+
+% trainseed_summary.csv | A1/pointnet2/softmax/scan/macro_auc | n_train_seeds=5 n_units=1029 | published=0.573
+\newcommand{\tsOfcFourAucPtES}{0.499}
+\newcommand{\tsOfcFourAucPtESSD}{0.024}
+\newcommand{\tsOfcFourAucPtESCI}{95\% CI 0.460 to 0.536}
+\newcommand{\tsOfcFourAucPtESCIb}{[0.460, 0.536]}
+\newcommand{\tsOfcFourAucPtESRange}{0.471--0.526}
+\newcommand{\tsOfcFourAucPtESPct}{49.9\%}
+\newcommand{\tsOfcFourAucPtESLegZ}{+3.08}
+
+% trainseed_summary.csv | A1/pointnet2/softmax/scan/accuracy | n_train_seeds=5 n_units=1029 | published=0.731
+\newcommand{\tsOfcFourAccPtES}{0.715}
+\newcommand{\tsOfcFourAccPtESSD}{0.034}
+\newcommand{\tsOfcFourAccPtESCI}{95\% CI 0.689 to 0.741}
+\newcommand{\tsOfcFourAccPtESCIb}{[0.689, 0.741]}
+\newcommand{\tsOfcFourAccPtESRange}{0.681--0.764}
+\newcommand{\tsOfcFourAccPtESPct}{71.5\%}
+\newcommand{\tsOfcFourAccPtESLegZ}{+0.45}
+
+% trainseed_summary.csv | A1/dgcnn/softmax/scan/macro_auc | n_train_seeds=5 n_units=1029 | published=0.551
+\newcommand{\tsOfcFourAucDGES}{0.547}
+\newcommand{\tsOfcFourAucDGESSD}{0.041}
+\newcommand{\tsOfcFourAucDGESCI}{95\% CI 0.503 to 0.590}
+\newcommand{\tsOfcFourAucDGESCIb}{[0.503, 0.590]}
+\newcommand{\tsOfcFourAucDGESRange}{0.503--0.597}
+\newcommand{\tsOfcFourAucDGESPct}{54.7\%}
+\newcommand{\tsOfcFourAucDGESLegZ}{+0.10}
+
+% trainseed_summary.csv | A1/geommlp/softmax/scan/macro_auc | n_train_seeds=5 n_units=1029 | published=0.599
+\newcommand{\tsOfcFourAucGMES}{0.594}
+\newcommand{\tsOfcFourAucGMESSD}{0.016}
+\newcommand{\tsOfcFourAucGMESCI}{95\% CI 0.549 to 0.639}
+\newcommand{\tsOfcFourAucGMESCIb}{[0.549, 0.639]}
+\newcommand{\tsOfcFourAucGMESRange}{0.577--0.612}
+\newcommand{\tsOfcFourAucGMESPct}{59.4\%}
+\newcommand{\tsOfcFourAucGMESLegZ}{+0.32}
+
+% trainseed_summary.csv | A1/pointnet/softmax/scan/macro_auc | n_train_seeds=5 n_units=1029 | published=0.505
+\newcommand{\tsOfcFourAucPnetES}{0.502}
+\newcommand{\tsOfcFourAucPnetESSD}{0.014}
+\newcommand{\tsOfcFourAucPnetESCI}{95\% CI 0.460 to 0.543}
+\newcommand{\tsOfcFourAucPnetESCIb}{[0.460, 0.543]}
+\newcommand{\tsOfcFourAucPnetESRange}{0.489--0.523}
+\newcommand{\tsOfcFourAucPnetESPct}{50.2\%}
+\newcommand{\tsOfcFourAucPnetESLegZ}{+0.25}
+
+% trainseed_summary.csv | B1_corrected/dgcnn/softmax/scan/macro_auc | n_train_seeds=5 n_units=1840 | published=0.781
+\newcommand{\tsSynAucScanDG}{0.794}
+\newcommand{\tsSynAucScanDGSD}{0.006}
+\newcommand{\tsSynAucScanDGCI}{95\% CI 0.772 to 0.815}
+\newcommand{\tsSynAucScanDGCIb}{[0.772, 0.815]}
+\newcommand{\tsSynAucScanDGRange}{0.788--0.802}
+\newcommand{\tsSynAucScanDGPct}{79.4\%}
+\newcommand{\tsSynAucScanDGLegZ}{$-1.94$}
+
+% trainseed_summary.csv | B2_corrected/dgcnn/softmax/scan/macro_auc | n_train_seeds=5 n_units=475 | published=0.853
+\newcommand{\tsDxAucScanDG}{0.857}
+\newcommand{\tsDxAucScanDGSD}{0.009}
+\newcommand{\tsDxAucScanDGCI}{95\% CI 0.833 to 0.884}
+\newcommand{\tsDxAucScanDGCIb}{[0.833, 0.884]}
+\newcommand{\tsDxAucScanDGRange}{0.848--0.870}
+\newcommand{\tsDxAucScanDGPct}{85.7\%}
+\newcommand{\tsDxAucScanDGLegZ}{$-0.47$}
+
+% trainseed_summary.csv | B1_corrected/dgcnn/softmax/scan/accuracy | n_train_seeds=5 n_units=1840 | published=0.193
+\newcommand{\tsSynAccScanDG}{0.237}
+\newcommand{\tsSynAccScanDGSD}{0.033}
+\newcommand{\tsSynAccScanDGCI}{95\% CI 0.210 to 0.264}
+\newcommand{\tsSynAccScanDGCIb}{[0.210, 0.264]}
+\newcommand{\tsSynAccScanDGRange}{0.179--0.261}
+\newcommand{\tsSynAccScanDGPct}{23.7\%}
+\newcommand{\tsSynAccScanDGLegZ}{$-1.31$}
+
+% trainseed_summary.csv | B2_corrected/dgcnn/softmax/scan/accuracy | n_train_seeds=5 n_units=475 | published=0.225
+\newcommand{\tsDxAccScanDG}{0.280}
+\newcommand{\tsDxAccScanDGSD}{0.039}
+\newcommand{\tsDxAccScanDGCI}{95\% CI 0.228 to 0.336}
+\newcommand{\tsDxAccScanDGCIb}{[0.228, 0.336]}
+\newcommand{\tsDxAccScanDGRange}{0.217--0.324}
+\newcommand{\tsDxAccScanDGPct}{28.0\%}
+\newcommand{\tsDxAccScanDGLegZ}{$-1.39$}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/softmax/scan/accuracy | n_train_seeds=5 n_units=1840 | published=0.295
+\newcommand{\tsSynAccScan}{0.267}
+\newcommand{\tsSynAccScanSD}{0.029}
+\newcommand{\tsSynAccScanCI}{95\% CI 0.242 to 0.292}
+\newcommand{\tsSynAccScanCIb}{[0.242, 0.292]}
+\newcommand{\tsSynAccScanRange}{0.222--0.297}
+\newcommand{\tsSynAccScanPct}{26.7\%}
+\newcommand{\tsSynAccScanLegZ}{+0.98}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/softmax/scan/macro_f1 | n_train_seeds=5 n_units=1840 | published=0.265
+\newcommand{\tsSynFoneScan}{0.244}
+\newcommand{\tsSynFoneScanSD}{0.024}
+\newcommand{\tsSynFoneScanCI}{95\% CI 0.213 to 0.269}
+\newcommand{\tsSynFoneScanCIb}{[0.213, 0.269]}
+\newcommand{\tsSynFoneScanRange}{0.209--0.272}
+\newcommand{\tsSynFoneScanPct}{24.4\%}
+\newcommand{\tsSynFoneScanLegZ}{+0.88}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/softmax/scan/macro_auc | n_train_seeds=5 n_units=1840 | published=0.774
+\newcommand{\tsSynAucScan}{0.775}
+\newcommand{\tsSynAucScanSD}{0.009}
+\newcommand{\tsSynAucScanCI}{95\% CI 0.752 to 0.797}
+\newcommand{\tsSynAucScanCIb}{[0.752, 0.797]}
+\newcommand{\tsSynAucScanRange}{0.766--0.785}
+\newcommand{\tsSynAucScanPct}{77.5\%}
+\newcommand{\tsSynAucScanLegZ}{$-0.08$}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/softmax/scan/accuracy | n_train_seeds=5 n_units=475 | published=0.291
+\newcommand{\tsDxAccScan}{0.295}
+\newcommand{\tsDxAccScanSD}{0.029}
+\newcommand{\tsDxAccScanCI}{95\% CI 0.246 to 0.345}
+\newcommand{\tsDxAccScanCIb}{[0.246, 0.345]}
+\newcommand{\tsDxAccScanRange}{0.263--0.339}
+\newcommand{\tsDxAccScanPct}{29.5\%}
+\newcommand{\tsDxAccScanLegZ}{$-0.14$}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/softmax/scan/macro_f1 | n_train_seeds=5 n_units=475 | published=0.240
+\newcommand{\tsDxFoneScan}{0.248}
+\newcommand{\tsDxFoneScanSD}{0.027}
+\newcommand{\tsDxFoneScanCI}{95\% CI 0.206 to 0.294}
+\newcommand{\tsDxFoneScanCIb}{[0.206, 0.294]}
+\newcommand{\tsDxFoneScanRange}{0.220--0.285}
+\newcommand{\tsDxFoneScanPct}{24.8\%}
+\newcommand{\tsDxFoneScanLegZ}{$-0.29$}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/softmax/scan/macro_auc | n_train_seeds=5 n_units=475 | published=0.845
+\newcommand{\tsDxAucScan}{0.845}
+\newcommand{\tsDxAucScanSD}{0.008}
+\newcommand{\tsDxAucScanCI}{95\% CI 0.825 to 0.876}
+\newcommand{\tsDxAucScanCIb}{[0.825, 0.876]}
+\newcommand{\tsDxAucScanRange}{0.837--0.856}
+\newcommand{\tsDxAucScanPct}{84.5\%}
+\newcommand{\tsDxAucScanLegZ}{+0.01}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/softmax/subject/accuracy | n_train_seeds=5 n_units=733 | published=0.350
+\newcommand{\tsSynAccSubjSM}{0.309}
+\newcommand{\tsSynAccSubjSMSD}{0.028}
+\newcommand{\tsSynAccSubjSMCI}{95\% CI 0.279 to 0.339}
+\newcommand{\tsSynAccSubjSMCIb}{[0.279, 0.339]}
+\newcommand{\tsSynAccSubjSMRange}{0.263--0.339}
+\newcommand{\tsSynAccSubjSMPct}{30.9\%}
+\newcommand{\tsSynAccSubjSMLegZ}{+1.45}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/softmax/subject/macro_f1 | n_train_seeds=5 n_units=733 | published=0.326
+\newcommand{\tsSynFoneSubjSM}{0.298}
+\newcommand{\tsSynFoneSubjSMSD}{0.030}
+\newcommand{\tsSynFoneSubjSMCI}{95\% CI 0.257 to 0.330}
+\newcommand{\tsSynFoneSubjSMCIb}{[0.257, 0.330]}
+\newcommand{\tsSynFoneSubjSMRange}{0.250--0.328}
+\newcommand{\tsSynFoneSubjSMPct}{29.8\%}
+\newcommand{\tsSynFoneSubjSMLegZ}{+0.90}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/softmax/subject/macro_auc | n_train_seeds=5 n_units=733 | published=0.811
+\newcommand{\tsSynAucSubjSM}{0.806}
+\newcommand{\tsSynAucSubjSMSD}{0.006}
+\newcommand{\tsSynAucSubjSMCI}{95\% CI 0.781 to 0.828}
+\newcommand{\tsSynAucSubjSMCIb}{[0.781, 0.828]}
+\newcommand{\tsSynAucSubjSMRange}{0.798--0.812}
+\newcommand{\tsSynAucSubjSMPct}{80.6\%}
+\newcommand{\tsSynAucSubjSMLegZ}{+0.91}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/softmax/subject/accuracy | n_train_seeds=5 n_units=169 | published=0.382
+\newcommand{\tsDxAccSubjSM}{0.398}
+\newcommand{\tsDxAccSubjSMSD}{0.041}
+\newcommand{\tsDxAccSubjSMCI}{95\% CI 0.330 to 0.466}
+\newcommand{\tsDxAccSubjSMCIb}{[0.330, 0.466]}
+\newcommand{\tsDxAccSubjSMRange}{0.347--0.451}
+\newcommand{\tsDxAccSubjSMPct}{39.8\%}
+\newcommand{\tsDxAccSubjSMLegZ}{$-0.38$}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/softmax/subject/macro_f1 | n_train_seeds=5 n_units=169 | published=0.280
+\newcommand{\tsDxFoneSubjSM}{0.318}
+\newcommand{\tsDxFoneSubjSMSD}{0.048}
+\newcommand{\tsDxFoneSubjSMCI}{95\% CI 0.254 to 0.382}
+\newcommand{\tsDxFoneSubjSMCIb}{[0.254, 0.382]}
+\newcommand{\tsDxFoneSubjSMRange}{0.269--0.388}
+\newcommand{\tsDxFoneSubjSMPct}{31.8\%}
+\newcommand{\tsDxFoneSubjSMLegZ}{$-0.81$}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/softmax/subject/macro_auc | n_train_seeds=5 n_units=169 | published=0.913
+\newcommand{\tsDxAucSubjSM}{0.903}
+\newcommand{\tsDxAucSubjSMSD}{0.004}
+\newcommand{\tsDxAucSubjSMCI}{95\% CI 0.881 to 0.925}
+\newcommand{\tsDxAucSubjSMCIb}{[0.881, 0.925]}
+\newcommand{\tsDxAucSubjSMRange}{0.899--0.910}
+\newcommand{\tsDxAucSubjSMPct}{90.3\%}
+\newcommand{\tsDxAucSubjSMLegZ}{+2.35}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/proto/subject/accuracy | n_train_seeds=5 n_units=733 | published=0.357
+\newcommand{\tsSynAccSubjPr}{0.312}
+\newcommand{\tsSynAccSubjPrSD}{0.026}
+\newcommand{\tsSynAccSubjPrCI}{95\% CI 0.282 to 0.343}
+\newcommand{\tsSynAccSubjPrCIb}{[0.282, 0.343]}
+\newcommand{\tsSynAccSubjPrRange}{0.271--0.341}
+\newcommand{\tsSynAccSubjPrPct}{31.2\%}
+\newcommand{\tsSynAccSubjPrLegZ}{+1.77}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/proto/subject/macro_f1 | n_train_seeds=5 n_units=733 | published=0.349
+\newcommand{\tsSynFoneSubjPr}{0.309}
+\newcommand{\tsSynFoneSubjPrSD}{0.027}
+\newcommand{\tsSynFoneSubjPrCI}{95\% CI 0.267 to 0.341}
+\newcommand{\tsSynFoneSubjPrCIb}{[0.267, 0.341]}
+\newcommand{\tsSynFoneSubjPrRange}{0.267--0.336}
+\newcommand{\tsSynFoneSubjPrPct}{30.9\%}
+\newcommand{\tsSynFoneSubjPrLegZ}{+1.47}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/proto/subject/macro_auc | n_train_seeds=5 n_units=733 | published=0.812
+\newcommand{\tsSynAucSubjPr}{0.811}
+\newcommand{\tsSynAucSubjPrSD}{0.009}
+\newcommand{\tsSynAucSubjPrCI}{95\% CI 0.786 to 0.833}
+\newcommand{\tsSynAucSubjPrCIb}{[0.786, 0.833]}
+\newcommand{\tsSynAucSubjPrRange}{0.801--0.821}
+\newcommand{\tsSynAucSubjPrPct}{81.1\%}
+\newcommand{\tsSynAucSubjPrLegZ}{+0.15}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/proto/subject/accuracy | n_train_seeds=5 n_units=169 | published=0.414
+\newcommand{\tsDxAccSubjPr}{0.431}
+\newcommand{\tsDxAccSubjPrSD}{0.038}
+\newcommand{\tsDxAccSubjPrCI}{95\% CI 0.362 to 0.499}
+\newcommand{\tsDxAccSubjPrCIb}{[0.362, 0.499]}
+\newcommand{\tsDxAccSubjPrRange}{0.393--0.479}
+\newcommand{\tsDxAccSubjPrPct}{43.1\%}
+\newcommand{\tsDxAccSubjPrLegZ}{$-0.44$}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/proto/subject/macro_f1 | n_train_seeds=5 n_units=169 | published=0.341
+\newcommand{\tsDxFoneSubjPr}{0.354}
+\newcommand{\tsDxFoneSubjPrSD}{0.039}
+\newcommand{\tsDxFoneSubjPrCI}{95\% CI 0.285 to 0.420}
+\newcommand{\tsDxFoneSubjPrCIb}{[0.285, 0.420]}
+\newcommand{\tsDxFoneSubjPrRange}{0.313--0.412}
+\newcommand{\tsDxFoneSubjPrPct}{35.4\%}
+\newcommand{\tsDxFoneSubjPrLegZ}{$-0.33$}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/proto/subject/macro_auc | n_train_seeds=5 n_units=169 | published=0.897
+\newcommand{\tsDxAucSubjPr}{0.894}
+\newcommand{\tsDxAucSubjPrSD}{0.007}
+\newcommand{\tsDxAucSubjPrCI}{95\% CI 0.875 to 0.924}
+\newcommand{\tsDxAucSubjPrCIb}{[0.875, 0.924]}
+\newcommand{\tsDxAucSubjPrRange}{0.881--0.899}
+\newcommand{\tsDxAucSubjPrPct}{89.4\%}
+\newcommand{\tsDxAucSubjPrLegZ}{+0.41}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/proto/scan/accuracy | n_train_seeds=5 n_units=1840 | published=0.266
+\newcommand{\tsSynAccScanPr}{0.244}
+\newcommand{\tsSynAccScanPrSD}{0.021}
+\newcommand{\tsSynAccScanPrCI}{95\% CI 0.219 to 0.269}
+\newcommand{\tsSynAccScanPrCIb}{[0.219, 0.269]}
+\newcommand{\tsSynAccScanPrRange}{0.216--0.275}
+\newcommand{\tsSynAccScanPrPct}{24.4\%}
+\newcommand{\tsSynAccScanPrLegZ}{+1.05}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/proto/scan/macro_f1 | n_train_seeds=5 n_units=1840 | published=0.244
+\newcommand{\tsSynFoneScanPr}{0.225}
+\newcommand{\tsSynFoneScanPrSD}{0.017}
+\newcommand{\tsSynFoneScanPrCI}{95\% CI 0.196 to 0.246}
+\newcommand{\tsSynFoneScanPrCIb}{[0.196, 0.246]}
+\newcommand{\tsSynFoneScanPrRange}{0.202--0.248}
+\newcommand{\tsSynFoneScanPrPct}{22.5\%}
+\newcommand{\tsSynFoneScanPrLegZ}{+1.13}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/proto/scan/macro_auc | n_train_seeds=5 n_units=1840 | published=0.769
+\newcommand{\tsSynAucScanPr}{0.775}
+\newcommand{\tsSynAucScanPrSD}{0.009}
+\newcommand{\tsSynAucScanPrCI}{95\% CI 0.752 to 0.797}
+\newcommand{\tsSynAucScanPrCIb}{[0.752, 0.797]}
+\newcommand{\tsSynAucScanPrRange}{0.765--0.786}
+\newcommand{\tsSynAucScanPrPct}{77.5\%}
+\newcommand{\tsSynAucScanPrLegZ}{$-0.57$}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/proto/scan/accuracy | n_train_seeds=5 n_units=475 | published=0.325
+\newcommand{\tsDxAccScanPr}{0.316}
+\newcommand{\tsDxAccScanPrSD}{0.020}
+\newcommand{\tsDxAccScanPrCI}{95\% CI 0.266 to 0.367}
+\newcommand{\tsDxAccScanPrCIb}{[0.266, 0.367]}
+\newcommand{\tsDxAccScanPrRange}{0.297--0.343}
+\newcommand{\tsDxAccScanPrPct}{31.6\%}
+\newcommand{\tsDxAccScanPrLegZ}{+0.43}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/proto/scan/macro_f1 | n_train_seeds=5 n_units=475 | published=0.277
+\newcommand{\tsDxFoneScanPr}{0.266}
+\newcommand{\tsDxFoneScanPrSD}{0.017}
+\newcommand{\tsDxFoneScanPrCI}{95\% CI 0.225 to 0.318}
+\newcommand{\tsDxFoneScanPrCIb}{[0.225, 0.318]}
+\newcommand{\tsDxFoneScanPrRange}{0.251--0.288}
+\newcommand{\tsDxFoneScanPrPct}{26.6\%}
+\newcommand{\tsDxFoneScanPrLegZ}{+0.67}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/proto/scan/macro_auc | n_train_seeds=5 n_units=475 | published=0.840
+\newcommand{\tsDxAucScanPr}{0.841}
+\newcommand{\tsDxAucScanPrSD}{0.006}
+\newcommand{\tsDxAucScanPrCI}{95\% CI 0.825 to 0.875}
+\newcommand{\tsDxAucScanPrCIb}{[0.825, 0.875]}
+\newcommand{\tsDxAucScanPrRange}{0.832--0.845}
+\newcommand{\tsDxAucScanPrPct}{84.1\%}
+\newcommand{\tsDxAucScanPrLegZ}{$-0.05$}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/knn11/scan/accuracy | n_train_seeds=5 n_units=1840 | published=0.285
+\newcommand{\tsSynAccScanKnn}{0.282}
+\newcommand{\tsSynAccScanKnnSD}{0.011}
+\newcommand{\tsSynAccScanKnnCI}{95\% CI 0.256 to 0.309}
+\newcommand{\tsSynAccScanKnnCIb}{[0.256, 0.309]}
+\newcommand{\tsSynAccScanKnnRange}{0.267--0.295}
+\newcommand{\tsSynAccScanKnnPct}{28.2\%}
+\newcommand{\tsSynAccScanKnnLegZ}{+0.21}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/knn11/scan/macro_f1 | n_train_seeds=5 n_units=1840 | published=0.185
+\newcommand{\tsSynFoneScanKnn}{0.202}
+\newcommand{\tsSynFoneScanKnnSD}{0.013}
+\newcommand{\tsSynFoneScanKnnCI}{95\% CI 0.168 to 0.230}
+\newcommand{\tsSynFoneScanKnnCIb}{[0.168, 0.230]}
+\newcommand{\tsSynFoneScanKnnRange}{0.181--0.216}
+\newcommand{\tsSynFoneScanKnnPct}{20.2\%}
+\newcommand{\tsSynFoneScanKnnLegZ}{$-1.29$}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/knn11/scan/macro_auc | n_train_seeds=5 n_units=1840 | published=0.729
+\newcommand{\tsSynAucScanKnn}{0.737}
+\newcommand{\tsSynAucScanKnnSD}{0.005}
+\newcommand{\tsSynAucScanKnnCI}{95\% CI 0.718 to 0.756}
+\newcommand{\tsSynAucScanKnnCIb}{[0.718, 0.756]}
+\newcommand{\tsSynAucScanKnnRange}{0.731--0.744}
+\newcommand{\tsSynAucScanKnnPct}{73.7\%}
+\newcommand{\tsSynAucScanKnnLegZ}{$-1.55$}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/knn11/scan/accuracy | n_train_seeds=5 n_units=475 | published=0.280
+\newcommand{\tsDxAccScanKnn}{0.291}
+\newcommand{\tsDxAccScanKnnSD}{0.014}
+\newcommand{\tsDxAccScanKnnCI}{95\% CI 0.241 to 0.344}
+\newcommand{\tsDxAccScanKnnCIb}{[0.241, 0.344]}
+\newcommand{\tsDxAccScanKnnRange}{0.273--0.308}
+\newcommand{\tsDxAccScanKnnPct}{29.1\%}
+\newcommand{\tsDxAccScanKnnLegZ}{$-0.81$}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/knn11/scan/macro_f1 | n_train_seeds=5 n_units=475 | published=0.216
+\newcommand{\tsDxFoneScanKnn}{0.224}
+\newcommand{\tsDxFoneScanKnnSD}{0.010}
+\newcommand{\tsDxFoneScanKnnCI}{95\% CI 0.187 to 0.268}
+\newcommand{\tsDxFoneScanKnnCIb}{[0.187, 0.268]}
+\newcommand{\tsDxFoneScanKnnRange}{0.212--0.235}
+\newcommand{\tsDxFoneScanKnnPct}{22.4\%}
+\newcommand{\tsDxFoneScanKnnLegZ}{$-0.83$}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/knn11/scan/macro_auc | n_train_seeds=5 n_units=475 | published=0.778
+\newcommand{\tsDxAucScanKnn}{0.784}
+\newcommand{\tsDxAucScanKnnSD}{0.012}
+\newcommand{\tsDxAucScanKnnCI}{95\% CI 0.768 to 0.832}
+\newcommand{\tsDxAucScanKnnCIb}{[0.768, 0.832]}
+\newcommand{\tsDxAucScanKnnRange}{0.771--0.797}
+\newcommand{\tsDxAucScanKnnPct}{78.4\%}
+\newcommand{\tsDxAucScanKnnLegZ}{$-0.44$}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/knn11/subject/accuracy | n_train_seeds=5 n_units=733 | published=0.293
+\newcommand{\tsSynAccSubjKnn}{0.305}
+\newcommand{\tsSynAccSubjKnnSD}{0.010}
+\newcommand{\tsSynAccSubjKnnCI}{95\% CI 0.275 to 0.334}
+\newcommand{\tsSynAccSubjKnnCIb}{[0.275, 0.334]}
+\newcommand{\tsSynAccSubjKnnRange}{0.291--0.316}
+\newcommand{\tsSynAccSubjKnnPct}{30.5\%}
+\newcommand{\tsSynAccSubjKnnLegZ}{$-1.18$}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/knn11/subject/macro_f1 | n_train_seeds=5 n_units=733 | published=0.192
+\newcommand{\tsSynFoneSubjKnn}{0.223}
+\newcommand{\tsSynFoneSubjKnnSD}{0.014}
+\newcommand{\tsSynFoneSubjKnnCI}{95\% CI 0.178 to 0.255}
+\newcommand{\tsSynFoneSubjKnnCIb}{[0.178, 0.255]}
+\newcommand{\tsSynFoneSubjKnnRange}{0.199--0.232}
+\newcommand{\tsSynFoneSubjKnnPct}{22.3\%}
+\newcommand{\tsSynFoneSubjKnnLegZ}{$-2.27$}
+
+% trainseed_summary.csv | B1_corrected/pointnet2/knn11/subject/macro_auc | n_train_seeds=5 n_units=733 | published=0.760
+\newcommand{\tsSynAucSubjKnn}{0.766}
+\newcommand{\tsSynAucSubjKnnSD}{0.005}
+\newcommand{\tsSynAucSubjKnnCI}{95\% CI 0.746 to 0.785}
+\newcommand{\tsSynAucSubjKnnCIb}{[0.746, 0.785]}
+\newcommand{\tsSynAucSubjKnnRange}{0.760--0.772}
+\newcommand{\tsSynAucSubjKnnPct}{76.6\%}
+\newcommand{\tsSynAucSubjKnnLegZ}{$-1.15$}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/knn11/subject/accuracy | n_train_seeds=5 n_units=169 | published=0.324
+\newcommand{\tsDxAccSubjKnn}{0.334}
+\newcommand{\tsDxAccSubjKnnSD}{0.017}
+\newcommand{\tsDxAccSubjKnnCI}{95\% CI 0.273 to 0.397}
+\newcommand{\tsDxAccSubjKnnCIb}{[0.273, 0.397]}
+\newcommand{\tsDxAccSubjKnnRange}{0.308--0.349}
+\newcommand{\tsDxAccSubjKnnPct}{33.4\%}
+\newcommand{\tsDxAccSubjKnnLegZ}{$-0.59$}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/knn11/subject/macro_f1 | n_train_seeds=5 n_units=169 | published=0.245
+\newcommand{\tsDxFoneSubjKnn}{0.243}
+\newcommand{\tsDxFoneSubjKnnSD}{0.008}
+\newcommand{\tsDxFoneSubjKnnCI}{95\% CI 0.192 to 0.296}
+\newcommand{\tsDxFoneSubjKnnCIb}{[0.192, 0.296]}
+\newcommand{\tsDxFoneSubjKnnRange}{0.231--0.252}
+\newcommand{\tsDxFoneSubjKnnPct}{24.3\%}
+\newcommand{\tsDxFoneSubjKnnLegZ}{+0.23}
+
+% trainseed_summary.csv | B2_corrected/pointnet2/knn11/subject/macro_auc | n_train_seeds=5 n_units=169 | published=0.822
+\newcommand{\tsDxAucSubjKnn}{0.830}
+\newcommand{\tsDxAucSubjKnnSD}{0.014}
+\newcommand{\tsDxAucSubjKnnCI}{95\% CI 0.811 to 0.878}
+\newcommand{\tsDxAucSubjKnnCIb}{[0.811, 0.878]}
+\newcommand{\tsDxAucSubjKnnRange}{0.817--0.848}
+\newcommand{\tsDxAucSubjKnnPct}{83.0\%}
+\newcommand{\tsDxAucSubjKnnLegZ}{$-0.56$}
+
+% trainseed_summary.csv | C_corrected/geommlp/softmax/scan/accuracy | n_train_seeds=5 n_units=3639 | published=0.851
+\newcommand{\tsCombAggGmScan}{0.850}
+\newcommand{\tsCombAggGmScanSD}{0.002}
+\newcommand{\tsCombAggGmScanCI}{95\% CI 0.835 to 0.865}
+\newcommand{\tsCombAggGmScanCIb}{[0.835, 0.865]}
+\newcommand{\tsCombAggGmScanRange}{0.848--0.852}
+\newcommand{\tsCombAggGmScanPct}{85.0\%}
+\newcommand{\tsCombAggGmScanLegZ}{+0.52}
+
+% trainseed_summary.csv | C_corrected/geommlp/softmax/scan/macro_f1 | n_train_seeds=5 n_units=3639 | published=0.848
+\newcommand{\tsCombAggGmScanF}{0.846}
+\newcommand{\tsCombAggGmScanFSD}{0.002}
+\newcommand{\tsCombAggGmScanFCI}{95\% CI 0.830 to 0.862}
+\newcommand{\tsCombAggGmScanFCIb}{[0.830, 0.862]}
+\newcommand{\tsCombAggGmScanFRange}{0.844--0.848}
+\newcommand{\tsCombAggGmScanFPct}{84.6\%}
+\newcommand{\tsCombAggGmScanFLegZ}{+0.67}
+
+% trainseed_summary.csv | C_corrected/geommlp/softmax/scan/macro_auc | n_train_seeds=5 n_units=3639 | published=0.913
+\newcommand{\tsCombAggGmScanA}{0.913}
+\newcommand{\tsCombAggGmScanASD}{0.001}
+\newcommand{\tsCombAggGmScanACI}{95\% CI 0.901 to 0.925}
+\newcommand{\tsCombAggGmScanACIb}{[0.901, 0.925]}
+\newcommand{\tsCombAggGmScanARange}{0.911--0.914}
+\newcommand{\tsCombAggGmScanAPct}{91.3\%}
+\newcommand{\tsCombAggGmScanALegZ}{+0.12}
+
+% trainseed_summary.csv | C_corrected/geommlp/softmax/subject/accuracy | n_train_seeds=5 n_units=2658 | published=0.859
+\newcommand{\tsCombAggGmSubj}{0.864}
+\newcommand{\tsCombAggGmSubjSD}{0.002}
+\newcommand{\tsCombAggGmSubjCI}{95\% CI 0.851 to 0.877}
+\newcommand{\tsCombAggGmSubjCIb}{[0.851, 0.877]}
+\newcommand{\tsCombAggGmSubjRange}{0.860--0.866}
+\newcommand{\tsCombAggGmSubjPct}{86.4\%}
+\newcommand{\tsCombAggGmSubjLegZ}{$-1.91$}
+
+% trainseed_summary.csv | C_corrected/geommlp/softmax/subject/macro_f1 | n_train_seeds=5 n_units=2658 | published=0.817
+\newcommand{\tsCombAggGmSubjF}{0.822}
+\newcommand{\tsCombAggGmSubjFSD}{0.002}
+\newcommand{\tsCombAggGmSubjFCI}{95\% CI 0.806 to 0.839}
+\newcommand{\tsCombAggGmSubjFCIb}{[0.806, 0.839]}
+\newcommand{\tsCombAggGmSubjFRange}{0.818--0.824}
+\newcommand{\tsCombAggGmSubjFPct}{82.2\%}
+\newcommand{\tsCombAggGmSubjFLegZ}{$-2.30$}
+
+% trainseed_summary.csv | C_corrected/geommlp/softmax/subject/macro_auc | n_train_seeds=5 n_units=2658 | published=0.898
+\newcommand{\tsCombAggGmSubjA}{0.900}
+\newcommand{\tsCombAggGmSubjASD}{0.002}
+\newcommand{\tsCombAggGmSubjACI}{95\% CI 0.886 to 0.912}
+\newcommand{\tsCombAggGmSubjACIb}{[0.886, 0.912]}
+\newcommand{\tsCombAggGmSubjARange}{0.897--0.903}
+\newcommand{\tsCombAggGmSubjAPct}{90.0\%}
+\newcommand{\tsCombAggGmSubjALegZ}{$-0.90$}
+
+% trainseed_summary.csv | C_corrected/pointnet/softmax/scan/accuracy | n_train_seeds=5 n_units=3639 | published=0.876
+\newcommand{\tsCombAggPnScan}{0.875}
+\newcommand{\tsCombAggPnScanSD}{0.004}
+\newcommand{\tsCombAggPnScanCI}{95\% CI 0.861 to 0.888}
+\newcommand{\tsCombAggPnScanCIb}{[0.861, 0.888]}
+\newcommand{\tsCombAggPnScanRange}{0.868--0.877}
+\newcommand{\tsCombAggPnScanPct}{87.5\%}
+\newcommand{\tsCombAggPnScanLegZ}{+0.25}
+
+% trainseed_summary.csv | C_corrected/pointnet/softmax/scan/macro_f1 | n_train_seeds=5 n_units=3639 | published=0.871
+\newcommand{\tsCombAggPnScanF}{0.870}
+\newcommand{\tsCombAggPnScanFSD}{0.004}
+\newcommand{\tsCombAggPnScanFCI}{95\% CI 0.856 to 0.885}
+\newcommand{\tsCombAggPnScanFCIb}{[0.856, 0.885]}
+\newcommand{\tsCombAggPnScanFRange}{0.864--0.874}
+\newcommand{\tsCombAggPnScanFPct}{87.0\%}
+\newcommand{\tsCombAggPnScanFLegZ}{+0.13}
+
+% trainseed_summary.csv | C_corrected/pointnet/softmax/scan/macro_auc | n_train_seeds=5 n_units=3639 | published=0.932
+\newcommand{\tsCombAggPnScanA}{0.935}
+\newcommand{\tsCombAggPnScanASD}{0.004}
+\newcommand{\tsCombAggPnScanACI}{95\% CI 0.925 to 0.945}
+\newcommand{\tsCombAggPnScanACIb}{[0.925, 0.945]}
+\newcommand{\tsCombAggPnScanARange}{0.929--0.938}
+\newcommand{\tsCombAggPnScanAPct}{93.5\%}
+\newcommand{\tsCombAggPnScanALegZ}{$-0.94$}
+
+% trainseed_summary.csv | C_corrected/pointnet/softmax/subject/accuracy | n_train_seeds=5 n_units=2658 | published=0.882
+\newcommand{\tsCombAggPnSubj}{0.882}
+\newcommand{\tsCombAggPnSubjSD}{0.005}
+\newcommand{\tsCombAggPnSubjCI}{95\% CI 0.870 to 0.895}
+\newcommand{\tsCombAggPnSubjCIb}{[0.870, 0.895]}
+\newcommand{\tsCombAggPnSubjRange}{0.874--0.886}
+\newcommand{\tsCombAggPnSubjPct}{88.2\%}
+\newcommand{\tsCombAggPnSubjLegZ}{+0.03}
+
+% trainseed_summary.csv | C_corrected/pointnet/softmax/subject/macro_f1 | n_train_seeds=5 n_units=2658 | published=0.839
+\newcommand{\tsCombAggPnSubjF}{0.842}
+\newcommand{\tsCombAggPnSubjFSD}{0.006}
+\newcommand{\tsCombAggPnSubjFCI}{95\% CI 0.826 to 0.858}
+\newcommand{\tsCombAggPnSubjFCIb}{[0.826, 0.858]}
+\newcommand{\tsCombAggPnSubjFRange}{0.831--0.847}
+\newcommand{\tsCombAggPnSubjFPct}{84.2\%}
+\newcommand{\tsCombAggPnSubjFLegZ}{$-0.50$}
+
+% trainseed_summary.csv | C_corrected/pointnet/softmax/subject/macro_auc | n_train_seeds=5 n_units=2658 | published=0.917
+\newcommand{\tsCombAggPnSubjA}{0.925}
+\newcommand{\tsCombAggPnSubjASD}{0.005}
+\newcommand{\tsCombAggPnSubjACI}{95\% CI 0.913 to 0.936}
+\newcommand{\tsCombAggPnSubjACIb}{[0.913, 0.936]}
+\newcommand{\tsCombAggPnSubjARange}{0.916--0.927}
+\newcommand{\tsCombAggPnSubjAPct}{92.5\%}
+\newcommand{\tsCombAggPnSubjALegZ}{$-1.62$}
+
+% trainseed_summary.csv | C_corrected/pointnet2/softmax/scan/accuracy | n_train_seeds=5 n_units=3639 | published=0.903
+\newcommand{\tsCombAggPtScan}{0.905}
+\newcommand{\tsCombAggPtScanSD}{0.003}
+\newcommand{\tsCombAggPtScanCI}{95\% CI 0.895 to 0.915}
+\newcommand{\tsCombAggPtScanCIb}{[0.895, 0.915]}
+\newcommand{\tsCombAggPtScanRange}{0.902--0.909}
+\newcommand{\tsCombAggPtScanPct}{90.5\%}
+\newcommand{\tsCombAggPtScanLegZ}{$-0.93$}
+
+% trainseed_summary.csv | C_corrected/pointnet2/softmax/scan/macro_f1 | n_train_seeds=5 n_units=3639 | published=0.900
+\newcommand{\tsCombAggPtScanF}{0.902}
+\newcommand{\tsCombAggPtScanFSD}{0.003}
+\newcommand{\tsCombAggPtScanFCI}{95\% CI 0.891 to 0.913}
+\newcommand{\tsCombAggPtScanFCIb}{[0.891, 0.913]}
+\newcommand{\tsCombAggPtScanFRange}{0.898--0.906}
+\newcommand{\tsCombAggPtScanFPct}{90.2\%}
+\newcommand{\tsCombAggPtScanFLegZ}{$-0.62$}
+
+% trainseed_summary.csv | C_corrected/pointnet2/softmax/scan/macro_auc | n_train_seeds=5 n_units=3639 | published=0.960
+\newcommand{\tsCombAggPtScanA}{0.963}
+\newcommand{\tsCombAggPtScanASD}{0.002}
+\newcommand{\tsCombAggPtScanACI}{95\% CI 0.955 to 0.969}
+\newcommand{\tsCombAggPtScanACIb}{[0.955, 0.969]}
+\newcommand{\tsCombAggPtScanARange}{0.960--0.965}
+\newcommand{\tsCombAggPtScanAPct}{96.3\%}
+\newcommand{\tsCombAggPtScanALegZ}{$-1.17$}
+
+% trainseed_summary.csv | C_corrected/pointnet2/softmax/subject/accuracy | n_train_seeds=5 n_units=2658 | published=0.910
+\newcommand{\tsCombAggPtSubj}{0.915}
+\newcommand{\tsCombAggPtSubjSD}{0.003}
+\newcommand{\tsCombAggPtSubjCI}{95\% CI 0.905 to 0.924}
+\newcommand{\tsCombAggPtSubjCIb}{[0.905, 0.924]}
+\newcommand{\tsCombAggPtSubjRange}{0.912--0.918}
+\newcommand{\tsCombAggPtSubjPct}{91.5\%}
+\newcommand{\tsCombAggPtSubjLegZ}{$-1.63$}
+
+% trainseed_summary.csv | C_corrected/pointnet2/softmax/subject/macro_f1 | n_train_seeds=5 n_units=2658 | published=0.886
+\newcommand{\tsCombAggPtSubjF}{0.889}
+\newcommand{\tsCombAggPtSubjFSD}{0.004}
+\newcommand{\tsCombAggPtSubjFCI}{95\% CI 0.876 to 0.900}
+\newcommand{\tsCombAggPtSubjFCIb}{[0.876, 0.900]}
+\newcommand{\tsCombAggPtSubjFRange}{0.884--0.893}
+\newcommand{\tsCombAggPtSubjFPct}{88.9\%}
+\newcommand{\tsCombAggPtSubjFLegZ}{$-0.62$}
+
+% trainseed_summary.csv | C_corrected/pointnet2/softmax/subject/macro_auc | n_train_seeds=5 n_units=2658 | published=0.958
+\newcommand{\tsCombAggPtSubjA}{0.959}
+\newcommand{\tsCombAggPtSubjASD}{0.002}
+\newcommand{\tsCombAggPtSubjACI}{95\% CI 0.952 to 0.966}
+\newcommand{\tsCombAggPtSubjACIb}{[0.952, 0.966]}
+\newcommand{\tsCombAggPtSubjARange}{0.957--0.963}
+\newcommand{\tsCombAggPtSubjAPct}{95.9\%}
+\newcommand{\tsCombAggPtSubjALegZ}{$-0.47$}
+
+% trainseed_summary.csv | C_corrected/dgcnn/softmax/scan/accuracy | n_train_seeds=5 n_units=3639 | published=0.896
+\newcommand{\tsCombAggDgScan}{0.884}
+\newcommand{\tsCombAggDgScanSD}{0.005}
+\newcommand{\tsCombAggDgScanCI}{95\% CI 0.871 to 0.896}
+\newcommand{\tsCombAggDgScanCIb}{[0.871, 0.896]}
+\newcommand{\tsCombAggDgScanRange}{0.879--0.892}
+\newcommand{\tsCombAggDgScanPct}{88.4\%}
+\newcommand{\tsCombAggDgScanLegZ}{+2.09}
+
+% trainseed_summary.csv | C_corrected/dgcnn/softmax/scan/macro_f1 | n_train_seeds=5 n_units=3639 | published=0.894
+\newcommand{\tsCombAggDgScanF}{0.881}
+\newcommand{\tsCombAggDgScanFSD}{0.006}
+\newcommand{\tsCombAggDgScanFCI}{95\% CI 0.868 to 0.894}
+\newcommand{\tsCombAggDgScanFCIb}{[0.868, 0.894]}
+\newcommand{\tsCombAggDgScanFRange}{0.875--0.890}
+\newcommand{\tsCombAggDgScanFPct}{88.1\%}
+\newcommand{\tsCombAggDgScanFLegZ}{+2.22}
+
+% trainseed_summary.csv | C_corrected/dgcnn/softmax/scan/macro_auc | n_train_seeds=5 n_units=3639 | published=0.960
+\newcommand{\tsCombAggDgScanA}{0.952}
+\newcommand{\tsCombAggDgScanASD}{0.005}
+\newcommand{\tsCombAggDgScanACI}{95\% CI 0.944 to 0.960}
+\newcommand{\tsCombAggDgScanACIb}{[0.944, 0.960]}
+\newcommand{\tsCombAggDgScanARange}{0.947--0.958}
+\newcommand{\tsCombAggDgScanAPct}{95.2\%}
+\newcommand{\tsCombAggDgScanALegZ}{+1.56}
+
+% trainseed_summary.csv | C_corrected/dgcnn/softmax/subject/accuracy | n_train_seeds=5 n_units=2658 | published=0.899
+\newcommand{\tsCombAggDgSubj}{0.893}
+\newcommand{\tsCombAggDgSubjSD}{0.008}
+\newcommand{\tsCombAggDgSubjCI}{95\% CI 0.881 to 0.904}
+\newcommand{\tsCombAggDgSubjCIb}{[0.881, 0.904]}
+\newcommand{\tsCombAggDgSubjRange}{0.886--0.905}
+\newcommand{\tsCombAggDgSubjPct}{89.3\%}
+\newcommand{\tsCombAggDgSubjLegZ}{+0.76}
+
+% trainseed_summary.csv | C_corrected/dgcnn/softmax/subject/macro_f1 | n_train_seeds=5 n_units=2658 | published=0.874
+\newcommand{\tsCombAggDgSubjF}{0.863}
+\newcommand{\tsCombAggDgSubjFSD}{0.008}
+\newcommand{\tsCombAggDgSubjFCI}{95\% CI 0.848 to 0.878}
+\newcommand{\tsCombAggDgSubjFCIb}{[0.848, 0.878]}
+\newcommand{\tsCombAggDgSubjFRange}{0.856--0.874}
+\newcommand{\tsCombAggDgSubjFPct}{86.3\%}
+\newcommand{\tsCombAggDgSubjFLegZ}{+1.36}
+
+% trainseed_summary.csv | C_corrected/dgcnn/softmax/subject/macro_auc | n_train_seeds=5 n_units=2658 | published=0.956
+\newcommand{\tsCombAggDgSubjA}{0.948}
+\newcommand{\tsCombAggDgSubjASD}{0.006}
+\newcommand{\tsCombAggDgSubjACI}{95\% CI 0.939 to 0.956}
+\newcommand{\tsCombAggDgSubjACIb}{[0.939, 0.956]}
+\newcommand{\tsCombAggDgSubjARange}{0.942--0.953}
+\newcommand{\tsCombAggDgSubjAPct}{94.8\%}
+\newcommand{\tsCombAggDgSubjALegZ}{+1.36}
+
+% ---- contrasts, percentage points ---------------------------------------
+% contrast_tests_trainseed.csv | C2_agg_softmax[pointnet2] B1_corrected accuracy
+\newcommand{\tsAggGainSyn}{+4.2}
+\newcommand{\tsAggGainSynSD}{0.6}
+\newcommand{\tsAggGainSynRange}{+3.5 to +5.2}
+\newcommand{\tsAggGainSynNSig}{all five}
+
+% contrast_tests_trainseed.csv | C2_agg_proto[pointnet2] B1_corrected accuracy
+\newcommand{\tsAggGainSynPr}{+6.8}
+\newcommand{\tsAggGainSynPrSD}{0.9}
+\newcommand{\tsAggGainSynPrRange}{+5.5 to +7.6}
+\newcommand{\tsAggGainSynPrNSig}{all five}
+
+% contrast_tests_trainseed.csv | C2_agg_softmax[pointnet2] B2_corrected accuracy
+\newcommand{\tsAggGainDx}{+10.3}
+\newcommand{\tsAggGainDxSD}{1.6}
+\newcommand{\tsAggGainDxRange}{+8.4 to +12.0}
+\newcommand{\tsAggGainDxNSig}{all five}
+
+% contrast_tests_trainseed.csv | C2_agg_proto[pointnet2] B2_corrected accuracy
+\newcommand{\tsAggGainDxPr}{+11.4}
+\newcommand{\tsAggGainDxPrSD}{2.2}
+\newcommand{\tsAggGainDxPrRange}{+9.6 to +15.0}
+\newcommand{\tsAggGainDxPrNSig}{all five}
+
+% contrast_tests_trainseed.csv | C2c_proto_subj_vs_softmax_scan[pointnet2] B1_corrected accuracy
+\newcommand{\tsProtoSubjVsSmScanSyn}{+4.5}
+\newcommand{\tsProtoSubjVsSmScanSynSD}{0.8}
+\newcommand{\tsProtoSubjVsSmScanSynRange}{+3.2 to +5.2}
+\newcommand{\tsProtoSubjVsSmScanSynNSig}{all five}
+
+% contrast_tests_trainseed.csv | C2c_proto_subj_vs_softmax_scan[pointnet2] B2_corrected accuracy
+\newcommand{\tsProtoSubjVsSmScanDx}{+13.6}
+\newcommand{\tsProtoSubjVsSmScanDxSD}{1.5}
+\newcommand{\tsProtoSubjVsSmScanDxRange}{+11.5 to +15.5}
+\newcommand{\tsProtoSubjVsSmScanDxNSig}{all five}
+
+% contrast_tests_trainseed.csv | C2_agg_softmax[pointnet2] C_corrected accuracy
+\newcommand{\tsAggGainCombAcc}{+0.9}
+\newcommand{\tsAggGainCombAccSD}{0.2}
+\newcommand{\tsAggGainCombAccRange}{+0.6 to +1.1}
+\newcommand{\tsAggGainCombAccNSig}{all five}
+
+% contrast_tests_trainseed.csv | C2_agg_softmax[pointnet2] C_corrected macro_f1
+\newcommand{\tsAggGainCombFone}{$-1.4$}
+\newcommand{\tsAggGainCombFoneSD}{0.2}
+\newcommand{\tsAggGainCombFoneRange}{$-1.7$ to $-1.1$}
+\newcommand{\tsAggGainCombFoneNSig}{all five}
+
+% contrast_tests_trainseed.csv | C2_agg_softmax[pointnet2] C_corrected macro_auc
+\newcommand{\tsAggGainCombAuc}{$-0.3$}
+\newcommand{\tsAggGainCombAucSD}{0.1}
+\newcommand{\tsAggGainCombAucRange}{$-0.4$ to $-0.2$}
+\newcommand{\tsAggGainCombAucNSig}{none of five}
+
+% contrast_tests_trainseed.csv | C2_agg_knn11[pointnet2] B1_corrected accuracy
+\newcommand{\tsAggGainSynKnn}{+2.2}
+\newcommand{\tsAggGainSynKnnSD}{0.2}
+\newcommand{\tsAggGainSynKnnRange}{+2.0 to +2.4}
+\newcommand{\tsAggGainSynKnnNSig}{all five}
+
+% contrast_tests_trainseed.csv | C2_agg_knn11[pointnet2] B1_corrected macro_auc
+\newcommand{\tsAggGainSynKnnAuc}{+2.9}
+\newcommand{\tsAggGainSynKnnAucSD}{0.2}
+\newcommand{\tsAggGainSynKnnAucRange}{+2.7 to +3.2}
+\newcommand{\tsAggGainSynKnnAucNSig}{all five}
+
+% contrast_tests_trainseed.csv | C2_agg_knn11[pointnet2] B2_corrected accuracy
+\newcommand{\tsAggGainDxKnn}{+4.3}
+\newcommand{\tsAggGainDxKnnSD}{1.7}
+\newcommand{\tsAggGainDxKnnRange}{+2.4 to +6.3}
+\newcommand{\tsAggGainDxKnnNSig}{two of five}
+
+% contrast_tests_trainseed.csv | C2_agg_knn11[pointnet2] B2_corrected macro_auc
+\newcommand{\tsAggGainDxKnnAuc}{+4.6}
+\newcommand{\tsAggGainDxKnnAucSD}{0.3}
+\newcommand{\tsAggGainDxKnnAucRange}{+4.4 to +5.1}
+\newcommand{\tsAggGainDxKnnAucNSig}{all five}
+
+% contrast_tests_trainseed.csv | C1a_head_subject[pointnet2] B2_corrected accuracy  (sign flipped to prototype-minus-softmax)
+\newcommand{\tsDxHeadAccDiff}{+3.3}
+\newcommand{\tsDxHeadAccDiffSD}{2.0}
+\newcommand{\tsDxHeadAccDiffRange}{+0.7 to +5.8}
+\newcommand{\tsDxHeadAccDiffNSig}{one of five}
+
+% contrast_tests_trainseed.csv | C1a_head_subject[pointnet2] B2_corrected macro_f1  (sign flipped to prototype-minus-softmax)
+\newcommand{\tsDxHeadFoneDiff}{+3.6}
+\newcommand{\tsDxHeadFoneDiffSD}{1.7}
+\newcommand{\tsDxHeadFoneDiffRange}{+2.0 to +5.8}
+\newcommand{\tsDxHeadFoneDiffNSig}{one of five}
+
+% contrast_tests_trainseed.csv | C1a_head_subject[pointnet2] B2_corrected macro_auc  (sign flipped to prototype-minus-softmax)
+\newcommand{\tsDxHeadAucDiff}{$-1.0$}
+\newcommand{\tsDxHeadAucDiffSD}{0.7}
+\newcommand{\tsDxHeadAucDiffRange}{$-2.1$ to $-0.3$}
+\newcommand{\tsDxHeadAucDiffNSig}{none of five}
+
+% contrast_tests_trainseed.csv | C1a_head_subject[pointnet2] B1_corrected accuracy  (sign flipped to prototype-minus-softmax)
+\newcommand{\tsSynHeadAccDiff}{+0.3}
+\newcommand{\tsSynHeadAccDiffSD}{0.5}
+\newcommand{\tsSynHeadAccDiffRange}{$-0.3$ to +0.9}
+\newcommand{\tsSynHeadAccDiffNSig}{none of five}
+
+% contrast_tests_trainseed.csv | C1a_head_subject[pointnet2] B1_corrected macro_f1  (sign flipped to prototype-minus-softmax)
+\newcommand{\tsSynHeadFoneDiff}{+1.1}
+\newcommand{\tsSynHeadFoneDiffSD}{0.5}
+\newcommand{\tsSynHeadFoneDiffRange}{+0.6 to +1.6}
+\newcommand{\tsSynHeadFoneDiffNSig}{none of five}
+
+% contrast_tests_trainseed.csv | C1a_head_subject[pointnet2] B1_corrected macro_auc  (sign flipped to prototype-minus-softmax)
+\newcommand{\tsSynHeadAucDiff}{+0.5}
+\newcommand{\tsSynHeadAucDiffSD}{0.4}
+\newcommand{\tsSynHeadAucDiffRange}{$-0.0$ to +1.0}
+\newcommand{\tsSynHeadAucDiffNSig}{none of five}
+
+% contrast_tests_trainseed.csv | C2_agg_softmax[geommlp] C_corrected accuracy
+\newcommand{\tsCombAggDGm}{+1.4}
+\newcommand{\tsCombAggDGmSD}{0.3}
+\newcommand{\tsCombAggDGmRange}{+0.8 to +1.6}
+\newcommand{\tsCombAggDGmNSig}{all five}
+
+% contrast_tests_trainseed.csv | C2_agg_softmax[geommlp] C_corrected macro_f1
+\newcommand{\tsCombAggDGmF}{$-2.4$}
+\newcommand{\tsCombAggDGmFSD}{0.4}
+\newcommand{\tsCombAggDGmFRange}{$-3.0$ to $-2.1$}
+\newcommand{\tsCombAggDGmFNSig}{all five}
+
+% contrast_tests_trainseed.csv | C2_agg_softmax[geommlp] C_corrected macro_auc
+\newcommand{\tsCombAggDGmA}{$-1.3$}
+\newcommand{\tsCombAggDGmASD}{0.1}
+\newcommand{\tsCombAggDGmARange}{$-1.5$ to $-1.1$}
+\newcommand{\tsCombAggDGmANSig}{all five}
+
+% contrast_tests_trainseed.csv | C2_agg_softmax[pointnet] C_corrected accuracy
+\newcommand{\tsCombAggDPn}{+0.8}
+\newcommand{\tsCombAggDPnSD}{0.3}
+\newcommand{\tsCombAggDPnRange}{+0.5 to +1.1}
+\newcommand{\tsCombAggDPnNSig}{two of five}
+
+% contrast_tests_trainseed.csv | C2_agg_softmax[pointnet] C_corrected macro_f1
+\newcommand{\tsCombAggDPnF}{$-2.8$}
+\newcommand{\tsCombAggDPnFSD}{0.3}
+\newcommand{\tsCombAggDPnFRange}{$-3.3$ to $-2.5$}
+\newcommand{\tsCombAggDPnFNSig}{all five}
+
+% contrast_tests_trainseed.csv | C2_agg_softmax[pointnet] C_corrected macro_auc
+\newcommand{\tsCombAggDPnA}{$-1.1$}
+\newcommand{\tsCombAggDPnASD}{0.1}
+\newcommand{\tsCombAggDPnARange}{$-1.3$ to $-0.9$}
+\newcommand{\tsCombAggDPnANSig}{all five}
+
+% contrast_tests_trainseed.csv | C2_agg_softmax[pointnet2] C_corrected accuracy
+\newcommand{\tsCombAggDPt}{+0.9}
+\newcommand{\tsCombAggDPtSD}{0.2}
+\newcommand{\tsCombAggDPtRange}{+0.6 to +1.1}
+\newcommand{\tsCombAggDPtNSig}{all five}
+
+% contrast_tests_trainseed.csv | C2_agg_softmax[pointnet2] C_corrected macro_f1
+\newcommand{\tsCombAggDPtF}{$-1.4$}
+\newcommand{\tsCombAggDPtFSD}{0.2}
+\newcommand{\tsCombAggDPtFRange}{$-1.7$ to $-1.1$}
+\newcommand{\tsCombAggDPtFNSig}{all five}
+
+% contrast_tests_trainseed.csv | C2_agg_softmax[pointnet2] C_corrected macro_auc
+\newcommand{\tsCombAggDPtA}{$-0.3$}
+\newcommand{\tsCombAggDPtASD}{0.1}
+\newcommand{\tsCombAggDPtARange}{$-0.4$ to $-0.2$}
+\newcommand{\tsCombAggDPtANSig}{none of five}
+
+% contrast_tests_trainseed.csv | C2_agg_softmax[dgcnn] C_corrected accuracy
+\newcommand{\tsCombAggDDg}{+0.9}
+\newcommand{\tsCombAggDDgSD}{0.6}
+\newcommand{\tsCombAggDDgRange}{+0.3 to +1.8}
+\newcommand{\tsCombAggDDgNSig}{three of five}
+
+% contrast_tests_trainseed.csv | C2_agg_softmax[dgcnn] C_corrected macro_f1
+\newcommand{\tsCombAggDDgF}{$-1.8$}
+\newcommand{\tsCombAggDDgFSD}{0.6}
+\newcommand{\tsCombAggDDgFRange}{$-2.2$ to $-0.8$}
+\newcommand{\tsCombAggDDgFNSig}{four of five}
+
+% contrast_tests_trainseed.csv | C2_agg_softmax[dgcnn] C_corrected macro_auc
+\newcommand{\tsCombAggDDgA}{$-0.4$}
+\newcommand{\tsCombAggDDgASD}{0.1}
+\newcommand{\tsCombAggDDgARange}{$-0.5$ to $-0.2$}
+\newcommand{\tsCombAggDDgANSig}{none of five}
+
+% ---- paired encoder differences, matched within training seed -----------
+% trainseed_per_run.csv | B1_corrected macro_auc: dgcnn minus pointnet2, paired by train seed
+\newcommand{\tsSynAucDgVsPt}{+1.9}
+\newcommand{\tsSynAucDgVsPtSD}{1.1}
+\newcommand{\tsSynAucDgVsPtNPos}{all five}
+
+% trainseed_per_run.csv | B2_corrected macro_auc: dgcnn minus pointnet2, paired by train seed
+\newcommand{\tsDxAucDgVsPt}{+1.3}
+\newcommand{\tsDxAucDgVsPtSD}{1.0}
+\newcommand{\tsDxAucDgVsPtNPos}{four of five}
+
+% trainseed_per_run.csv | B1_corrected accuracy: pointnet2 minus dgcnn, paired by train seed
+\newcommand{\tsSynAccPtVsDg}{+3.0}
+\newcommand{\tsSynAccPtVsDgSD}{4.2}
+\newcommand{\tsSynAccPtVsDgNPos}{four of five}
+
+% trainseed_per_run.csv | B2_corrected accuracy: pointnet2 minus dgcnn, paired by train seed
+\newcommand{\tsDxAccPtVsDg}{+1.5}
+\newcommand{\tsDxAccPtVsDgSD}{4.6}
+\newcommand{\tsDxAccPtVsDgNPos}{three of five}
+
+% cross-encoder: macro-F1 change under screening aggregation, mean over 5 training seeds per encoder
+%   geommlp: -2.42 pp, CI excluded 0 in 5/5 models
+%   pointnet: -2.80 pp, CI excluded 0 in 5/5 models
+%   pointnet2: -1.36 pp, CI excluded 0 in 5/5 models
+%   dgcnn: -1.79 pp, CI excluded 0 in 4/5 models
+\newcommand{\tsCombAggFoneNRev}{all four}
+\newcommand{\tsCombAggFoneRange}{1.4 to 2.8}
+% macro-AUC change under screening aggregation: geommlp -1.33, pointnet -1.08, pointnet2 -0.32, dgcnn -0.43
+\newcommand{\tsCombAggAucNDown}{all four}
+\newcommand{\tsCombAggAucRange}{0.3 to 1.3}

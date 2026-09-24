@@ -1,0 +1,65 @@
+% SUPERSEDED 2026-09-08: \rasNErr, \rasOutFrac, \rasTopDest and
+% \rasTopDestFrac used to be hand-maintained here from the single pre-sweep
+% checkpoint (49 errors, 74% leaving the group, Joubert 18%). They are now
+% emitted by scripts/paper_reruns/recognizability.py into numbers_recog.tex
+% over the five-training-seed sweep, alongside \rasWithinFrac and \rasEnrich,
+% so the five RASopathy quantities can no longer describe different arms.
+% ============================================================================
+% numbers_sal_err.tex — added 2026-08-18 for main_revised.tex Sec. 2.6
+%
+% (1) Misclassification structure  -> Supplementary Fig. S3
+% (2) Gradient saliency            -> Supplementary Fig. S4
+%
+% Computed by scripts/paper_figs/figS3_error_structure.py and
+% scripts/paper_figs/figS4_saliency.py; saliency itself by
+% scripts/saliency_full_test.py over all 475 B2_corrected test scans.
+% ============================================================================
+
+% ── (1) RASopathy confusion ─────────────────────────────────────────────────
+% \rasWithinFrac (27%), \rasShare (9%) and \rasEnrich (3) already exist in
+% numbers_recog.tex and reproduce exactly from the prediction files
+% (26.5%, 9.5%, 2.80x). Only the additional descriptive numbers are new.
+% Pooled over five inference seeds, subject level: 49 misclassified RASopathy
+% subject-predictions in total.
+% Context for the confusion matrix: for 16 of the 33 diagnoses the most common
+% prediction is NOT the correct one, which is the general form of the same point.
+\newcommand{\dxModalWrong}{16}
+\newcommand{\dxModalTotal}{33}
+
+% ── (2) Saliency ────────────────────────────────────────────────────────────
+% !! THIS BLOCK CORRECTS A CLAIM IN THE SUBMITTED DRAFT. Sec. 2.6 stated that
+% saliency maps "were generally diffuse". Recomputed on B2_corrected over all
+% 475 test scans, that is not what the data show. The earlier basis for the
+% sentence, experiments/runs/analysis/B2_saliency_stats.csv, is unusable twice
+% over:
+%   (a) it came from experiments/runs/B2/ — the SUPERSEDED pre-correction
+%       checkpoint, i.e. the leakage-affected split Sec. 2.7 reports as
+%       inflated. Every other number in the paper uses B2_corrected.
+%   (b) it measured the entropy of a saliency map AVERAGED across all scans of
+%       a class. Averaging point-indexed saliency over subjects who are not in
+%       dense correspondence destroys per-scan structure by construction, so it
+%       reported 98–99.5% of maximum entropy. Per scan the figure is 90.4%.
+% Do not cite B2_saliency_stats.csv anywhere. It is kept on disk under the
+% standing no-deletion rule, not because it is usable.
+\newcommand{\salNScans}{475}
+\newcommand{\salTopDecile}{50\%}        % mean 49.67%
+\newcommand{\salTopDecileLo}{44\%}
+\newcommand{\salTopDecileHi}{57\%}
+\newcommand{\salEntropyFrac}{90\%}      % 90.41% of log(4096)
+
+% Across-scan reproducibility, voxelised saliency maps, 12^3 grid.
+% !! THE CONFOUND. Same-diagnosis pairs include repeated scans OF THE SAME
+% SUBJECT, which correlate trivially (r = +0.210). Including them inflates the
+% same-diagnosis figure from +0.128 to +0.184 and more than doubles the
+% apparent diagnosis-specific effect (+0.033 -> +0.089). All numbers below are
+% subject-disjoint, and the permutation null shuffles diagnosis AT SUBJECT
+% LEVEL. Never quote the naive version.
+\newcommand{\salCorrSame}{$+0.128$}     % same diagnosis, different subject
+\newcommand{\salCorrDiff}{$+0.094$}     % different diagnosis
+\newcommand{\salCorrNull}{$+0.000$}     % spatially shuffled
+\newcommand{\salCorrGap}{$+0.033$}
+\newcommand{\salCorrGapP}{$p<0.001$}    % 1000 subject-level permutations, z=+4.7
+% Anatomical localisation: mean saliency percentile by radial and vertical band.
+% A band with no preference sits at 0.50; the observed range is this narrow.
+\newcommand{\salBandLo}{0.47}
+\newcommand{\salBandHi}{0.54}

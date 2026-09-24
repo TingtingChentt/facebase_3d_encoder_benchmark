@@ -1,0 +1,139 @@
+% ============================================================================
+% numbers_knn_agg.tex — added 2026-08-18 for main_revised.tex Sec. 2.4
+%
+% Two result blocks made visible in the manuscript:
+%   (1) the cosine-kNN grid, for two new rows in Table 2 (tab:grid);
+%   (2) the screening-task aggregation contrast, for Supplementary Table S1.
+%
+% Every value below is read straight from
+%   results/paper_reruns/summary_ci.csv      (absolute levels)
+%   results/paper_reruns/contrast_tests.csv  (paired subject-level deltas)
+% Task codes: B1_corrected = 19-class syndrome category,
+%             B2_corrected = 33-class clinical diagnosis,
+%             C_corrected  = combined affected-vs-unaffected screening.
+% Each macro states the row it came from so it can be checked by eye.
+% ============================================================================
+
+% ── (1) Cosine kNN, k=11, PointNet++ ────────────────────────────────────────
+% SCOPE LIMIT — READ BEFORE CITING. Only k=11 was ever run. summary_ci.csv
+% contains head=knn11 and nothing else; there are no knn1/knn3/knn5/knn7 rows
+% anywhere in results/. The Methods currently claim k in {1,3,5,7,11} with "the
+% full kNN analysis reported in Supplementary Methods" — that sweep does not
+% exist yet. The per-seed feature files (results/paper_reruns/features/) make it
+% computable, so this is a gap to fill, not a wrong number. Flagged
+% 2026-08-18. Do not describe these two rows as a sweep.
+
+% summary_ci.csv | task=B1_corrected encoder=pointnet2 head=knn11 level=scan n_seeds=5 n_units=1840 n_subjects=733
+\newcommand{\synAccScanKnn}{0.285}
+\newcommand{\synAccScanKnnCI}{[0.259, 0.312]}
+\newcommand{\synFoneScanKnn}{0.185}
+\newcommand{\synFoneScanKnnCI}{[0.155, 0.211]}
+\newcommand{\synAucScanKnn}{0.729}
+\newcommand{\synAucScanKnnCI}{[0.710, 0.749]}
+
+% summary_ci.csv | task=B1_corrected encoder=pointnet2 head=knn11 level=subject n_seeds=5 n_units=733 n_subjects=733
+\newcommand{\synAccSubjKnn}{0.293}
+\newcommand{\synAccSubjKnnCI}{[0.264, 0.322]}
+\newcommand{\synFoneSubjKnn}{0.192}
+\newcommand{\synFoneSubjKnnCI}{[0.153, 0.222]}
+\newcommand{\synAucSubjKnn}{0.760}
+\newcommand{\synAucSubjKnnCI}{[0.740, 0.779]}
+
+% summary_ci.csv | task=B2_corrected encoder=pointnet2 head=knn11 level=scan n_seeds=5 n_units=475 n_subjects=169
+\newcommand{\dxAccScanKnn}{0.280}
+\newcommand{\dxAccScanKnnCI}{[0.231, 0.331]}
+\newcommand{\dxFoneScanKnn}{0.216}
+\newcommand{\dxFoneScanKnnCI}{[0.182, 0.254]}
+\newcommand{\dxAucScanKnn}{0.778}
+\newcommand{\dxAucScanKnnCI}{[0.764, 0.831]}
+
+% summary_ci.csv | task=B2_corrected encoder=pointnet2 head=knn11 level=subject n_seeds=5 n_units=169 n_subjects=169
+\newcommand{\dxAccSubjKnn}{0.324}
+\newcommand{\dxAccSubjKnnCI}{[0.265, 0.385]}
+\newcommand{\dxFoneSubjKnn}{0.245}
+\newcommand{\dxFoneSubjKnnCI}{[0.200, 0.292]}
+\newcommand{\dxAucSubjKnn}{0.822}
+\newcommand{\dxAucSubjKnnCI}{[0.804, 0.880]}
+
+% kNN aggregation deltas at 33 classes, to match \aggGainSynKnn* already in
+% numbers.tex for 19 classes.
+% contrast_tests.csv | C2_agg_knn11[pointnet2] @ B2_corrected
+\newcommand{\aggGainDxKnn}{+4.4}                          % pp, accuracy — SURVIVES
+\newcommand{\aggGainDxKnnCI}{95\% CI $+0.4$ to $+8.3$}
+\newcommand{\aggGainDxKnnAuc}{+4.4}                       % pp, macro AUC — SURVIVES
+\newcommand{\aggGainDxKnnAucCI}{95\% CI $+3.1$ to $+5.7$}
+
+% ── (2) Screening-task aggregation, combined binary, all four encoders ──────
+% Absolute levels, softmax head. PointNet++ is 5 inference seeds; the other
+% three encoders are deterministic and evaluated once (n_seeds=1), consistent
+% with how numbers_reruns.tex treats them elsewhere.
+% summary_ci.csv | task=C_corrected head=softmax
+%
+% NOTE ON SCOPE: this is the ONLY screening task where aggregation is defined.
+% Binary cleft screening (task A2) has n_subjects = n_units = 1030 — one scan
+% per subject — so there is nothing to aggregate and no subject-level row
+% exists. contrast_tests.csv accordingly contains no A2 aggregation contrast.
+% The prose must say "screening task", singular, or name the reason.
+\newcommand{\combAggGmScan}{0.851}   \newcommand{\combAggGmScanCI}{[0.836, 0.866]}
+\newcommand{\combAggGmScanF}{0.848}  \newcommand{\combAggGmScanFCI}{[0.832, 0.863]}
+\newcommand{\combAggGmScanA}{0.913}  \newcommand{\combAggGmScanACI}{[0.901, 0.925]}
+\newcommand{\combAggGmSubj}{0.859}   \newcommand{\combAggGmSubjCI}{[0.846, 0.872]}
+\newcommand{\combAggGmSubjF}{0.817}  \newcommand{\combAggGmSubjFCI}{[0.800, 0.833]}
+\newcommand{\combAggGmSubjA}{0.898}  \newcommand{\combAggGmSubjACI}{[0.884, 0.910]}
+
+\newcommand{\combAggPnScan}{0.876}   \newcommand{\combAggPnScanCI}{[0.862, 0.889]}
+\newcommand{\combAggPnScanF}{0.871}  \newcommand{\combAggPnScanFCI}{[0.857, 0.885]}
+\newcommand{\combAggPnScanA}{0.932}  \newcommand{\combAggPnScanACI}{[0.920, 0.942]}
+\newcommand{\combAggPnSubj}{0.882}   \newcommand{\combAggPnSubjCI}{[0.870, 0.895]}
+\newcommand{\combAggPnSubjF}{0.839}  \newcommand{\combAggPnSubjFCI}{[0.822, 0.856]}
+\newcommand{\combAggPnSubjA}{0.917}  \newcommand{\combAggPnSubjACI}{[0.904, 0.928]}
+
+\newcommand{\combAggPtScan}{0.903}   \newcommand{\combAggPtScanCI}{[0.892, 0.913]}
+\newcommand{\combAggPtScanF}{0.900}  \newcommand{\combAggPtScanFCI}{[0.889, 0.911]}
+\newcommand{\combAggPtScanA}{0.960}  \newcommand{\combAggPtScanACI}{[0.953, 0.967]}
+\newcommand{\combAggPtSubj}{0.910}   \newcommand{\combAggPtSubjCI}{[0.900, 0.919]}
+\newcommand{\combAggPtSubjF}{0.886}  \newcommand{\combAggPtSubjFCI}{[0.874, 0.898]}
+\newcommand{\combAggPtSubjA}{0.958}  \newcommand{\combAggPtSubjACI}{[0.950, 0.965]}
+
+\newcommand{\combAggDgScan}{0.896}   \newcommand{\combAggDgScanCI}{[0.883, 0.907]}
+\newcommand{\combAggDgScanF}{0.894}  \newcommand{\combAggDgScanFCI}{[0.881, 0.905]}
+\newcommand{\combAggDgScanA}{0.960}  \newcommand{\combAggDgScanACI}{[0.953, 0.967]}
+\newcommand{\combAggDgSubj}{0.899}   \newcommand{\combAggDgSubjCI}{[0.887, 0.910]}
+\newcommand{\combAggDgSubjF}{0.874}  \newcommand{\combAggDgSubjFCI}{[0.860, 0.887]}
+\newcommand{\combAggDgSubjA}{0.956}  \newcommand{\combAggDgSubjACI}{[0.947, 0.963]}
+
+% Paired subject-level bootstrap deltas (subject minus scan), same head.
+% contrast_tests.csv | C2_agg_softmax[<encoder>] @ C_corrected
+% Verdict vocabulary is the emitter's: SURVIVES = CI excludes 0 with the
+% expected (positive) sign; DISSOLVES = CI spans 0; REVERSES = CI excludes 0
+% with the OPPOSITE sign, i.e. aggregation measurably hurts.
+\newcommand{\combAggDGm}{$+0.8$}  \newcommand{\combAggDGmCI}{$[-0.0, +1.7]$}
+\newcommand{\combAggDGmF}{$-3.1$} \newcommand{\combAggDGmFCI}{$[-4.0, -2.1]$}
+\newcommand{\combAggDGmA}{$-1.5$} \newcommand{\combAggDGmACI}{$[-2.3, -0.7]$}
+
+\newcommand{\combAggDPn}{$+0.7$}  \newcommand{\combAggDPnCI}{$[-0.0, +1.4]$}
+\newcommand{\combAggDPnF}{$-3.2$} \newcommand{\combAggDPnFCI}{$[-4.1, -2.2]$}
+\newcommand{\combAggDPnA}{$-1.5$} \newcommand{\combAggDPnACI}{$[-2.2, -0.7]$}
+
+\newcommand{\combAggDPt}{$+0.7$}  \newcommand{\combAggDPtCI}{$[+0.2, +1.3]$}
+\newcommand{\combAggDPtF}{$-1.4$} \newcommand{\combAggDPtFCI}{$[-2.1, -0.7]$}
+\newcommand{\combAggDPtA}{$-0.2$} \newcommand{\combAggDPtACI}{$[-0.7, +0.3]$}
+
+\newcommand{\combAggDDg}{$+0.3$}  \newcommand{\combAggDDgCI}{$[-0.3, +1.0]$}
+\newcommand{\combAggDDgF}{$-2.0$} \newcommand{\combAggDDgFCI}{$[-2.7, -1.2]$}
+\newcommand{\combAggDDgA}{$-0.4$} \newcommand{\combAggDDgACI}{$[-0.9, +0.1]$}
+
+% Counts for the prose: how many of the four encoders show each verdict on F1.
+\newcommand{\combAggFoneNRev}{all four}   % macro-F1 REVERSES for every encoder
+\newcommand{\combAggFoneRange}{1.4 to 3.2}  % pp, magnitude of the F1 loss
+
+% ── Three-way decision-rule ranking, checked 2026-08-18 ─────────────────────
+% Supports the qualitative sentence in Sec. 2.4 paragraph 5. Read from
+% summary_ci.csv, encoder=pointnet2, heads softmax/proto/knn11, 12 cells
+% (2 tasks x 2 levels x 3 metrics):
+%   knn11 is the LOWEST of the three rules in 11 of 12 cells.
+%   The single exception is B1_corrected / scan / accuracy, where
+%   knn11 = 0.285 > proto = 0.266, but still < softmax = 0.295.
+% An earlier draft of that sentence claimed knn was below both rules on all
+% three metrics everywhere. That is FALSE because of this one cell. Corrected
+% before the sentence ever reached a compiled draft; do not reinstate it.

@@ -1,0 +1,20 @@
+# Versions below are the ones the published results were produced with
+# (Python 3.9.25, CUDA 12.8). Later minor versions are expected to work; if you
+# reproduce with different versions, expect agreement to the reported SDs
+# rather than bit-identical outputs.
+
+torch==2.8.0
+numpy==2.0.1
+pandas==2.3.3
+scikit-learn==1.6.1
+scipy==1.13.1
+matplotlib==3.9.4
+
+# preprocessing only (mesh loading / sampling)
+trimesh==4.11.5
+plyfile>=1.0
+
+# optional: Poisson-disc sampling in preprocessing. Without it the pipeline
+# falls back to area-weighted surface sampling, which is what most of the
+# released point clouds were produced with anyway.
+# open3d>=0.18

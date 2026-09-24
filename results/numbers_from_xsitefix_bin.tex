@@ -1,0 +1,524 @@
+% ==========================================================================
+% numbers_from_xsitefix_bin.tex — MACHINE-GENERATED. Do not hand-edit.
+%
+%   generator : facebench/eval/emit_numbers_xsite.py
+%   source    : results/summary_ci_xsitefix_bin.csv  (72 rows)
+%
+% Leave-one-site-out cross-site transfer. TEST is one held-out
+% FaceBase acquisition site in full; train/val are a stratified
+% split over the remaining ten sites. The five sites failing the
+% post-attrition per-class viability gate (CL, CO, NG, SF, TX) stay
+% in the TRAINING pool and are never scored as folds.
+%
+% THERE WAS NO PRIOR RESULT HERE. The 'AUC 0.48-0.51' figures in
+% earlier drafts came from the A1_S1/S2/S3 runs, which are
+% class-imbalance variants on the full-cohort split, not site
+% splits. \xsiteAucLo / \xsiteAucHi are NOT rebound by this block:
+% new measurement, new names.
+%
+% THE TWO FOLD GROUPS ARE NEVER POOLED:
+%   \xsGone*  PH, FC, PR — both datasets remain in training, so the
+%             fold isolates SITE from DATASET
+%   \xsGtwo*  GW, PT, LC — single-dataset; site and dataset move
+%             together and are measured jointly
+% No macro here spans both groups.
+%
+% READ ACCURACY AGAINST \xs<Site>Maj. Held-out sites are 72-92%
+% Unaffected and prevalence differs per site, so accuracy is not
+% comparable across folds. macro-AUC is the headline metric;
+% its chance level is 0.50 regardless of prevalence.
+%
+% \X point estimate / \XSD inference-seed SD / \XCI bootstrap over
+% test SUBJECTS. Never pooled.
+%
+% NOT MEASURED: training-seed variance. Each cell is ONE training
+% run. Every interval is inference variance under frozen weights.
+%
+% THIS IS THE CORRECTED ARM (2026-09-07). Same six folds, same
+% manifests, same encoders, same label collapse. TWO protocol
+% changes relative to the \xsb* block:
+%   1. early stopping disabled (patience == epochs == 200).
+%      The published folds stopped at 21-46 epochs, inside the
+%      ln(K) plateau, so they measured the stopping rule as
+%      much as site transfer.
+%   2. training is SEEDED (--train-seed 1); the published runs
+%      were not, and seeding also gives each dataloader worker
+%      its own augmentation stream.
+% Both arms are therefore ONE draw each. The difference between
+% them is NOT separated into stopping rule vs retraining
+% variance, and no macro here should be quoted as if it were.
+% What licenses reading it as the stopping rule is the pattern,
+% not any single cell: the gain is consistent across folds for
+% the encoders that plateau, and absent for GeomMLP, which has
+% no plateau and is the control.
+% ==========================================================================
+
+% --------------------------------------------------------------------------
+% Fold sizes and majority-class baselines (post-attrition)
+% --------------------------------------------------------------------------
+% site PH | group 1 (site isolated) | datasets FB-56+FB-5A
+\newcommand{\xsbfPHNtest}{1960}
+\newcommand{\xsbfPHNtrain}{4178}
+\newcommand{\xsbfPHMaj}{0.800}  % majority-class rate = accuracy of a constant predictor
+
+% site FC | group 1 (site isolated) | datasets FB-56+FB-5A
+\newcommand{\xsbfFCNtest}{1259}
+\newcommand{\xsbfFCNtrain}{4774}
+\newcommand{\xsbfFCMaj}{0.919}  % majority-class rate = accuracy of a constant predictor
+
+% site PR | group 1 (site isolated) | datasets FB-56+FB-5A
+\newcommand{\xsbfPRNtest}{589}
+\newcommand{\xsbfPRNtrain}{5342}
+\newcommand{\xsbfPRMaj}{0.778}  % majority-class rate = accuracy of a constant predictor
+
+% site GW | group 2 (site+dataset) | datasets FB-5A
+\newcommand{\xsbfGWNtest}{744}
+\newcommand{\xsbfGWNtrain}{5211}
+\newcommand{\xsbfGWMaj}{0.812}  % majority-class rate = accuracy of a constant predictor
+
+% site PT | group 2 (site+dataset) | datasets FB-5A
+\newcommand{\xsbfPTNtest}{473}
+\newcommand{\xsbfPTNtrain}{5442}
+\newcommand{\xsbfPTMaj}{0.732}  % majority-class rate = accuracy of a constant predictor
+
+% site LC | group 2 (site+dataset) | datasets FB-56
+\newcommand{\xsbfLCNtest}{120}
+\newcommand{\xsbfLCNtrain}{5742}
+\newcommand{\xsbfLCMaj}{0.708}  % majority-class rate = accuracy of a constant predictor
+
+% --------------------------------------------------------------------------
+% GROUP 1 — site isolated from dataset (both FB-56 and FB-5A remain in training)
+% --------------------------------------------------------------------------
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PH encoder=geommlp head=softmax level=scan metric=macro_auc n_seeds=1 n_units=1960 n_subjects=1959
+\newcommand{\xsbfPHGmlpAuc}{0.625}
+\newcommand{\xsbfPHGmlpAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPHGmlpAucCI}{[0.594, 0.657]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PH encoder=geommlp head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=1960 n_subjects=1959
+\newcommand{\xsbfPHGmlpFone}{0.576}
+\newcommand{\xsbfPHGmlpFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPHGmlpFoneCI}{[0.552, 0.600]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PH encoder=geommlp head=softmax level=scan metric=accuracy n_seeds=1 n_units=1960 n_subjects=1959
+\newcommand{\xsbfPHGmlpAcc}{0.678}
+\newcommand{\xsbfPHGmlpAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPHGmlpAccCI}{[0.655, 0.698]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PH encoder=pointnet head=softmax level=scan metric=macro_auc n_seeds=1 n_units=1960 n_subjects=1959
+\newcommand{\xsbfPHPnetAuc}{0.699}
+\newcommand{\xsbfPHPnetAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPHPnetAucCI}{[0.671, 0.727]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PH encoder=pointnet head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=1960 n_subjects=1959
+\newcommand{\xsbfPHPnetFone}{0.593}
+\newcommand{\xsbfPHPnetFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPHPnetFoneCI}{[0.571, 0.616]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PH encoder=pointnet head=softmax level=scan metric=accuracy n_seeds=1 n_units=1960 n_subjects=1959
+\newcommand{\xsbfPHPnetAcc}{0.664}
+\newcommand{\xsbfPHPnetAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPHPnetAccCI}{[0.643, 0.685]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PH encoder=dgcnn head=softmax level=scan metric=macro_auc n_seeds=1 n_units=1960 n_subjects=1959
+\newcommand{\xsbfPHDgcnnAuc}{0.811}
+\newcommand{\xsbfPHDgcnnAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPHDgcnnAucCI}{[0.787, 0.834]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PH encoder=dgcnn head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=1960 n_subjects=1959
+\newcommand{\xsbfPHDgcnnFone}{0.701}
+\newcommand{\xsbfPHDgcnnFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPHDgcnnFoneCI}{[0.673, 0.726]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PH encoder=dgcnn head=softmax level=scan metric=accuracy n_seeds=1 n_units=1960 n_subjects=1959
+\newcommand{\xsbfPHDgcnnAcc}{0.823}
+\newcommand{\xsbfPHDgcnnAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPHDgcnnAccCI}{[0.805, 0.839]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PH encoder=pointnet2 head=softmax level=scan metric=macro_auc n_seeds=5 n_units=1960 n_subjects=1959
+\newcommand{\xsbfPHPtwoAuc}{0.753}
+\newcommand{\xsbfPHPtwoAucSD}{0.0042}  % inference-seed SD, weights frozen
+\newcommand{\xsbfPHPtwoAucCI}{[0.727, 0.779]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PH encoder=pointnet2 head=softmax level=scan metric=macro_f1 n_seeds=5 n_units=1960 n_subjects=1959
+\newcommand{\xsbfPHPtwoFone}{0.654}
+\newcommand{\xsbfPHPtwoFoneSD}{0.0079}  % inference-seed SD, weights frozen
+\newcommand{\xsbfPHPtwoFoneCI}{[0.633, 0.675]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PH encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=1960 n_subjects=1959
+\newcommand{\xsbfPHPtwoAcc}{0.743}
+\newcommand{\xsbfPHPtwoAccSD}{0.0045}  % inference-seed SD, weights frozen
+\newcommand{\xsbfPHPtwoAccCI}{[0.726, 0.760]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_FC encoder=geommlp head=softmax level=scan metric=macro_auc n_seeds=1 n_units=1259 n_subjects=1259
+\newcommand{\xsbfFCGmlpAuc}{0.643}
+\newcommand{\xsbfFCGmlpAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfFCGmlpAucCI}{[0.587, 0.695]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_FC encoder=geommlp head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=1259 n_subjects=1259
+\newcommand{\xsbfFCGmlpFone}{0.498}
+\newcommand{\xsbfFCGmlpFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfFCGmlpFoneCI}{[0.471, 0.527]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_FC encoder=geommlp head=softmax level=scan metric=accuracy n_seeds=1 n_units=1259 n_subjects=1259
+\newcommand{\xsbfFCGmlpAcc}{0.676}
+\newcommand{\xsbfFCGmlpAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfFCGmlpAccCI}{[0.650, 0.701]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_FC encoder=pointnet head=softmax level=scan metric=macro_auc n_seeds=1 n_units=1259 n_subjects=1259
+\newcommand{\xsbfFCPnetAuc}{0.674}
+\newcommand{\xsbfFCPnetAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfFCPnetAucCI}{[0.610, 0.733]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_FC encoder=pointnet head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=1259 n_subjects=1259
+\newcommand{\xsbfFCPnetFone}{0.548}
+\newcommand{\xsbfFCPnetFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfFCPnetFoneCI}{[0.517, 0.578]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_FC encoder=pointnet head=softmax level=scan metric=accuracy n_seeds=1 n_units=1259 n_subjects=1259
+\newcommand{\xsbfFCPnetAcc}{0.743}
+\newcommand{\xsbfFCPnetAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfFCPnetAccCI}{[0.719, 0.767]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_FC encoder=dgcnn head=softmax level=scan metric=macro_auc n_seeds=1 n_units=1259 n_subjects=1259
+\newcommand{\xsbfFCDgcnnAuc}{0.822}
+\newcommand{\xsbfFCDgcnnAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfFCDgcnnAucCI}{[0.779, 0.861]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_FC encoder=dgcnn head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=1259 n_subjects=1259
+\newcommand{\xsbfFCDgcnnFone}{0.635}
+\newcommand{\xsbfFCDgcnnFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfFCDgcnnFoneCI}{[0.599, 0.671]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_FC encoder=dgcnn head=softmax level=scan metric=accuracy n_seeds=1 n_units=1259 n_subjects=1259
+\newcommand{\xsbfFCDgcnnAcc}{0.840}
+\newcommand{\xsbfFCDgcnnAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfFCDgcnnAccCI}{[0.819, 0.859]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_FC encoder=pointnet2 head=softmax level=scan metric=macro_auc n_seeds=5 n_units=1259 n_subjects=1259
+\newcommand{\xsbfFCPtwoAuc}{0.692}
+\newcommand{\xsbfFCPtwoAucSD}{0.0082}  % inference-seed SD, weights frozen
+\newcommand{\xsbfFCPtwoAucCI}{[0.638, 0.740]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_FC encoder=pointnet2 head=softmax level=scan metric=macro_f1 n_seeds=5 n_units=1259 n_subjects=1259
+\newcommand{\xsbfFCPtwoFone}{0.535}
+\newcommand{\xsbfFCPtwoFoneSD}{0.0057}  % inference-seed SD, weights frozen
+\newcommand{\xsbfFCPtwoFoneCI}{[0.508, 0.563]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_FC encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=1259 n_subjects=1259
+\newcommand{\xsbfFCPtwoAcc}{0.720}
+\newcommand{\xsbfFCPtwoAccSD}{0.0019}  % inference-seed SD, weights frozen
+\newcommand{\xsbfFCPtwoAccCI}{[0.697, 0.741]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PR encoder=geommlp head=softmax level=scan metric=macro_auc n_seeds=1 n_units=589 n_subjects=589
+\newcommand{\xsbfPRGmlpAuc}{0.648}
+\newcommand{\xsbfPRGmlpAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPRGmlpAucCI}{[0.596, 0.703]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PR encoder=geommlp head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=589 n_subjects=589
+\newcommand{\xsbfPRGmlpFone}{0.591}
+\newcommand{\xsbfPRGmlpFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPRGmlpFoneCI}{[0.551, 0.635]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PR encoder=geommlp head=softmax level=scan metric=accuracy n_seeds=1 n_units=589 n_subjects=589
+\newcommand{\xsbfPRGmlpAcc}{0.677}
+\newcommand{\xsbfPRGmlpAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPRGmlpAccCI}{[0.640, 0.716]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PR encoder=pointnet head=softmax level=scan metric=macro_auc n_seeds=1 n_units=589 n_subjects=589
+\newcommand{\xsbfPRPnetAuc}{0.559}
+\newcommand{\xsbfPRPnetAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPRPnetAucCI}{[0.500, 0.616]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PR encoder=pointnet head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=589 n_subjects=589
+\newcommand{\xsbfPRPnetFone}{0.526}
+\newcommand{\xsbfPRPnetFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPRPnetFoneCI}{[0.486, 0.570]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PR encoder=pointnet head=softmax level=scan metric=accuracy n_seeds=1 n_units=589 n_subjects=589
+\newcommand{\xsbfPRPnetAcc}{0.635}
+\newcommand{\xsbfPRPnetAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPRPnetAccCI}{[0.596, 0.674]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PR encoder=dgcnn head=softmax level=scan metric=macro_auc n_seeds=1 n_units=589 n_subjects=589
+\newcommand{\xsbfPRDgcnnAuc}{0.879}
+\newcommand{\xsbfPRDgcnnAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPRDgcnnAucCI}{[0.846, 0.909]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PR encoder=dgcnn head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=589 n_subjects=589
+\newcommand{\xsbfPRDgcnnFone}{0.787}
+\newcommand{\xsbfPRDgcnnFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPRDgcnnFoneCI}{[0.746, 0.824]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PR encoder=dgcnn head=softmax level=scan metric=accuracy n_seeds=1 n_units=589 n_subjects=589
+\newcommand{\xsbfPRDgcnnAcc}{0.851}
+\newcommand{\xsbfPRDgcnnAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPRDgcnnAccCI}{[0.822, 0.878]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PR encoder=pointnet2 head=softmax level=scan metric=macro_auc n_seeds=5 n_units=589 n_subjects=589
+\newcommand{\xsbfPRPtwoAuc}{0.870}
+\newcommand{\xsbfPRPtwoAucSD}{0.0056}  % inference-seed SD, weights frozen
+\newcommand{\xsbfPRPtwoAucCI}{[0.837, 0.901]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PR encoder=pointnet2 head=softmax level=scan metric=macro_f1 n_seeds=5 n_units=589 n_subjects=589
+\newcommand{\xsbfPRPtwoFone}{0.757}
+\newcommand{\xsbfPRPtwoFoneSD}{0.0073}  % inference-seed SD, weights frozen
+\newcommand{\xsbfPRPtwoFoneCI}{[0.720, 0.792]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PR encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=589 n_subjects=589
+\newcommand{\xsbfPRPtwoAcc}{0.819}
+\newcommand{\xsbfPRPtwoAccSD}{0.0084}  % inference-seed SD, weights frozen
+\newcommand{\xsbfPRPtwoAccCI}{[0.792, 0.846]}  % 95% bootstrap over held-out-site test subjects
+
+% --------------------------------------------------------------------------
+% GROUP 2 — site and dataset confounded (single-dataset sites)
+% --------------------------------------------------------------------------
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_GW encoder=geommlp head=softmax level=scan metric=macro_auc n_seeds=1 n_units=744 n_subjects=744
+\newcommand{\xsbfGWGmlpAuc}{0.564}
+\newcommand{\xsbfGWGmlpAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfGWGmlpAucCI}{[0.517, 0.609]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_GW encoder=geommlp head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=744 n_subjects=744
+\newcommand{\xsbfGWGmlpFone}{0.488}
+\newcommand{\xsbfGWGmlpFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfGWGmlpFoneCI}{[0.453, 0.523]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_GW encoder=geommlp head=softmax level=scan metric=accuracy n_seeds=1 n_units=744 n_subjects=744
+\newcommand{\xsbfGWGmlpAcc}{0.573}
+\newcommand{\xsbfGWGmlpAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfGWGmlpAccCI}{[0.536, 0.608]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_GW encoder=pointnet head=softmax level=scan metric=macro_auc n_seeds=1 n_units=744 n_subjects=744
+\newcommand{\xsbfGWPnetAuc}{0.679}
+\newcommand{\xsbfGWPnetAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfGWPnetAucCI}{[0.632, 0.725]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_GW encoder=pointnet head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=744 n_subjects=744
+\newcommand{\xsbfGWPnetFone}{0.581}
+\newcommand{\xsbfGWPnetFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfGWPnetFoneCI}{[0.544, 0.619]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_GW encoder=pointnet head=softmax level=scan metric=accuracy n_seeds=1 n_units=744 n_subjects=744
+\newcommand{\xsbfGWPnetAcc}{0.655}
+\newcommand{\xsbfGWPnetAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfGWPnetAccCI}{[0.621, 0.691]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_GW encoder=dgcnn head=softmax level=scan metric=macro_auc n_seeds=1 n_units=744 n_subjects=744
+\newcommand{\xsbfGWDgcnnAuc}{0.744}
+\newcommand{\xsbfGWDgcnnAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfGWDgcnnAucCI}{[0.704, 0.785]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_GW encoder=dgcnn head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=744 n_subjects=744
+\newcommand{\xsbfGWDgcnnFone}{0.629}
+\newcommand{\xsbfGWDgcnnFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfGWDgcnnFoneCI}{[0.589, 0.668]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_GW encoder=dgcnn head=softmax level=scan metric=accuracy n_seeds=1 n_units=744 n_subjects=744
+\newcommand{\xsbfGWDgcnnAcc}{0.743}
+\newcommand{\xsbfGWDgcnnAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfGWDgcnnAccCI}{[0.714, 0.774]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_GW encoder=pointnet2 head=softmax level=scan metric=macro_auc n_seeds=5 n_units=744 n_subjects=744
+\newcommand{\xsbfGWPtwoAuc}{0.744}
+\newcommand{\xsbfGWPtwoAucSD}{0.0105}  % inference-seed SD, weights frozen
+\newcommand{\xsbfGWPtwoAucCI}{[0.700, 0.782]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_GW encoder=pointnet2 head=softmax level=scan metric=macro_f1 n_seeds=5 n_units=744 n_subjects=744
+\newcommand{\xsbfGWPtwoFone}{0.619}
+\newcommand{\xsbfGWPtwoFoneSD}{0.0134}  % inference-seed SD, weights frozen
+\newcommand{\xsbfGWPtwoFoneCI}{[0.587, 0.649]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_GW encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=744 n_subjects=744
+\newcommand{\xsbfGWPtwoAcc}{0.695}
+\newcommand{\xsbfGWPtwoAccSD}{0.0096}  % inference-seed SD, weights frozen
+\newcommand{\xsbfGWPtwoAccCI}{[0.666, 0.723]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PT encoder=geommlp head=softmax level=scan metric=macro_auc n_seeds=1 n_units=473 n_subjects=473
+\newcommand{\xsbfPTGmlpAuc}{0.640}
+\newcommand{\xsbfPTGmlpAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPTGmlpAucCI}{[0.583, 0.697]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PT encoder=geommlp head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=473 n_subjects=473
+\newcommand{\xsbfPTGmlpFone}{0.610}
+\newcommand{\xsbfPTGmlpFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPTGmlpFoneCI}{[0.563, 0.654]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PT encoder=geommlp head=softmax level=scan metric=accuracy n_seeds=1 n_units=473 n_subjects=473
+\newcommand{\xsbfPTGmlpAcc}{0.700}
+\newcommand{\xsbfPTGmlpAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPTGmlpAccCI}{[0.658, 0.738]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PT encoder=pointnet head=softmax level=scan metric=macro_auc n_seeds=1 n_units=473 n_subjects=473
+\newcommand{\xsbfPTPnetAuc}{0.750}
+\newcommand{\xsbfPTPnetAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPTPnetAucCI}{[0.701, 0.795]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PT encoder=pointnet head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=473 n_subjects=473
+\newcommand{\xsbfPTPnetFone}{0.649}
+\newcommand{\xsbfPTPnetFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPTPnetFoneCI}{[0.601, 0.693]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PT encoder=pointnet head=softmax level=scan metric=accuracy n_seeds=1 n_units=473 n_subjects=473
+\newcommand{\xsbfPTPnetAcc}{0.702}
+\newcommand{\xsbfPTPnetAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPTPnetAccCI}{[0.662, 0.742]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PT encoder=dgcnn head=softmax level=scan metric=macro_auc n_seeds=1 n_units=473 n_subjects=473
+\newcommand{\xsbfPTDgcnnAuc}{0.823}
+\newcommand{\xsbfPTDgcnnAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPTDgcnnAucCI}{[0.779, 0.867]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PT encoder=dgcnn head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=473 n_subjects=473
+\newcommand{\xsbfPTDgcnnFone}{0.730}
+\newcommand{\xsbfPTDgcnnFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPTDgcnnFoneCI}{[0.687, 0.775]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PT encoder=dgcnn head=softmax level=scan metric=accuracy n_seeds=1 n_units=473 n_subjects=473
+\newcommand{\xsbfPTDgcnnAcc}{0.772}
+\newcommand{\xsbfPTDgcnnAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfPTDgcnnAccCI}{[0.734, 0.810]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PT encoder=pointnet2 head=softmax level=scan metric=macro_auc n_seeds=5 n_units=473 n_subjects=473
+\newcommand{\xsbfPTPtwoAuc}{0.815}
+\newcommand{\xsbfPTPtwoAucSD}{0.0112}  % inference-seed SD, weights frozen
+\newcommand{\xsbfPTPtwoAucCI}{[0.773, 0.855]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PT encoder=pointnet2 head=softmax level=scan metric=macro_f1 n_seeds=5 n_units=473 n_subjects=473
+\newcommand{\xsbfPTPtwoFone}{0.722}
+\newcommand{\xsbfPTPtwoFoneSD}{0.0095}  % inference-seed SD, weights frozen
+\newcommand{\xsbfPTPtwoFoneCI}{[0.684, 0.756]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_PT encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=473 n_subjects=473
+\newcommand{\xsbfPTPtwoAcc}{0.758}
+\newcommand{\xsbfPTPtwoAccSD}{0.0095}  % inference-seed SD, weights frozen
+\newcommand{\xsbfPTPtwoAccCI}{[0.725, 0.789]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_LC encoder=geommlp head=softmax level=scan metric=macro_auc n_seeds=1 n_units=120 n_subjects=120
+\newcommand{\xsbfLCGmlpAuc}{0.437}
+\newcommand{\xsbfLCGmlpAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfLCGmlpAucCI}{[0.316, 0.551]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_LC encoder=geommlp head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=120 n_subjects=120
+\newcommand{\xsbfLCGmlpFone}{0.481}
+\newcommand{\xsbfLCGmlpFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfLCGmlpFoneCI}{[0.403, 0.569]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_LC encoder=geommlp head=softmax level=scan metric=accuracy n_seeds=1 n_units=120 n_subjects=120
+\newcommand{\xsbfLCGmlpAcc}{0.700}
+\newcommand{\xsbfLCGmlpAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfLCGmlpAccCI}{[0.617, 0.783]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_LC encoder=pointnet head=softmax level=scan metric=macro_auc n_seeds=1 n_units=120 n_subjects=120
+\newcommand{\xsbfLCPnetAuc}{0.483}
+\newcommand{\xsbfLCPnetAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfLCPnetAucCI}{[0.370, 0.595]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_LC encoder=pointnet head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=120 n_subjects=120
+\newcommand{\xsbfLCPnetFone}{0.465}
+\newcommand{\xsbfLCPnetFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfLCPnetFoneCI}{[0.386, 0.549]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_LC encoder=pointnet head=softmax level=scan metric=accuracy n_seeds=1 n_units=120 n_subjects=120
+\newcommand{\xsbfLCPnetAcc}{0.642}
+\newcommand{\xsbfLCPnetAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfLCPnetAccCI}{[0.550, 0.725]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_LC encoder=dgcnn head=softmax level=scan metric=macro_auc n_seeds=1 n_units=120 n_subjects=120
+\newcommand{\xsbfLCDgcnnAuc}{0.662}
+\newcommand{\xsbfLCDgcnnAucSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfLCDgcnnAucCI}{[0.555, 0.764]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_LC encoder=dgcnn head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=120 n_subjects=120
+\newcommand{\xsbfLCDgcnnFone}{0.602}
+\newcommand{\xsbfLCDgcnnFoneSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfLCDgcnnFoneCI}{[0.505, 0.697]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_LC encoder=dgcnn head=softmax level=scan metric=accuracy n_seeds=1 n_units=120 n_subjects=120
+\newcommand{\xsbfLCDgcnnAcc}{0.692}
+\newcommand{\xsbfLCDgcnnAccSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\xsbfLCDgcnnAccCI}{[0.608, 0.775]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_LC encoder=pointnet2 head=softmax level=scan metric=macro_auc n_seeds=5 n_units=120 n_subjects=120
+\newcommand{\xsbfLCPtwoAuc}{0.622}
+\newcommand{\xsbfLCPtwoAucSD}{0.0245}  % inference-seed SD, weights frozen
+\newcommand{\xsbfLCPtwoAucCI}{[0.514, 0.721]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_LC encoder=pointnet2 head=softmax level=scan metric=macro_f1 n_seeds=5 n_units=120 n_subjects=120
+\newcommand{\xsbfLCPtwoFone}{0.543}
+\newcommand{\xsbfLCPtwoFoneSD}{0.0216}  % inference-seed SD, weights frozen
+\newcommand{\xsbfLCPtwoFoneCI}{[0.464, 0.623]}  % 95% bootstrap over held-out-site test subjects
+
+% summary_ci_xsitefix_bin.csv | task=XSB_fix_LC encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=120 n_subjects=120
+\newcommand{\xsbfLCPtwoAcc}{0.708}
+\newcommand{\xsbfLCPtwoAccSD}{0.0167}  % inference-seed SD, weights frozen
+\newcommand{\xsbfLCPtwoAccCI}{[0.628, 0.782]}  % 95% bootstrap over held-out-site test subjects
+
+% --------------------------------------------------------------------------
+% Group-level macro-AUC ranges over folds, PointNet++ only.
+% Ranges, not means: three folds is too few for an average to mean
+% anything, and averaging would also hide a fold that behaves
+% differently from the other two.
+% --------------------------------------------------------------------------
+% folds FC, PH, PR | encoder pointnet2 | metric macro_auc | level scan
+\newcommand{\xsbfGoneAucLo}{0.692}
+\newcommand{\xsbfGoneAucHi}{0.870}
+\newcommand{\xsbfGoneNfolds}{3}
+\newcommand{\xsbfGoneNaboveChance}{3}  % folds whose 95% CI lies entirely above 0.50
+
+% folds GW, LC, PT | encoder pointnet2 | metric macro_auc | level scan
+\newcommand{\xsbfGtwoAucLo}{0.622}
+\newcommand{\xsbfGtwoAucHi}{0.815}
+\newcommand{\xsbfGtwoNfolds}{3}
+\newcommand{\xsbfGtwoNaboveChance}{3}  % folds whose 95% CI lies entirely above 0.50
+
+% --------------------------------------------------------------------------
+% Census over all fold x encoder cells, by their own bootstrap CI.
+% --------------------------------------------------------------------------
+\newcommand{\xsbfNcells}{24}
+\newcommand{\xsbfNcellsAbove}{21}  % CI entirely above chance
+\newcommand{\xsbfNcellsSpan}{3}  % CI contains chance
+\newcommand{\xsbfNcellsBelow}{0}  % CI entirely below chance
+\newcommand{\xsbfGmlpNaboveChance}{5}  % of 6 folds, geommlp
+\newcommand{\xsbfGmlpAucLo}{0.437}
+\newcommand{\xsbfGmlpAucHi}{0.648}
+\newcommand{\xsbfPnetNaboveChance}{4}  % of 6 folds, pointnet
+\newcommand{\xsbfPnetAucLo}{0.483}
+\newcommand{\xsbfPnetAucHi}{0.750}
+\newcommand{\xsbfDgcnnNaboveChance}{6}  % of 6 folds, dgcnn
+\newcommand{\xsbfDgcnnAucLo}{0.662}
+\newcommand{\xsbfDgcnnAucHi}{0.879}
+\newcommand{\xsbfPtwoNaboveChance}{6}  % of 6 folds, pointnet2
+\newcommand{\xsbfPtwoAucLo}{0.622}
+\newcommand{\xsbfPtwoAucHi}{0.870}
+
+% --------------------------------------------------------------------------
+% Attenuation vs within-site (A2_fix, 5-retraining mean, scan level, softmax head).
+% A fold MEAN is used only for this delta and never as a headline: the
+% folds differ in size, prevalence and whether dataset moves with site,
+% so they are not exchangeable and the prose reports ranges.
+% --------------------------------------------------------------------------
+% geommlp: within-site 0.653 -> fold mean 0.593
+\newcommand{\xsbfGmlpWithin}{0.653}
+\newcommand{\xsbfGmlpFoldMean}{0.593}
+\newcommand{\xsbfGmlpAtten}{6.1}  % percentage points, within-site minus fold mean
+% pointnet: within-site 0.712 -> fold mean 0.641
+\newcommand{\xsbfPnetWithin}{0.712}
+\newcommand{\xsbfPnetFoldMean}{0.641}
+\newcommand{\xsbfPnetAtten}{7.2}  % percentage points, within-site minus fold mean
+% dgcnn: within-site 0.831 -> fold mean 0.790
+\newcommand{\xsbfDgcnnWithin}{0.831}
+\newcommand{\xsbfDgcnnFoldMean}{0.790}
+\newcommand{\xsbfDgcnnAtten}{4.1}  % percentage points, within-site minus fold mean
+% pointnet2: within-site 0.843 -> fold mean 0.749
+\newcommand{\xsbfPtwoWithin}{0.843}
+\newcommand{\xsbfPtwoFoldMean}{0.749}
+\newcommand{\xsbfPtwoAtten}{9.4}  % percentage points, within-site minus fold mean
+
+\newcommand{\xsbfGoneCellsAbove}{11}  % of 12 cells, folds PH/FC/PR
+\newcommand{\xsbfGoneNcells}{12}
+\newcommand{\xsbfGtwoCellsAbove}{10}  % of 12 cells, folds GW/PT/LC
+\newcommand{\xsbfGtwoNcells}{12}
+
+\newcommand{\xsbfNfolds}{6}
+\newcommand{\xsbfNencoders}{4}
+\newcommand{\xsbfNruns}{24}  % fresh training runs behind this block
+

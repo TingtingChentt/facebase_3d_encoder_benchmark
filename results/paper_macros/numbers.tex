@@ -1,0 +1,623 @@
+% ============================================================================
+% numbers.tex — EVERY quantitative value used in the manuscript, in one place.
+%
+% WHY THIS FILE EXISTS
+%   The prose in main.tex contains no literal number. Every quantity is a macro
+%   defined here (or in the machine-generated block this file pulls in), so a
+%   value can be corrected in exactly one place and the manuscript follows.
+%
+% TWO-FILE STRUCTURE  (introduced 2026-08-08, coder's re-run merge)
+%   numbers_reruns.tex   MACHINE-GENERATED, DO NOT HAND-EDIT. Every model-derived
+%                        number: seed-averaged point estimate \X, inference-seed
+%                        SD \XSD, bootstrap-over-subjects interval \XCI. Emitted by
+%                        scripts/paper_reruns/emit_numbers.py from summary_ci.csv
+%                        (336 rows) and contrast_tests.csv (186 rows). Every macro
+%                        carries its source row as a preceding comment. To refresh:
+%                        re-run the emitter and copy the file over.
+%   numbers.tex (here)   Everything the emitter cannot produce: cohort counts from
+%                        the manifests, chance baselines, literature values, the
+%                        pre-correction leakage arm, and the prose-formatted
+%                        wrappers around emitted intervals.
+%
+%   ORDER MATTERS. The \input comes first; this file may then \renewcommand an
+%   emitted macro for presentation, but must never silently change its VALUE.
+%   Any \renewcommand below that alters a number rather than its formatting is a
+%   bug — the emitted block is the source of record for model numbers.
+%
+% WHAT THE INTERVALS MEAN
+%   \XSD is spread across five inference seeds with the model WEIGHTS FROZEN —
+%   it is the farthest-point-sampling draw, nothing else. \XCI is a bootstrap
+%   over test SUBJECTS. The two answer different questions and are never pooled.
+%   NEITHER captures training-seed variance: nothing was retrained. Methods says
+%   so explicitly and must keep saying so.
+%
+% MARKERS (visible while \draftnumstrue, silent when set false)
+%   \prov{x}   provisional — single unseeded run, no CI                (dagger)
+%   \ver{x}    awaiting analyst verification against the manifests     (star)
+%   \conflict{x} two sources disagree; must not ship until resolved    (ddagger)
+%   \unsup{x}  NO EXPERIMENT BEHIND THIS NUMBER — cut it or run it     (section)
+%   Drop the wrapper once a value is settled. The markers only mean something if
+%   they are maintained honestly.
+%
+% PROVENANCE for the hand-maintained values below: dataset manifests (analyst,
+% pending), EXPERIMENTAL_FINDINGS.md (read its 2026-08-04 editor's note first —
+% its body still contains one withdrawn claim and one mislabelled experiment),
+% results_analysis.md, refs.bib.
+% ============================================================================
+
+\input{numbers_reruns}
+%   numbers_xsite.tex    MACHINE-GENERATED, DO NOT HAND-EDIT. The cross-site
+%                        leave-one-site-out block. Emitted by
+%                        scripts/paper_reruns/emit_numbers_xsite.py from
+%                        summary_ci_xsite.csv (72 rows). Same \X / \XSD / \XCI
+%                        convention. Group 1 (\xsGone*) and Group 2 (\xsGtwo*)
+%                        are NEVER pooled — there is deliberately no macro
+%                        spanning both. To refresh: re-run the emitter, copy over.
+\input{numbers_xsite}
+%   numbers_xsite_bin.tex  MACHINE-GENERATED, DO NOT HAND-EDIT. The SAME six
+%                        leave-one-site-out folds run on the BINARY screening
+%                        task (A2, affected vs unaffected within the cleft
+%                        cohort). Emitted by the same script with --binary from
+%                        summary_ci_xsite_bin.csv (72 rows). Its macros live in
+%                        a separate \xsb* namespace precisely so that this file
+%                        and numbers_xsite.tex can be \input together without
+%                        either silently redefining the other's \xs<Site><Enc>
+%                        names — the two blocks are DIFFERENT TASKS on the same
+%                        folds, and a four-class value must never be readable
+%                        through a binary macro name or vice versa.
+%                        The within-site reference for this block is \ofcBin*
+%                        (task A2), NOT \combAuc — the combined-cohort detection
+%                        task was not run cross-site.
+\input{numbers_xsite_bin}
+%   numbers_xsitefix.tex / numbers_xsitefix_bin.tex
+%                        MACHINE-GENERATED, DO NOT HAND-EDIT. Added 2026-09-08,
+%                        thread facebase3d-xsitediag-2026-09-07. The SAME six
+%                        folds, encoders and label collapses as the two blocks
+%                        above, retrained with early stopping DISABLED after the
+%                        published folds were found to have stopped at 21--46
+%                        epochs, inside the ln(K) plateau. Emitted by the same
+%                        script with --fix (and --fix --binary).
+%                        THEY REBIND NOTHING. The corrected arm lives in \xsf*
+%                        and \xsbf*; the published patience-20 arm keeps \xs*
+%                        and \xsb*. Sec 2.7 quotes the corrected arm and cites
+%                        the published one as the truncated comparison, so both
+%                        have to remain readable and separately named.
+%                        Each cell is still ONE training run, and the corrected
+%                        runs are seeded while the published ones were not, so
+%                        the difference between the two arms confounds the
+%                        stopping rule with retraining variance. Methods says so.
+\input{numbers_xsitefix}
+\input{numbers_xsitefix_bin}
+%   numbers_errconc.tex  MACHINE-GENERATED, DO NOT HAND-EDIT. Error-concentration
+%                        statistics emitted by scripts/paper_reruns/error_concentration.py
+%                        from the cached prediction arrays. Replaces the draft's
+%                        unsupported "under an independence model..." sentence.
+\input{numbers_errconc}
+%   numbers_recog.tex    MACHINE-GENERATED, DO NOT HAND-EDIT. Class-size/F1
+%                        correlation, matched-size spread and the RASopathy
+%                        confusion enrichment, from scripts/paper_reruns/recognizability.py.
+%                        RESOLVES the poster-vs-results_analysis rho conflict.
+\input{numbers_recog}
+%   numbers_perclass_trainseed.tex
+%                        MACHINE-GENERATED, DO NOT HAND-EDIT. Added 2026-09-08.
+%                        The per-class decomposition of the softmax-vs-prototype
+%                        contrast, over the FIVE-TRAINING-SEED sweep. Emitted by
+%                        scripts/paper_reruns/emit_perclass.py --family trainseed,
+%                        which cross-checks its macro-F1 total against
+%                        contrast_tests_trainseed.csv on every run and refuses to
+%                        write if the two disagree.
+%                        SUPERSEDES the hand-maintained \dxHead* / \synPerClass*
+%                        values below and in numbers_perclass.tex, which came
+%                        from ONE training run and decomposed a 6.1 pp macro-F1
+%                        difference the manuscript no longer reports (it reports
+%                        3.6 pp). The old macros are left defined but are no
+%                        longer used by the prose.
+\input{numbers_perclass_trainseed}
+
+% ── Superseded RASopathy enrichment (named so the prose can cite what it is
+%    retracting without a bare literal). Both values are regenerable with
+%    scripts/paper_reruns/recognizability.py --family legacy, which reproduces
+%    them exactly; they come from ONE training checkpoint. The five-model
+%    values that replace them are \rasWithinFrac / \rasEnrich in
+%    numbers_recog.tex, and the per-model range is \rasWithinFracLo--Hi.
+\newcommand{\rasWithinFracLegacy}{27\%}   % one checkpoint, 5 inference seeds
+\newcommand{\rasEnrichLegacy}{3}          % 2.8x, rounded as published
+
+% ── Cohort ──────────────────────────────────────────────────────────────────
+% F2 RESOLVED 2026-08-10. Every count below was verified directly against the
+% manifests on disk (row counts and groupby, not transcribed from any document).
+%
+% THE BUG THAT WAS HERE. The Abstract and Introduction paired \NScans{26,673}
+% with \NSubjects{18,076}. Those are TWO DIFFERENT CORPORA and neither number
+% described the other:
+%   26,673 = the five non-TJ0 datasets counted WHOLE + FB-TJ0 counted at its
+%            19-class-FILTERED size. A hybrid. It is not the size of any corpus
+%            this paper uses, trains on, or reports — writer's flag F2.
+%   18,076 = subjects of combined_manifest.csv, whose scan count is 24,973.
+%            A real number, but of the COMBINED BINARY TASK corpus, not of the
+%            processed corpus the sentence claimed to describe.
+%
+% THE CONSISTENT PAIR, verified per dataset (scans / subjects):
+%   FB-5A 3,099/3,099 · FB-56 3,839/3,838 · FB-TJ0 13,307/5,103
+%   FB-TK0 686/686 · FB-VWP 2,454/2,454 · FB-TX4 3,605/3,605
+%   TOTAL 26,990 / 18,785   <- \NScansProc / \NSubjectsProc
+% Sources: ofc_manifest.csv (groupby dataset; study_id unique within dataset),
+% syndrome_manifest.csv (fbid), controls_manifest.csv (one scan per subject,
+% cross-checked against combined_manifest.csv's subject_id assignment).
+%
+% USE \NScansProc/\NSubjectsProc for the corpus the benchmark DRAWS ON, and
+% \combNScansTask/\NSubjects for the combined binary TASK. Never mix the two in
+% one sentence — that is exactly the error being fixed here.
+\newcommand{\NSubjectsProc}{18{,}785}     % subjects of the 26,990-scan processed corpus
+\newcommand{\NSubjects}{18{,}076}         % subjects of the 24,973-scan COMBINED BINARY task
+\newcommand{\NScansRound}{${\sim}$27{,}000}  % 26,990 — still correct
+\newcommand{\NDatasets}{six}
+% \NVendors DELETED 2026-08-10 (writer's flag F3, resolved). "Four scanner
+% vendors" had no source: dataset_usage_review.md records 3dMD for FB-5A,
+% FB-56 and FB-TJ0 and identifies no scanner for FB-TK0/VWP/TX4. The paired
+% claim that "only FB-TJ0 carries colour" was also WRONG — the only textured
+% dataset in the review is FB-1A (.obj + .mtl), which is EXCLUDED from this
+% paper entirely. Both call sites now state what the metadata supports and
+% assign no vendor count. Left undefined so a stale draft fails loudly.
+\newcommand{\dsFiveA}{3{,}099}      % FB-5A   | ofc_manifest.csv
+\newcommand{\dsFiveSix}{3{,}839}    % FB-56   | ofc_manifest.csv
+\newcommand{\dsTJZero}{12{,}990}    % FB-TJ0 at its 19-class-filtered size | syndrome_manifest_b1.csv
+\newcommand{\dsTKZero}{686}         % FB-TK0  | controls_manifest.csv
+\newcommand{\dsVWP}{2{,}454}        % FB-VWP  | controls_manifest.csv
+\newcommand{\dsTXFour}{3{,}605}     % FB-TX4  | controls_manifest.csv
+
+% Per-dataset SUBJECT counts, same sources as the scan counts above. Verified
+% 2026-08-10; these are what Table 1 and Fig. 1(a) both read, so the table and
+% the figure cannot disagree. FB-TJ0 is the one cohort where scans and subjects
+% differ materially (13,307 / 5,103) — that gap is the whole reason the unit of
+% analysis matters, so it must never be quoted from memory.
+\newcommand{\dsFiveASubj}{3{,}099}
+\newcommand{\dsFiveSixSubj}{3{,}838}
+\newcommand{\dsTJZeroSubj}{5{,}103}
+\newcommand{\dsTKZeroSubj}{686}
+\newcommand{\dsVWPSubj}{2{,}454}
+\newcommand{\dsTXFourSubj}{3{,}605}
+
+% ── Registration attenuation (Fig. 1d) ──────────────────────────────────────
+% Mean per-vertex deviation from the normative template, before and after a
+% regularised non-rigid morph of a real 22q11.2 scan toward the real control
+% template the pipeline selected. Source: figures/fig_reg_meta.json, produced by
+% abstracts/make_registration_fig.py. ILLUSTRATIVE of what dense/non-rigid
+% registration does — our own pipeline performs NO registration at all, and the
+% caption must keep saying so.
+\newcommand{\regDevRaw}{3.6}
+\newcommand{\regDevPost}{1.9}
+\newcommand{\dsOneAexcl}{\ver{63}}        % FB-1A  — in inventory, in no manifest
+\newcommand{\dsVPWexcl}{\ver{26}}         % FB-VPW — in inventory, in no manifest
+
+% F1 RESOLVED 2026-08-10. Was "eight" until writer corrected it 2026-08-04;
+% re-verified directly against the manifests, so \ver{} is dropped:
+%   syndrome_manifest_b1.csv  12,990 rows / 4,955 subjects, max 34, mean 2.62
+%   syndrome_manifest.csv     13,307 rows / 5,103 subjects, max 34, mean 2.61
+%   syndrome_clinical_manifest.csv                          max 26
+% "Eight" was where the tail thins (37 subjects have exactly 8), not where it
+% ends — the old value was not right under any cohort definition.
+\newcommand{\maxScansPerSubj}{34}
+\newcommand{\medScansPerSubj}{2.6}   % FB-TJ0 mean scans/subject (19-class manifest)
+
+% ── Per-task corpus sizes (Methods: Cohort, Label provenance) ───────────────
+% NOTE the three totals are NOT the same corpus and must not be conflated:
+%   processed scans across six datasets   = 26,990   (\NScansProc)
+%   19-class syndrome-category task       = 12,990   (\synNScans)
+%   33-class clinical-diagnosis task      =  3,623   (\dxNScans)
+%   combined binary task                  = 24,973   (\combNScansTask)
+% \NScans (26,673) HAS BEEN DELETED — see the F2 note in the Cohort block above.
+% It was a hybrid matching no corpus and it was the Abstract's headline. Every
+% call site now uses \NScansProc. The macro is deliberately left undefined so a
+% stale draft quoting it fails at build time rather than shipping the hybrid.
+% Row counts verified on disk 2026-08-10: 26,990 = 6,938 (ofc) + 13,307
+% (syndrome) + 6,745 (controls); 24,973 = combined_manifest.csv.
+\newcommand{\NScansProc}{26{,}990}
+\newcommand{\synNScans}{12{,}990}
+\newcommand{\synNSubj}{4{,}955}
+\newcommand{\dxNScans}{3{,}623}
+\newcommand{\dxNSubj}{1{,}241}
+\newcommand{\combNScansTask}{24{,}973}
+\newcommand{\dsTJZeroAll}{13{,}307}  % FB-TJ0 | syndrome_manifest.csv rows (before the 19-class floor)
+\newcommand{\dsTJZeroBin}{11{,}290}  % FB-TJ0 | combined_manifest.csv, dataset==FB-TJ0 (Uncategorized dropped)
+
+% ── Preprocessing attrition (scans in a manifest with no .npy on disk) ──────
+\newcommand{\attritSyn}{\ver{12}}
+\newcommand{\attritDx}{\ver{5}}
+\newcommand{\attritComb}{\ver{361}}
+
+% ── Class inventory ─────────────────────────────────────────────────────────
+\newcommand{\synFloorScans}{175}          % min scans/class, 19-class scheme
+\newcommand{\dxFloorScans}{50}            % min scans/class, 33-class scheme
+\newcommand{\synClassSubjMax}{\ver{978}}  % Control
+\newcommand{\synClassSubjMin}{\ver{51}}   % DNA Repair
+\newcommand{\dxClassSubjMax}{\ver{123}}   % Down Syndrome
+\newcommand{\dxClassSubjMin}{\ver{8}}     % Bohring-Opitz / MPS IIIB
+\newcommand{\uncatSubj}{\ver{709}}        % "Uncategorized", 2nd largest 19-class class
+\newcommand{\controlSubj}{\ver{978}}      % "Control" category, 19-class scheme
+\newcommand{\dysmorphSubj}{\ver{58}}      % "Facial Dysmorphia, possibly genetic"
+% RECOMPUTED 2026-09-14 (thread facebase3d-leakpct-2026-09-14): was 86\%, which
+% reproduces from nothing. Recomputed from rerun_scanlevel.legacy_split() on
+% syndrome_clinical_manifest.csv, keyed on fbid:
+%   test SUBJECTS also in train : 364/427 = 0.8525 -> 85\%   <- the sentence's claim
+%   test SCANS whose subj in train: 452/530 = 0.8528 -> 85\%  (= \leakDxLeakFrac)
+% Neither rounds to 86. Variants checked and rejected: train|val gives 90\%,
+% restricting to subjects with repeats gives 92\%. 85\% is correct on BOTH
+% readings, so the scans/subjects ambiguity in the prose is harmless here.
+\newcommand{\leakTestSeen}{\ver{85\%}}    % 33-cls test subjects also seen in training, scan-level split
+
+% ── Test-set sizes (confirmed by the re-run; coder reply 2026-08-07) ────────
+% These matched the published tables exactly, which is what establishes that the
+% re-run used the same splits, label maps and metric definitions as the original
+% evaluation. The three deterministic encoders also reproduced their published
+% A1 accuracies to three decimals (GeomMLP 0.5656 / PointNet 0.7473 / DGCNN 0.7677).
+\newcommand{\combNtest}{3{,}639}
+\newcommand{\dxNTestSubj}{169}
+\newcommand{\synNTestSubj}{733}
+\newcommand{\dxNTestScans}{475}
+\newcommand{\synNTestScans}{1{,}840}
+
+% ── Chance baselines ────────────────────────────────────────────────────────
+\newcommand{\chanceSyn}{5.3\%}            % 19-class
+\newcommand{\chanceDx}{3.0\%}             % 33-class
+\newcommand{\chanceDxFilt}{4.2\%}         % 24-class filtered
+
+% ============================================================================
+% PROSE FORMATTING OF EMITTED INTERVALS
+% ============================================================================
+% The emitter writes intervals as "[lo, hi]" in raw units. The prose reads them
+% inline in a parenthetical, where a bare bracket pair is ambiguous, so they are
+% re-rendered here as "95% CI lo to hi" in percentage points. VALUES ARE
+% UNCHANGED — only the typography. Each line states the emitted value it wraps
+% so the pair can be checked by eye against numbers_reruns.tex.
+\renewcommand{\aggGainSynCI}{95\% CI $+3.7$ to $+7.2$}    % emitted [3.7, 7.2]
+\renewcommand{\aggGainDxCI}{95\% CI $+5.2$ to $+13.1$}    % emitted [5.2, 13.1]
+
+% ── Aggregation deltas the emitter did not cover ────────────────────────────
+% The prototype-rule and kNN aggregation contrasts, from the same
+% contrast_tests.csv rows (C2_agg_proto / C2_agg_knn11 [pointnet2]), formatted to
+% match the two above. Accuracy unless the name says otherwise.
+%
+% SUPERSEDED, for the record: \aggGainDx was 12 and \aggGainSyn was 4, both from
+% single unseeded runs, and the 19- vs 33-class contrast they supported does not
+% exist — the effect is comparable at both granularities and, for the prototype
+% rule, larger at 19 classes. The old 19-class "null" was an unseeded-FPS
+% artefact, not a finding. Do not reinstate it.
+\newcommand{\aggGainDxPr}{8.9}             % pp, 33-class, prototype
+\newcommand{\aggGainDxPrCI}{95\% CI $+5.1$ to $+13.1$}
+\newcommand{\aggGainSynPr}{9.1}            % pp, 19-class, prototype
+\newcommand{\aggGainSynPrCI}{95\% CI $+7.0$ to $+11.1$}
+% the one genuine null left: kNN at 19 classes gains no top-1 accuracy, though
+% its ranking still improves — the vote, not the pooling, is what discards it.
+\newcommand{\aggGainSynKnn}{+0.9}          % pp, 19-class, kNN — spans zero
+\newcommand{\aggGainSynKnnCI}{95\% CI $-1.2$ to $+2.7$}
+\newcommand{\aggGainSynKnnAuc}{+3.1}       % pp, same contrast, macro AUC
+\newcommand{\aggGainSynKnnAucCI}{95\% CI $+1.9$ to $+4.1$}
+
+% ── The combined-binary exception (coder reply 2026-08-07, result (b)) ──────
+% Aggregation is NOT a uniform gain. On the combined binary task it buys a small
+% amount of accuracy and COSTS macro-F1 — the interval excludes zero on the wrong
+% side. Any statement that subject aggregation is a free gain must carry this
+% scope limit. Source: contrast_tests.csv, C2_agg_softmax[pointnet2] @ C_corrected.
+\newcommand{\aggGainCombAcc}{+0.7}         % pp — SURVIVES
+\newcommand{\aggGainCombAccCI}{95\% CI $+0.2$ to $+1.3$}
+\newcommand{\aggGainCombFone}{$-1.4$}      % pp — REVERSES
+\newcommand{\aggGainCombFoneCI}{95\% CI $-2.1$ to $-0.7$}
+\newcommand{\aggGainCombAuc}{$-0.2$}       % pp — DISSOLVES
+\newcommand{\aggGainCombAucCI}{95\% CI $-0.7$ to $+0.3$}
+
+% ── Head contrast, prototype minus softmax ──────────────────────────────────
+% !! SIGN CONVENTION. contrast_tests.csv and the emitted \headDelta* macros read
+% SOFTMAX MINUS PROTOTYPE. The prose reads the other way round, because the
+% prototype rule is the intervention under test. These macros are therefore the
+% emitted values NEGATED, and each states its emitted counterpart. Never mix the
+% two families in one sentence.
+%
+% Encoder-fixed (contrast C1a): SAME frozen checkpoint, same patients, only the
+% inference-time decision rule differs. Intervals are bootstrap over test
+% SUBJECTS (n=169 at 33 classes), not the inference-seed spread.
+\newcommand{\dxHeadAccDiff}{+3.2}                          % $=-\headDeltaDx$
+\newcommand{\dxHeadAccCI}{95\% CI $-2.0$ to $+8.6$}        % emitted [-8.6, 2.0]
+\newcommand{\dxHeadFoneDiff}{6.1}
+\newcommand{\dxHeadFoneCI}{95\% CI $+0.8$ to $+10.9$}
+\newcommand{\dxHeadAucDiff}{$-1.6$}
+\newcommand{\dxHeadAucCI}{95\% CI $-2.4$ to $+0.7$}
+\newcommand{\synHeadAccDiff}{+0.8}                         % $=-\headDeltaSyn$
+\newcommand{\synHeadAccCI}{95\% CI $-1.1$ to $+2.6$}       % emitted [-2.6, 1.1]
+\newcommand{\synHeadFoneDiff}{+2.3}
+\newcommand{\synHeadFoneCI}{95\% CI $-0.2$ to $+4.7$}
+
+% !! WHAT "NO DIFFERENCE" IS ENTITLED TO SAY (coder reply 2026-08-07, result (c)).
+% Of the head contrasts, exactly ONE is a tight null: 19-class macro-AUC, where
+% the interval is narrow enough to exclude a material difference. Everywhere else
+% the interval contains zero but is too wide to rule out an effect that would
+% matter clinically. Those two situations must not be written with the same
+% sentence. "The heads tie" is licensed only for 19-class AUC; elsewhere the
+% honest form is "we could not separate them, and the interval is wide".
+\newcommand{\synHeadAucDiff}{+0.1}                         % $=-\headDeltaSynAuc$
+\newcommand{\synHeadAucCI}{95\% CI $-1.0$ to $+1.2$}       % the one tight null
+
+% As-published arm (contrast C1b): the prototype numbers come from a SEPARATE
+% CE-trained checkpoint, so this comparison confounds head choice with training
+% run. Kept only to show that the confound is what produced the withdrawn claim —
+% at 33 classes it "refutes the tie" while the encoder-fixed contrast on the same
+% metric does not. Never quote C1b as a head effect.
+\newcommand{\dxHeadAccDiffPub}{+7.0}                       % $=-\headDeltaDxPub$
+\newcommand{\dxHeadAccCIPub}{95\% CI $+1.2$ to $+13.1$}
+
+% Per-class decomposition of the 33-class macro-F1 difference, computed from the
+% per-seed subject-level prediction files (results/paper_reruns/predictions/,
+% B2_corrected__pointnet2__{softmax,proto}__subject__seed0-4.npz), five-seed mean
+% per class. Checked specifically to rule out the near-singleton-class artefact.
+\newcommand{\dxHeadClassesUp}{14}
+\newcommand{\dxHeadClassesDown}{9}
+\newcommand{\dxHeadClassesFlat}{10}
+\newcommand{\dxHeadFoneFromLarge}{4.8}     % pp of the 6.1, from classes n>2
+\newcommand{\dxHeadFoneFromTiny}{1.3}      % pp of the 6.1, from the 8 tiny classes
+\newcommand{\dxHeadTinyClasses}{eight}     % classes with <=2 test subjects (11 subjects total)
+
+% ── Leakage audit — BEFORE arm only ─────────────────────────────────────────
+% !! SUPERSEDED 2026-08-18. The five macros below are the ORIGINAL single-run,
+% unseeded "before" values. They are kept under the standing no-deletion rule and
+% because they are what the earlier drafts reported, but NOTHING SHOULD CITE THEM
+% ANY MORE. Use \leak*BeforeS / \leak*BeforeCI / \leak*DeltaS from numbers_leak.tex,
+% which re-score the ORIGINAL checkpoints on the rebuilt legacy scan-level split
+% under the same five seeds and the same subject bootstrap as the corrected arm.
+%
+% The premise of the old comment — that the re-run pipeline could not reproduce
+% these — turned out to be wrong rather than unavoidable. dataset.py can no longer
+% BUILD the legacy split (it always groups by subject now), but the split code was
+% recovered from commit 1d4ec45 and verified: scoring the old B2 checkpoint on the
+% rebuilt split returns 0.5075 at batch 1 and a five-seed mean of 0.512 at the
+% pipeline's batch 16, against the 0.509 recorded here.
+%
+% Original note, kept for the record:
+% The "after" values are emitted (\leakSynAfter, \leakDxAfter, \leakDxFoneAfter,
+% \leakCombAfter). The "before" values come from a pre-correction, scan-level-split
+% run whose checkpoint is not in the frozen set, so the re-run pipeline could not
+% reproduce them and they stay provisional single-run numbers. Do not attach a CI
+% to a before/after delta computed from a \prov value and a seeded one.
+\newcommand{\leakDxBefore}{\prov{0.509}}
+\newcommand{\leakDxFoneBefore}{\prov{0.476}}
+\newcommand{\leakSynBefore}{\prov{0.343}}
+\newcommand{\leakCombBefore}{\prov{0.902}} % binary task is robust to the correction
+\newcommand{\leakDxDelta}{\prov{22}}       % pp, 0.509 -> 0.291 seeded
+
+% ── Cross-site design constants ─────────────────────────────────────────────
+% VERIFIED BY FRANK 2026-08-08 directly against data/processed/ofc_manifest.csv,
+% independently of coder's reply, because these went into the manuscript before
+% the experiment returned. Reproduced: 6,938 scans / 6,889 subjects / 11 sites;
+% ZERO subjects appear at more than one site; 6 sites clear the >=5-scans-in-every-
+% one-of-4-classes bar (PH 1,960 / FC 1,259 / GW 744 / PR 589 / PT 473 / LC 126).
+% Multi-dataset folds PH, FC, PR (FB-56 + FB-5A) isolate site from dataset;
+% GW, PT, LC are single-dataset. The 5 excluded sites are NOT missing a class
+% outright in every case — CO and SF have no Cleft Palate, but NG (4/4/3), TX (1)
+% and CL (1) merely fall below the floor. Word it as "below the floor", not "absent".
+\newcommand{\xsiteNSites}{eleven}
+\newcommand{\xsiteNFolds}{six}
+\newcommand{\xsiteNTrainSites}{ten}
+\newcommand{\xsiteClassFloor}{five}
+\newcommand{\xsiteNScans}{6{,}938}
+% CORRECTED 2026-08-10. Was 6,889 — that is `study_id` counted ALONE, which
+% merges distinct people: 48 study_ids occur in BOTH FB-56 and FB-5A, which
+% are separate studies reusing an identifier scheme. Keyed on the pair
+% (dataset, study_id) the cohort has 6,937 subjects for 6,938 scans, i.e.
+% exactly one subject with two scans. The bootstrap always used the composite
+% key (ofc_manifest_xsite.csv subject_id, 6,937 unique), so no RESULT was
+% affected — only this quoted count was. Verified: audit_ofc_split.py.
+\newcommand{\xsiteNSubj}{6{,}937}
+
+% ── Cross-site transfer ─────────────────────────────────────────────────────
+% RETIRED 2026-08-10. \xsiteAucLo{0.48} and \xsiteAucHi{0.51} lived here behind
+% an \unsup marker because NO EXPERIMENT EXISTED BEHIND THEM: they were read off
+% runs A1_S1/S2/S3, which were believed to be site splits and are not — no code
+% path reads the `site` column, all three trained on the identical full cohort,
+% and "S" denoted STRATEGY (weighted sampler / focal loss / both). Their real
+% values are emitted as \imbWeighted*, \imbFocal*, \imbBoth*.
+%
+% The leave-one-site-out experiment has now been RUN (24 training runs, 6 folds
+% x 4 encoders, 2026-08-09/10) and its numbers live in numbers_xsite.tex.
+% THE OLD MACRO NAMES ARE NOT REUSED AND ARE NOT REDEFINED HERE. Rebinding them
+% would silently convert a retracted claim into a measured one, and the two are
+% not even the same design. Any \xsiteAucLo/\xsiteAucHi left in a draft is now an
+% undefined-control-sequence error, which is the intended behaviour: it fails
+% loudly rather than quoting a withdrawn number. Use \xsGone*/\xsGtwo*/\xs<Site><Enc>*.
+
+% ── Recognizability (poster block 6) ────────────────────────────────────────
+% CONFLICT RESOLVED 2026-08-10. The poster (rho=+0.56, 28% of variance) and
+% results_analysis.md Finding 5 (r=0.256, "weak") were BOTH broadly right and
+% were computed on DIFFERENT TASKS — 33-class clinical diagnosis vs the
+% 19-class/scan-level setting. Recomputed from the seeded predictions in
+% numbers_recog.tex: rho=+0.60 at 33 classes, rho=-0.12 at 19. The old
+% single-number macros \rhoSize and \varExpl are deleted rather than rebound,
+% because there is no single number — the task dependence IS the finding.
+% \fOneSpanLo/\fOneSpanHi are now emitted against an explicitly stated size band.
+
+% ── Inference non-determinism ───────────────────────────────────────────────
+% The old \fpsWobble / \fpsRunA / \fpsRunB described two ad-hoc UNSEEDED runs and
+% are deliberately retired rather than renamed: they were not a measurement of
+% anything. Their replacements are emitted from the seeded five-seed sweep —
+% \fpsSeedSD (1.07 pp on the headline row), \fpsSeedLo/\fpsSeedHi, \fpsSeedSpan,
+% and \fpsMaxSeedSD (3.57 pp, the worst row anywhere in the sweep: 33-class kNN
+% subject-level macro-F1, an 8.4 pp span from the sampling draw alone).
+% \fpsWobbleOld is kept ONLY for the sentence in Methods that describes what the
+% original diagnosis looked like before the path was seeded.
+\newcommand{\fpsWobbleOld}{\prov{2--3}}
+\newcommand{\fpsRunA}{\prov{0.396}}
+\newcommand{\fpsRunB}{\prov{0.367}}
+
+% ── What the published/re-eval discrepancy is, and is NOT ───────────────────
+% RESOLVED 2026-08-10 from coder's PART B diagnostics. Every value below was
+% re-verified against the raw CSVs, not taken from the summary prose.
+%
+% THE DISCREPANCY IS TWO-SIDED, so no biased estimator can explain it. Of the 13
+% published PointNet++ point estimates, 8 fall outside the five-seed range —
+% 5 above and 3 below — while ALL 13 fall inside the bootstrap subject interval.
+% (published_direction_check.csv, 13 rows. NOTE: an earlier note in this file and
+% coder's 08-07 message both said "10 of 13"; that count was never itemised and
+% is withdrawn. This one names task, metric, published value and source line per
+% row and is reproducible from check_published_direction.py.)
+%
+% RULED OUT AS EXPLANATIONS, both with zero effect on any metric:
+%   DEVICE (H100 vs CPU) — accuracy identical to 4 dp on every seed at both
+%     levels; largest deviation on ANY metric/seed 0.019 pp, ~50x under the
+%     1.07 pp inference-seed SD, and the sign flips across seeds.
+%     0-1 of 475 test scans change predicted class. (gpu_cpu_deltas.csv)
+%   BLAS THREAD COUNT — metrics identical to six decimal places at 1, 8 and 16
+%     threads; 0 argmax flips. (diff_threads_20260809.log)
+%
+% NOT A BIAS, BUT A LARGE SOURCE OF SPREAD: EVAL BATCH SIZE. The FPS start index
+% is drawn per sample per batch, so rebatching genuinely resamples the point
+% cloud and batch size is part of the estimator, not a throughput knob. Batch 16
+% vs 32 changes the predicted class of 94 and 110 of 475 test scans (20-23%),
+% yet the aggregate metrics move only within noise and flip sign across seeds
+% (accuracy -0.46 pp, macro-F1 -0.38, macro-AUC +0.09; sd exceeds the mean on
+% all three). (batchsize_probe.csv, diff_batchsize_20260809.log)
+% ONE TASK ONLY (B2_corrected) — do not write that this generalises.
+\newcommand{\pubOutside}{eight}
+\newcommand{\pubTotal}{thirteen}
+\newcommand{\pubAbove}{five}
+\newcommand{\pubBelow}{three}
+\newcommand{\devMaxDelta}{0.02}      % pp, max |GPU-CPU| on any metric/seed
+\newcommand{\threadDP}{six}          % decimal places of agreement across thread counts
+\newcommand{\bsFlipLo}{94}
+\newcommand{\bsFlipHi}{110}
+\newcommand{\bsFlipN}{475}
+\newcommand{\bsFlipPct}{20--23}
+
+% ── Encoder spread on the fine-grained tasks ────────────────────────────────
+% max - min over the four encoders, scan level, softmax, from summary_ci.csv.
+% Derived by subtraction from values already emitted in numbers_reruns.tex, so
+% they are checkable against the table rather than taken on trust:
+%   19-class accuracy  geommlp 0.115 -> pointnet2 0.295 = 18.1 pp
+%   33-class accuracy  pointnet 0.149 -> pointnet2 0.291 = 14.1 pp
+%   19-class macro-AUC geommlp 0.650 -> dgcnn 0.781     = 13.2 pp
+%   33-class macro-AUC geommlp 0.768 -> dgcnn 0.853     =  8.5 pp
+% NOTE the Discussion previously said "roughly ten percentage points" for this
+% spread. That was wrong on accuracy and it mattered: the argument there is that
+% architecture matters LESS than the evaluation choices, and understating the
+% architecture spread made that contrast look sharper than the data supports.
+\newcommand{\encSpreadAccLo}{14}   % pp, 33-class accuracy
+\newcommand{\encSpreadAccHi}{18}   % pp, 19-class accuracy
+\newcommand{\encSpreadAucLo}{9}    % pp, 33-class macro-AUC
+\newcommand{\encSpreadAucHi}{13}   % pp, 19-class macro-AUC
+
+% ── Label/cohort structure of the two screening tasks ───────────────────────
+% Emitted by scripts/paper_reruns/audit_combined_controls.py --tex, which reads
+% the two manifests directly. Re-run it if either manifest changes.
+%
+% WHY THESE ARE IN THE PAPER (2026-08-17). The COMBINED screening task
+% draws 46% of its negative class from three normative cohorts that contribute
+% ZERO positives, so cohort membership alone separates the classes at macro-AUC
+% 0.730 without reading a single scan. The CLEFT task has no such structure:
+% both its cohorts contain both classes, and the same cohort-only rule sits at
+% exactly 0.500. That is why Section 2.2 now leads screening with the cleft
+% number and reports the pooled figure as an upper bound.
+%
+% \combCohortOnlyAuc IS NOT A MODEL RESULT AND MUST NEVER BE SUBTRACTED FROM
+% ONE. The encoder receives geometry and never a dataset label; this is the
+% score of an oracle reading the manifest column. It bounds what COULD be
+% cohort recognition. It does not measure what the model does.
+\newcommand{\combNegN}{14{,}683}
+\newcommand{\combNegNormN}{6{,}745}
+\newcommand{\combNegNormFrac}{46\%}
+\newcommand{\combCohortOnlyAuc}{0.730}
+\newcommand{\combCohortOnlyAcc}{0.682}
+\newcommand{\ofcCohortOnlyAuc}{0.500}
+
+% ── Cross-site attenuation of the BINARY screening task ─────────────────────
+% Within-site macro-AUC on A2 (numbers_reruns.tex) minus the mean over the six
+% leave-one-site-out folds on the SAME task (numbers_xsite_bin.tex). Derived by
+% subtraction from emitted values, so it is checkable against the figure:
+%   pointnet2  within 0.849 -> fold mean 0.713 = 13.6 pp
+%   dgcnn      within 0.805 -> fold mean 0.726 =  7.9 pp
+%   geommlp    within 0.649 -> fold mean 0.596 =  5.2 pp
+%   pointnet   within 0.543 -> fold mean 0.521 =  2.2 pp
+% ONLY the first two are quoted. The last two are attenuations of a within-site
+% value that barely clears chance to begin with, so a small drop there is not
+% the same quantity as a small drop from 0.85 and must not be averaged with it.
+% A FOLD MEAN IS USED ONLY FOR THIS DELTA, never as a headline: the fold ranges
+% are what the prose and Fig. 4 report, because the folds are not exchangeable
+% (they differ in size, prevalence and whether dataset moves with site).
+\newcommand{\xsbAttenLo}{8}    % pp, DGCNN  (7.9, rounded up so the range is not overstated)
+\newcommand{\xsbAttenHi}{14}   % pp, PointNet++ (13.6)
+\newcommand{\xsbPtwoFoldMean}{0.713}
+\newcommand{\xsbDgcnnFoldMean}{0.726}
+% Cells above chance in each fold group, ALL FOUR ENCODERS (the \xsb* block
+% emits the per-encoder census and the PointNet++ group ranges, not this split).
+% Counted from summary_ci_xsite_bin.csv: CI lower bound > 0.50.
+\newcommand{\xsbGoneCellsAbove}{11}   % of 12, folds PH/FC/PR
+\newcommand{\xsbGtwoCellsAbove}{6}    % of 12, folds GW/PT/LC
+% Range of the per-fold majority-class (Unaffected) rate, min and max over the
+% six \xsb<Site>Maj values emitted in numbers_xsite_bin.tex:
+%   LC 0.708 (min) ... FC 0.919 (max); PH 0.800, PR 0.778, GW 0.812, PT 0.732
+\newcommand{\xsbMajLo}{71\%}
+\newcommand{\xsbMajHi}{92\%}
+
+% ── Per-class floor ─────────────────────────────────────────────────────────
+\newcommand{\nBelowFloor}{\ver{8}}         % of 33 classes with <20 subjects
+\newcommand{\nTinyTest}{\ver{12}}          % of 33 classes with <=3 test subjects
+\newcommand{\controlRelativeFrac}{\ver{89\%}}
+
+% ── Literature ──────────────────────────────────────────────────────────────
+% CITATION AUDIT 2026-08-10. Every value below was read from the source
+% PDF in projects/facebase_3d_encoder/papers/ and quoted with its metric and
+% class count. Two errors were found and corrected; both had reached the
+% Discussion.
+%
+% ERROR 1 — MISATTRIBUTION. \litMahdiAcc{87.2%} was credited to Mahdi 2024. It
+%   is HALLGRIMSSON et al. 2020's number, appearing in Mahdi's related-work section, and it
+%   is a TOP-TEN accuracy, not top-1: "the correct diagnosis was listed among
+%   the top ten ranked diagnoses for 87.2% of syndromic subjects" (Hallgrimsson et al. 2020;
+%   the identical sentence is paraphrased in Mahdi 2024). It was being compared
+%   against our TOP-1. Macro deleted; \litHallgTopTen carries it correctly.
+%   Mahdi 2024 reports no comparable 33-class top-1 figure — its results table
+%   gives sensitivity / balanced accuracy / specificity for outlier-detection
+%   models (the 0.8630 that appears there is a BASELINE SPECIFICITY, unrelated).
+%
+% ERROR 2 — NON-COMPARABLE DENOMINATOR. Bannister 2022a's headline 71% is
+%   "overall top-1 accuracy" on a cohort that INCLUDES unaffected subjects, of
+%   whom 92% are correctly classified. Our 33-class task is syndromic-only
+%   (verified: no unaffected/control class among the 33 in
+%   syndrome_clinical_manifest.csv), so that 71% is not a like-for-like target.
+%   The paper's own per-syndrome figure is a MEAN SENSITIVITY OF 43% across 48
+%   classes, and that is the comparable quantity.
+%
+% CONSEQUENCE: the old \gapToRegLo{31} / \gapToRegHi{47} "gap to registered
+% shape models" was measured against an inflated denominator and a misattributed
+% top-10 number. Both are deleted. The honest comparator is Hallgrimsson et al. 2020's
+% 48.8% top-1 over syndromic subjects on 64 classes. THIS MOVES IN OUR FAVOUR,
+% so it is stated conservatively and the class-count asymmetry (they use more
+% classes, which is harder) is kept in the prose.
+\newcommand{\litHallgAcc}{48.8\%}       % top-1, syndromic subjects, 64 syndromes (n>=10)
+\newcommand{\litHallgNCls}{64}
+\newcommand{\litHallgTopTen}{87.2\%}    % TOP-TEN, same cohort — never compare to our top-1
+\newcommand{\litBannisterAAcc}{71\%}      % OVERALL top-1, INCLUDES unaffected — see ERROR 2
+\newcommand{\litBannisterASens}{43\%}     % mean sensitivity across 48 syndrome classes
+\newcommand{\litBannisterANCls}{48}
+\newcommand{\litBannisterCAcc}{40.7\%}    % mean top-1 sensitivity, 3D surface PCA+MLP
+\newcommand{\litBannisterCNCls}{43}
+% VERIFIED 2026-08-19. Read from the source article, not the pointer note.
+%   Bannister et al., "Detecting 3D Syndromic Faces as Outliers using Unsupervised
+%   Normalizing Flow Models", Artificial Intelligence in Medicine 134:102425 (2022).
+%   PMC10949379. Abstract: "the best model achieving an ROC-AUC of 86.3% on a
+%   challenging, age and sex diverse data set." Table 3 gives that cell as the
+%   NON-GAUSSIAN density model at 1k vertices, 86.3 (1.3) -- the SD is 1.3 pp, which
+%   is what makes "a tie" the honest reading against our \ofcBinAuc{} 0.849.
+%   Task: binary syndromic vs. non-syndromic. Cohort: 2,471 unaffected + 1,629
+%   syndromic across 262 syndromes, ages 5-40, 3dMD scans via FaceBase.
+%   Method is dense-correspondence registration + normalizing-flow density
+%   estimation -- NOT a statistical shape model; the table's Registration column and
+%   the Section~\ref{sec:lit} prose were corrected to match on the same date.
+%   NOT the same number as Mahdi's 0.8630, which is a BASELINE SPECIFICITY (checked
+%   against the local PDF, Table 2, PCA+LDA baseline row) -- see ERROR 1 above.
+\newcommand{\litBannisterBAuc}{0.863}
+
+% Percentage-formatted wrappers for the literature comparison ONLY. The lit
+% values are published as percentages, and mixing "0.414" with "48.8%" in one
+% sentence invites a reader to compare across a factor of 100. These are
+% PRESENTATION of the emitted macros, not new values — if the emitted value
+% changes, these must be re-derived from it by hand, so keep the pairing visible.
+\newcommand{\dxAccSubjSMPct}{38.2\%}   % = \dxAccSubjSM{} 0.382
+\newcommand{\dxAccSubjPrPct}{41.4\%}   % = \dxAccSubjPr{} 0.414
+\newcommand{\combAucPct}{96.0\%}       % = \combAuc{} 0.960

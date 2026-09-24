@@ -1,0 +1,483 @@
+% ==========================================================================
+% numbers_from_reruns.tex — MACHINE-GENERATED. Do not hand-edit.
+%
+%   generator : scripts/paper_reruns/emit_numbers.py
+%   sources   : results/paper_reruns/summary_ci.csv  (336 rows)
+%               results/paper_reruns/contrast_tests.csv  (186 rows)
+%
+% Three macros per quantity — the prose chooses which to show:
+%   \X    seed-averaged point estimate
+%   \XSD  inference-seed SD    (FPS draw; model weights FROZEN)
+%   \XCI  95% bootstrap interval over test SUBJECTS
+% The two are different questions and are never pooled into one
+% interval. \XSD is exactly 0 for GeomMLP/PointNet/DGCNN — those
+% encoders are bit-identical across repeat runs and are evaluated
+% once, so 0 is a fact about the estimator, not a measurement.
+%
+% NOT MEASURED HERE: training-seed variance. Nothing was retrained;
+% every interval is inference variance under frozen weights. A model
+% retrained from a different init could land outside these bounds.
+%
+% Each macro carries the source row it resolves to as a comment.
+% ==========================================================================
+
+% --------------------------------------------------------------------------
+% Task 5: combined binary (affected vs unaffected, all datasets)
+%   Scan level, matching EXPERIMENTAL_FINDINGS.md line 198 (n_test=3,639).
+% --------------------------------------------------------------------------
+% summary_ci.csv | task=C_corrected encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=3639 n_subjects=2658
+\newcommand{\combAcc}{0.903}
+\newcommand{\combAccSD}{0.0035}  % inference-seed SD, weights frozen
+\newcommand{\combAccCI}{[0.892, 0.913]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=C_corrected encoder=pointnet2 head=softmax level=scan metric=macro_f1 n_seeds=5 n_units=3639 n_subjects=2658
+\newcommand{\combFone}{0.900}
+\newcommand{\combFoneSD}{0.0035}  % inference-seed SD, weights frozen
+\newcommand{\combFoneCI}{[0.889, 0.911]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=C_corrected encoder=pointnet2 head=softmax level=scan metric=macro_auc n_seeds=5 n_units=3639 n_subjects=2658
+\newcommand{\combAuc}{0.960}
+\newcommand{\combAucSD}{0.0008}  % inference-seed SD, weights frozen
+\newcommand{\combAucCI}{[0.953, 0.967]}  % 95% bootstrap over test subjects
+
+% --------------------------------------------------------------------------
+% Task 5 at SUBJECT level — NEW, not in numbers.tex. See reply PART 1.
+%   C_corrected groups by subject_id (3,639 scans / 2,658 subjects), so unlike
+%   the A-family this is a real aggregation, not a relabelled scan row.
+% --------------------------------------------------------------------------
+% summary_ci.csv | task=C_corrected encoder=pointnet2 head=softmax level=subject metric=accuracy n_seeds=5 n_units=2658 n_subjects=2658
+\newcommand{\combAccSubj}{0.910}
+\newcommand{\combAccSubjSD}{0.0043}  % inference-seed SD, weights frozen
+\newcommand{\combAccSubjCI}{[0.900, 0.919]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=C_corrected encoder=pointnet2 head=softmax level=subject metric=macro_f1 n_seeds=5 n_units=2658 n_subjects=2658
+\newcommand{\combFoneSubj}{0.886}
+\newcommand{\combFoneSubjSD}{0.0051}  % inference-seed SD, weights frozen
+\newcommand{\combFoneSubjCI}{[0.874, 0.898]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=C_corrected encoder=pointnet2 head=softmax level=subject metric=macro_auc n_seeds=5 n_units=2658 n_subjects=2658
+\newcommand{\combAucSubj}{0.958}
+\newcommand{\combAucSubjSD}{0.0007}  % inference-seed SD, weights frozen
+\newcommand{\combAucSubjCI}{[0.950, 0.965]}  % 95% bootstrap over test subjects
+
+% --------------------------------------------------------------------------
+% Task 2: OFC binary
+%   Scan level only: A2's manifest has no subject id, so every scan is its own
+%   unit and a subject-level row would duplicate this one exactly.
+%   The four macro-AUC rows are the WITHIN-SITE reference for the BINARY
+%   leave-one-site-out block in numbers_xsite_bin.tex (\xsb*): those folds run
+%   this same A2 task, so the comparison is like-for-like on the task even
+%   though the test sets differ. It is NOT a paired contrast, and it is NOT
+%   \combAuc — the combined-cohort task C_corrected was never run cross-site.
+% --------------------------------------------------------------------------
+% summary_ci.csv | task=A2 encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=1030 n_subjects=1030
+\newcommand{\ofcBinAcc}{0.830}
+\newcommand{\ofcBinAccSD}{0.0058}  % inference-seed SD, weights frozen
+\newcommand{\ofcBinAccCI}{[0.808, 0.850]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=A2 encoder=pointnet2 head=softmax level=scan metric=macro_f1 n_seeds=5 n_units=1030 n_subjects=1030
+\newcommand{\ofcBinFone}{0.735}
+\newcommand{\ofcBinFoneSD}{0.0044}  % inference-seed SD, weights frozen
+\newcommand{\ofcBinFoneCI}{[0.705, 0.764]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=A2 encoder=pointnet2 head=softmax level=scan metric=macro_auc n_seeds=5 n_units=1030 n_subjects=1030
+\newcommand{\ofcBinAuc}{0.849}
+\newcommand{\ofcBinAucSD}{0.0025}  % inference-seed SD, weights frozen
+\newcommand{\ofcBinAucCI}{[0.821, 0.877]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=A2 encoder=dgcnn head=softmax level=scan metric=macro_auc n_seeds=1 n_units=1030 n_subjects=1030
+\newcommand{\ofcBinAucDG}{0.805}
+\newcommand{\ofcBinAucDGSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\ofcBinAucDGCI}{[0.770, 0.837]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=A2 encoder=pointnet head=softmax level=scan metric=macro_auc n_seeds=1 n_units=1030 n_subjects=1030
+\newcommand{\ofcBinAucPnet}{0.543}
+\newcommand{\ofcBinAucPnetSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\ofcBinAucPnetCI}{[0.498, 0.587]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=A2 encoder=geommlp head=softmax level=scan metric=macro_auc n_seeds=1 n_units=1030 n_subjects=1030
+\newcommand{\ofcBinAucGM}{0.649}
+\newcommand{\ofcBinAucGMSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\ofcBinAucGMCI}{[0.606, 0.690]}  % 95% bootstrap over test subjects
+
+% --------------------------------------------------------------------------
+% Task 1: OFC four-class
+%   Per-encoder picks preserved from numbers.tex: DGCNN best accuracy,
+%   GeomMLP best AUC and best macro-F1.
+%   The four macro-AUC rows (GM/PN/DG/Pnet) are the WITHIN-SITE reference the
+%   cross-site folds in numbers_xsite.tex are read against: the leave-one-site-out
+%   runs are this same four-class task, so the comparison is like-for-like on the
+%   task even though the test sets differ. It is NOT a paired contrast.
+% --------------------------------------------------------------------------
+% summary_ci.csv | task=A1 encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=1029 n_subjects=1029
+\newcommand{\ofcFourAccPN}{0.731}
+\newcommand{\ofcFourAccPNSD}{0.0046}  % inference-seed SD, weights frozen
+\newcommand{\ofcFourAccPNCI}{[0.707, 0.753]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=A1 encoder=dgcnn head=softmax level=scan metric=accuracy n_seeds=1 n_units=1029 n_subjects=1029
+\newcommand{\ofcFourAccDG}{0.768}
+\newcommand{\ofcFourAccDGSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\ofcFourAccDGCI}{[0.742, 0.795]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=A1 encoder=geommlp head=softmax level=scan metric=macro_auc n_seeds=1 n_units=1029 n_subjects=1029
+\newcommand{\ofcFourAucGM}{0.599}
+\newcommand{\ofcFourAucGMSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\ofcFourAucGMCI}{[0.555, 0.640]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=A1 encoder=geommlp head=softmax level=scan metric=macro_f1 n_seeds=1 n_units=1029 n_subjects=1029
+\newcommand{\ofcFourFoneGM}{0.277}
+\newcommand{\ofcFourFoneGMSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\ofcFourFoneGMCI}{[0.246, 0.312]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=A1 encoder=pointnet2 head=softmax level=scan metric=macro_auc n_seeds=5 n_units=1029 n_subjects=1029
+\newcommand{\ofcFourAucPN}{0.573}
+\newcommand{\ofcFourAucPNSD}{0.0128}  % inference-seed SD, weights frozen
+\newcommand{\ofcFourAucPNCI}{[0.537, 0.609]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=A1 encoder=dgcnn head=softmax level=scan metric=macro_auc n_seeds=1 n_units=1029 n_subjects=1029
+\newcommand{\ofcFourAucDG}{0.551}
+\newcommand{\ofcFourAucDGSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\ofcFourAucDGCI}{[0.510, 0.591]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=A1 encoder=pointnet head=softmax level=scan metric=macro_auc n_seeds=1 n_units=1029 n_subjects=1029
+\newcommand{\ofcFourAucPnet}{0.505}
+\newcommand{\ofcFourAucPnetSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\ofcFourAucPnetCI}{[0.466, 0.546]}  % 95% bootstrap over test subjects
+
+% --------------------------------------------------------------------------
+% Task 3: syndrome category, 19 classes, per-scan
+% --------------------------------------------------------------------------
+% summary_ci.csv | task=B1_corrected encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=1840 n_subjects=733
+\newcommand{\synAccScan}{0.295}
+\newcommand{\synAccScanSD}{0.0073}  % inference-seed SD, weights frozen
+\newcommand{\synAccScanCI}{[0.270, 0.320]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B1_corrected encoder=pointnet2 head=softmax level=scan metric=macro_f1 n_seeds=5 n_units=1840 n_subjects=733
+\newcommand{\synFoneScan}{0.265}
+\newcommand{\synFoneScanSD}{0.0116}  % inference-seed SD, weights frozen
+\newcommand{\synFoneScanCI}{[0.230, 0.290]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B1_corrected encoder=pointnet2 head=softmax level=scan metric=macro_auc n_seeds=5 n_units=1840 n_subjects=733
+\newcommand{\synAucScan}{0.774}
+\newcommand{\synAucScanSD}{0.0016}  % inference-seed SD, weights frozen
+\newcommand{\synAucScanCI}{[0.751, 0.798]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B1_corrected encoder=dgcnn head=softmax level=scan metric=macro_auc n_seeds=1 n_units=1840 n_subjects=733
+\newcommand{\synAucScanDG}{0.781}
+\newcommand{\synAucScanDGSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\synAucScanDGCI}{[0.759, 0.805]}  % 95% bootstrap over test subjects
+
+% --------------------------------------------------------------------------
+% Task 4: clinical diagnosis, 33 classes, per-scan
+% --------------------------------------------------------------------------
+% summary_ci.csv | task=B2_corrected encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=475 n_subjects=169
+\newcommand{\dxAccScan}{0.291}
+\newcommand{\dxAccScanSD}{0.0074}  % inference-seed SD, weights frozen
+\newcommand{\dxAccScanCI}{[0.242, 0.344]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B2_corrected encoder=pointnet2 head=softmax level=scan metric=macro_f1 n_seeds=5 n_units=475 n_subjects=169
+\newcommand{\dxFoneScan}{0.240}
+\newcommand{\dxFoneScanSD}{0.0131}  % inference-seed SD, weights frozen
+\newcommand{\dxFoneScanCI}{[0.204, 0.287]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B2_corrected encoder=pointnet2 head=softmax level=scan metric=macro_auc n_seeds=5 n_units=475 n_subjects=169
+\newcommand{\dxAucScan}{0.845}
+\newcommand{\dxAucScanSD}{0.0023}  % inference-seed SD, weights frozen
+\newcommand{\dxAucScanCI}{[0.829, 0.875]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B2_corrected encoder=dgcnn head=softmax level=scan metric=macro_auc n_seeds=1 n_units=475 n_subjects=169
+\newcommand{\dxAucScanDG}{0.853}
+\newcommand{\dxAucScanDGSD}{0}  % exact 0: deterministic encoder, evaluated once
+\newcommand{\dxAucScanDGCI}{[0.827, 0.879]}  % 95% bootstrap over test subjects
+
+% --------------------------------------------------------------------------
+% The head x level grid, 19-class — THE CORE RESULT
+%   ENCODER-FIXED arm: the *same* checkpoint read through both heads. This is
+%   the clean head comparison (contrast C1a).
+% --------------------------------------------------------------------------
+% summary_ci.csv | task=B1_corrected encoder=pointnet2 head=softmax level=subject metric=accuracy n_seeds=5 n_units=733 n_subjects=733
+\newcommand{\synAccSubjSM}{0.350}
+\newcommand{\synAccSubjSMSD}{0.0103}  % inference-seed SD, weights frozen
+\newcommand{\synAccSubjSMCI}{[0.318, 0.380]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B1_corrected encoder=pointnet2 head=softmax level=subject metric=macro_f1 n_seeds=5 n_units=733 n_subjects=733
+\newcommand{\synFoneSubjSM}{0.326}
+\newcommand{\synFoneSubjSMSD}{0.0117}  % inference-seed SD, weights frozen
+\newcommand{\synFoneSubjSMCI}{[0.282, 0.356]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B1_corrected encoder=pointnet2 head=softmax level=subject metric=macro_auc n_seeds=5 n_units=733 n_subjects=733
+\newcommand{\synAucSubjSM}{0.811}
+\newcommand{\synAucSubjSMSD}{0.0027}  % inference-seed SD, weights frozen
+\newcommand{\synAucSubjSMCI}{[0.787, 0.833]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B1_corrected encoder=pointnet2 head=proto level=subject metric=accuracy n_seeds=5 n_units=733 n_subjects=733
+\newcommand{\synAccSubjPr}{0.357}
+\newcommand{\synAccSubjPrSD}{0.0095}  % inference-seed SD, weights frozen
+\newcommand{\synAccSubjPrCI}{[0.326, 0.387]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B1_corrected encoder=pointnet2 head=proto level=subject metric=macro_f1 n_seeds=5 n_units=733 n_subjects=733
+\newcommand{\synFoneSubjPr}{0.349}
+\newcommand{\synFoneSubjPrSD}{0.0162}  % inference-seed SD, weights frozen
+\newcommand{\synFoneSubjPrCI}{[0.301, 0.380]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B1_corrected encoder=pointnet2 head=proto level=subject metric=macro_auc n_seeds=5 n_units=733 n_subjects=733
+\newcommand{\synAucSubjPr}{0.812}
+\newcommand{\synAucSubjPrSD}{0.0024}  % inference-seed SD, weights frozen
+\newcommand{\synAucSubjPrCI}{[0.788, 0.833]}  % 95% bootstrap over test subjects
+
+% --------------------------------------------------------------------------
+% 19-class, AS-PUBLISHED proto arm — separate CE-trained checkpoint
+%   Different checkpoint from the softmax arm, so this comparison CONFOUNDS
+%   head choice with training run (contrast C1b). Reported alongside the
+%   encoder-fixed arm so the two are not mistaken for each other.
+% --------------------------------------------------------------------------
+% summary_ci.csv | task=B1_proto_cetrain encoder=pointnet2 head=proto level=subject metric=accuracy n_seeds=5 n_units=733 n_subjects=733
+\newcommand{\synAccSubjPrPub}{0.339}
+\newcommand{\synAccSubjPrPubSD}{0.0093}  % inference-seed SD, weights frozen
+\newcommand{\synAccSubjPrPubCI}{[0.309, 0.371]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B1_proto_cetrain encoder=pointnet2 head=proto level=subject metric=macro_f1 n_seeds=5 n_units=733 n_subjects=733
+\newcommand{\synFoneSubjPrPub}{0.329}
+\newcommand{\synFoneSubjPrPubSD}{0.0105}  % inference-seed SD, weights frozen
+\newcommand{\synFoneSubjPrPubCI}{[0.285, 0.362]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B1_proto_cetrain encoder=pointnet2 head=proto level=subject metric=macro_auc n_seeds=5 n_units=733 n_subjects=733
+\newcommand{\synAucSubjPrPub}{0.817}
+\newcommand{\synAucSubjPrPubSD}{0.0026}  % inference-seed SD, weights frozen
+\newcommand{\synAucSubjPrPubCI}{[0.794, 0.839]}  % 95% bootstrap over test subjects
+
+% --------------------------------------------------------------------------
+% The head x level grid, 33-class — THE CORE RESULT
+%   ENCODER-FIXED arm — see the 19-class note.
+% --------------------------------------------------------------------------
+% summary_ci.csv | task=B2_corrected encoder=pointnet2 head=softmax level=subject metric=accuracy n_seeds=5 n_units=169 n_subjects=169
+\newcommand{\dxAccSubjSM}{0.382}
+\newcommand{\dxAccSubjSMSD}{0.0107}  % inference-seed SD, weights frozen
+\newcommand{\dxAccSubjSMCI}{[0.317, 0.447]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B2_corrected encoder=pointnet2 head=softmax level=subject metric=macro_f1 n_seeds=5 n_units=169 n_subjects=169
+\newcommand{\dxFoneSubjSM}{0.280}
+\newcommand{\dxFoneSubjSMSD}{0.0128}  % inference-seed SD, weights frozen
+\newcommand{\dxFoneSubjSMCI}{[0.227, 0.345]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B2_corrected encoder=pointnet2 head=softmax level=subject metric=macro_auc n_seeds=5 n_units=169 n_subjects=169
+\newcommand{\dxAucSubjSM}{0.913}
+\newcommand{\dxAucSubjSMSD}{0.0030}  % inference-seed SD, weights frozen
+\newcommand{\dxAucSubjSMCI}{[0.891, 0.930]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B2_corrected encoder=pointnet2 head=proto level=subject metric=accuracy n_seeds=5 n_units=169 n_subjects=169
+\newcommand{\dxAccSubjPr}{0.414}
+\newcommand{\dxAccSubjPrSD}{0.0042}  % inference-seed SD, weights frozen
+\newcommand{\dxAccSubjPrCI}{[0.346, 0.485]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B2_corrected encoder=pointnet2 head=proto level=subject metric=macro_f1 n_seeds=5 n_units=169 n_subjects=169
+\newcommand{\dxFoneSubjPr}{0.341}
+\newcommand{\dxFoneSubjPrSD}{0.0098}  % inference-seed SD, weights frozen
+\newcommand{\dxFoneSubjPrCI}{[0.273, 0.413]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B2_corrected encoder=pointnet2 head=proto level=subject metric=macro_auc n_seeds=5 n_units=169 n_subjects=169
+\newcommand{\dxAucSubjPr}{0.897}
+\newcommand{\dxAucSubjPrSD}{0.0033}  % inference-seed SD, weights frozen
+\newcommand{\dxAucSubjPrCI}{[0.881, 0.924]}  % 95% bootstrap over test subjects
+
+% --------------------------------------------------------------------------
+% 33-class, AS-PUBLISHED proto arm — separate CE-trained checkpoint
+% --------------------------------------------------------------------------
+% summary_ci.csv | task=B2_proto_cetrain encoder=pointnet2 head=proto level=subject metric=accuracy n_seeds=5 n_units=169 n_subjects=169
+\newcommand{\dxAccSubjPrPub}{0.452}
+\newcommand{\dxAccSubjPrPubSD}{0.0099}  % inference-seed SD, weights frozen
+\newcommand{\dxAccSubjPrPubCI}{[0.386, 0.522]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B2_proto_cetrain encoder=pointnet2 head=proto level=subject metric=macro_f1 n_seeds=5 n_units=169 n_subjects=169
+\newcommand{\dxFoneSubjPrPub}{0.366}
+\newcommand{\dxFoneSubjPrPubSD}{0.0128}  % inference-seed SD, weights frozen
+\newcommand{\dxFoneSubjPrPubCI}{[0.298, 0.436]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B2_proto_cetrain encoder=pointnet2 head=proto level=subject metric=macro_auc n_seeds=5 n_units=169 n_subjects=169
+\newcommand{\dxAucSubjPrPub}{0.903}
+\newcommand{\dxAucSubjPrPubSD}{0.0022}  % inference-seed SD, weights frozen
+\newcommand{\dxAucSubjPrPubCI}{[0.880, 0.927]}  % 95% bootstrap over test subjects
+
+% --------------------------------------------------------------------------
+% Aggregation gain (subject minus scan), percentage points
+%   PAIRED bootstrap on the difference (same subject draws in both arms), not
+%   two marginal intervals eyeballed against each other. \XSD here is the SD
+%   of the paired difference across inference seeds.
+% --------------------------------------------------------------------------
+% contrast_tests.csv | contrast=C2_agg_softmax[pointnet2] task=B1_corrected metric=accuracy | pointnet2/softmax/subject@B1_corrected MINUS pointnet2/softmax/scan@B1_corrected | verdict=SURVIVES (CI excludes 0, expected sign)
+\newcommand{\aggGainSyn}{5.4}
+\newcommand{\aggGainSynSD}{0.75}  % inference-seed SD pp, weights frozen
+\newcommand{\aggGainSynCI}{[3.7, 7.2]}  % 95% bootstrap over test subjects
+
+% contrast_tests.csv | contrast=C2_agg_softmax[pointnet2] task=B1_corrected metric=macro_f1 | pointnet2/softmax/subject@B1_corrected MINUS pointnet2/softmax/scan@B1_corrected | verdict=SURVIVES (CI excludes 0, expected sign)
+\newcommand{\aggGainSynFone}{6.1}
+\newcommand{\aggGainSynFoneSD}{1.24}  % inference-seed SD pp, weights frozen
+\newcommand{\aggGainSynFoneCI}{[4.1, 7.9]}  % 95% bootstrap over test subjects
+
+% contrast_tests.csv | contrast=C2_agg_softmax[pointnet2] task=B2_corrected metric=accuracy | pointnet2/softmax/subject@B2_corrected MINUS pointnet2/softmax/scan@B2_corrected | verdict=SURVIVES (CI excludes 0, expected sign)
+\newcommand{\aggGainDx}{9.1}
+\newcommand{\aggGainDxSD}{1.14}  % inference-seed SD pp, weights frozen
+\newcommand{\aggGainDxCI}{[5.2, 13.1]}  % 95% bootstrap over test subjects
+
+% contrast_tests.csv | contrast=C2_agg_softmax[pointnet2] task=B2_corrected metric=macro_f1 | pointnet2/softmax/subject@B2_corrected MINUS pointnet2/softmax/scan@B2_corrected | verdict=SURVIVES (CI excludes 0, expected sign)
+\newcommand{\aggGainDxFone}{4.0}
+\newcommand{\aggGainDxFoneSD}{1.90}  % inference-seed SD pp, weights frozen
+\newcommand{\aggGainDxFoneCI}{[1.0, 7.2]}  % 95% bootstrap over test subjects
+
+% --------------------------------------------------------------------------
+% Head-choice delta (softmax minus prototype), percentage points
+%   NEW — no macro existed for this. The C1 null claim needs the interval, not
+%   just the point difference: 'CI contains 0' alone is equally consistent
+%   with being underpowered. See the verdict column in contrast_tests.csv.
+% --------------------------------------------------------------------------
+% contrast_tests.csv | contrast=C1a_head_subject[pointnet2] task=B1_corrected metric=accuracy | pointnet2/softmax/subject@B1_corrected MINUS pointnet2/proto/subject@B1_corrected | verdict=TIE NOT ESTABLISHED (CI contains 0 but is too wide to exclude a material difference)
+\newcommand{\headDeltaSyn}{-0.8}
+\newcommand{\headDeltaSynSD}{0.59}  % inference-seed SD pp, weights frozen
+\newcommand{\headDeltaSynCI}{[-2.6, 1.1]}  % 95% bootstrap over test subjects
+
+% contrast_tests.csv | contrast=C1a_head_subject[pointnet2] task=B2_corrected metric=accuracy | pointnet2/softmax/subject@B2_corrected MINUS pointnet2/proto/subject@B2_corrected | verdict=TIE NOT ESTABLISHED (CI contains 0 but is too wide to exclude a material difference)
+\newcommand{\headDeltaDx}{-3.2}
+\newcommand{\headDeltaDxSD}{1.43}  % inference-seed SD pp, weights frozen
+\newcommand{\headDeltaDxCI}{[-8.6, 2.0]}  % 95% bootstrap over test subjects
+
+% contrast_tests.csv | contrast=C1b_head_subject_aspublished task=B1_corrected metric=accuracy | pointnet2/softmax/subject@B1_corrected MINUS pointnet2/proto/subject@B1_proto_cetrain | verdict=TIE NOT ESTABLISHED (CI contains 0 but is too wide to exclude a material difference)
+\newcommand{\headDeltaSynPub}{1.0}
+\newcommand{\headDeltaSynPubSD}{1.01}  % inference-seed SD pp, weights frozen
+\newcommand{\headDeltaSynPubCI}{[-1.6, 3.7]}  % 95% bootstrap over test subjects
+
+% contrast_tests.csv | contrast=C1b_head_subject_aspublished task=B2_corrected metric=accuracy | pointnet2/softmax/subject@B2_corrected MINUS pointnet2/proto/subject@B2_proto_cetrain | verdict=TIE REFUTED (CI excludes 0 — real difference)
+\newcommand{\headDeltaDxPub}{-7.0}
+\newcommand{\headDeltaDxPubSD}{0.97}  % inference-seed SD pp, weights frozen
+\newcommand{\headDeltaDxPubCI}{[-13.1, -1.2]}  % 95% bootstrap over test subjects
+
+% --------------------------------------------------------------------------
+% 24-class filtered clinical task (B2_r2) — NEW, no macros existed
+%   numbers.tex already carries \chanceDxFilt (4.2%) with nothing to compare
+%   it against. 377 scans / 149 subjects.
+% --------------------------------------------------------------------------
+% summary_ci.csv | task=B2_r2 encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=377 n_subjects=149
+\newcommand{\dxFiltAcc}{0.382}
+\newcommand{\dxFiltAccSD}{0.0069}  % inference-seed SD, weights frozen
+\newcommand{\dxFiltAccCI}{[0.322, 0.444]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B2_r2 encoder=pointnet2 head=softmax level=scan metric=macro_f1 n_seeds=5 n_units=377 n_subjects=149
+\newcommand{\dxFiltFone}{0.310}
+\newcommand{\dxFiltFoneSD}{0.0051}  % inference-seed SD, weights frozen
+\newcommand{\dxFiltFoneCI}{[0.251, 0.347]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B2_r2 encoder=pointnet2 head=softmax level=scan metric=macro_auc n_seeds=5 n_units=377 n_subjects=149
+\newcommand{\dxFiltAuc}{0.855}
+\newcommand{\dxFiltAucSD}{0.0022}  % inference-seed SD, weights frozen
+\newcommand{\dxFiltAucCI}{[0.824, 0.886]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B2_r2 encoder=pointnet2 head=softmax level=subject metric=accuracy n_seeds=5 n_units=149 n_subjects=149
+\newcommand{\dxFiltAccSubj}{0.436}
+\newcommand{\dxFiltAccSubjSD}{0.0095}  % inference-seed SD, weights frozen
+\newcommand{\dxFiltAccSubjCI}{[0.365, 0.510]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B2_r2 encoder=pointnet2 head=softmax level=subject metric=macro_auc n_seeds=5 n_units=149 n_subjects=149
+\newcommand{\dxFiltAucSubj}{0.889}
+\newcommand{\dxFiltAucSubjSD}{0.0031}  % inference-seed SD, weights frozen
+\newcommand{\dxFiltAucSubjCI}{[0.860, 0.918]}  % 95% bootstrap over test subjects
+
+% --------------------------------------------------------------------------
+% Class-imbalance strategy variants (A1_S1/S2/S3) — REPLACES \xsiteAuc*
+%   These three runs are weighted-sampler / focal-loss / both, trained on the
+%   IDENTICAL full-cohort split as A1 (AUDIT_NONDETERMINISM.md section E).
+%   They are NOT site splits. \xsiteAucLo and \xsiteAucHi are deliberately
+%   NOT emitted here: the cross-site claim has no supporting experiment.
+% --------------------------------------------------------------------------
+% summary_ci.csv | task=A1_S1 encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=1029 n_subjects=1029
+\newcommand{\imbWeightedAcc}{0.024}
+\newcommand{\imbWeightedAccSD}{0.0010}  % inference-seed SD, weights frozen
+\newcommand{\imbWeightedAccCI}{[0.016, 0.034]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=A1_S1 encoder=pointnet2 head=softmax level=scan metric=macro_auc n_seeds=5 n_units=1029 n_subjects=1029
+\newcommand{\imbWeightedAuc}{0.495}
+\newcommand{\imbWeightedAucSD}{0.0136}  % inference-seed SD, weights frozen
+\newcommand{\imbWeightedAucCI}{[0.455, 0.533]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=A1_S2 encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=1029 n_subjects=1029
+\newcommand{\imbFocalAcc}{0.630}
+\newcommand{\imbFocalAccSD}{0.0077}  % inference-seed SD, weights frozen
+\newcommand{\imbFocalAccCI}{[0.602, 0.656]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=A1_S2 encoder=pointnet2 head=softmax level=scan metric=macro_auc n_seeds=5 n_units=1029 n_subjects=1029
+\newcommand{\imbFocalAuc}{0.508}
+\newcommand{\imbFocalAucSD}{0.0100}  % inference-seed SD, weights frozen
+\newcommand{\imbFocalAucCI}{[0.464, 0.547]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=A1_S3 encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=1029 n_subjects=1029
+\newcommand{\imbBothAcc}{0.026}
+\newcommand{\imbBothAccSD}{0.0019}  % inference-seed SD, weights frozen
+\newcommand{\imbBothAccCI}{[0.017, 0.035]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=A1_S3 encoder=pointnet2 head=softmax level=scan metric=macro_auc n_seeds=5 n_units=1029 n_subjects=1029
+\newcommand{\imbBothAuc}{0.510}
+\newcommand{\imbBothAucSD}{0.0082}  % inference-seed SD, weights frozen
+\newcommand{\imbBothAucCI}{[0.468, 0.550]}  % 95% bootstrap over test subjects
+
+% --------------------------------------------------------------------------
+% Leakage audit — AFTER values only
+%   Aliases of the corrected-split numbers above, kept so the leakage prose
+%   reads independently. The matching *Before* macros are NOT emitted: they
+%   come from pre-correction scan-level-split runs that this pipeline never
+%   re-ran, so they must stay \prov{} in numbers.tex.
+% --------------------------------------------------------------------------
+% summary_ci.csv | task=B1_corrected encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=1840 n_subjects=733
+\newcommand{\leakSynAfter}{0.295}
+\newcommand{\leakSynAfterSD}{0.0073}  % inference-seed SD, weights frozen
+\newcommand{\leakSynAfterCI}{[0.270, 0.320]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B2_corrected encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=475 n_subjects=169
+\newcommand{\leakDxAfter}{0.291}
+\newcommand{\leakDxAfterSD}{0.0074}  % inference-seed SD, weights frozen
+\newcommand{\leakDxAfterCI}{[0.242, 0.344]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=B2_corrected encoder=pointnet2 head=softmax level=scan metric=macro_f1 n_seeds=5 n_units=475 n_subjects=169
+\newcommand{\leakDxFoneAfter}{0.240}
+\newcommand{\leakDxFoneAfterSD}{0.0131}  % inference-seed SD, weights frozen
+\newcommand{\leakDxFoneAfterCI}{[0.204, 0.287]}  % 95% bootstrap over test subjects
+
+% summary_ci.csv | task=C_corrected encoder=pointnet2 head=softmax level=scan metric=accuracy n_seeds=5 n_units=3639 n_subjects=2658
+\newcommand{\leakCombAfter}{0.903}
+\newcommand{\leakCombAfterSD}{0.0035}  % inference-seed SD, weights frozen
+\newcommand{\leakCombAfterCI}{[0.892, 0.913]}  % 95% bootstrap over test subjects
+
+% --------------------------------------------------------------------------
+% The AUC-minus-top-1 gap — DERIVED, POINT ESTIMATE ONLY
+%   macro_auc minus accuracy off the same summary row. The
+%   difference was never bootstrapped as a unit, so there is no
+%   honest interval to attach and none is emitted. numbers.tex was
+%   ambiguous about which head \gapDxSubj came from, so both the
+%   softmax and prototype variants are given.
+% --------------------------------------------------------------------------
+% summary_ci.csv | B1_corrected/pointnet2/softmax/subject macro_auc 0.8109 - accuracy 0.3495
+\newcommand{\gapSyn}{0.46}
+
+% summary_ci.csv | B1_corrected/pointnet2/proto/subject macro_auc 0.8119 - accuracy 0.3574
+\newcommand{\gapSynPr}{0.45}
+
+% summary_ci.csv | B2_corrected/pointnet2/softmax/scan macro_auc 0.8447 - accuracy 0.2909
+\newcommand{\gapDxScan}{0.55}
+
+% summary_ci.csv | B2_corrected/pointnet2/softmax/subject macro_auc 0.9127 - accuracy 0.3822
+\newcommand{\gapDxSubj}{0.53}
+
+% summary_ci.csv | B2_corrected/pointnet2/proto/subject macro_auc 0.8967 - accuracy 0.4142
+\newcommand{\gapDxSubjPr}{0.48}
+
+% --------------------------------------------------------------------------
+% Inference non-determinism — REPLACES \fpsWobble/\fpsRunA/\fpsRunB
+%   Those three came from two ad-hoc unseeded runs. These come from
+%   the seeded 5-seed sweep on the same task/head/level.
+% --------------------------------------------------------------------------
+% summary_ci.csv | B2_corrected/pointnet2/softmax/subject/accuracy over 5 inference seeds
+\newcommand{\fpsSeedSD}{1.07}  % pp, inference-seed SD
+\newcommand{\fpsSeedLo}{0.373}
+\newcommand{\fpsSeedHi}{0.396}
+\newcommand{\fpsSeedSpan}{2.4}  % pp, observed range
+
+% summary_ci.csv | worst-case row across the whole sweep: B2_corrected/pointnet2/knn11/subject/macro_f1
+\newcommand{\fpsMaxSeedSD}{3.57}  % pp, largest inference-seed SD observed
+

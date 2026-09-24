@@ -1,0 +1,14 @@
+task,metric,published,seed_mean,seed_min,seed_max,delta_pp,where,direction,in_boot_ci,src
+A1,accuracy,0.74,0.7306,0.7259,0.7357,0.94,OUTSIDE,above,True,A1 4-class table
+A2,accuracy,0.841,0.8295,0.8214,0.8359,1.15,OUTSIDE,above,True,A2 binary table
+A2,macro_auc,0.856,0.8491,0.847,0.8521,0.69,OUTSIDE,above,True,A2 binary table
+B2_r2,accuracy,0.401,0.3825,0.374,0.3899,1.85,OUTSIDE,above,True,line 221
+B1_corrected,accuracy,0.298,0.2952,0.288,0.3076,0.28,inside,-,True,line 341
+B1_corrected,macro_f1,0.26,0.2651,0.2493,0.2792,-0.51,inside,-,True,line 341
+B1_corrected,macro_auc,0.771,0.7742,0.7718,0.7756,-0.32,OUTSIDE,below,True,line 341
+B2_corrected,accuracy,0.276,0.2909,0.2842,0.2989,-1.49,OUTSIDE,below,True,line 343 / 257
+B2_corrected,macro_f1,0.222,0.2399,0.2242,0.2527,-1.79,OUTSIDE,below,True,line 343 / 257
+B2_corrected,macro_auc,0.85,0.8447,0.8412,0.8475,0.53,OUTSIDE,above,True,line 343 / 257
+C_corrected,accuracy,0.902,0.9026,0.8989,0.9074,-0.06,inside,-,True,08-07 reply
+C_corrected,macro_f1,0.899,0.9003,0.8967,0.9052,-0.13,inside,-,True,08-07 reply
+C_corrected,macro_auc,0.96,0.9602,0.9595,0.9613,-0.02,inside,-,True,08-07 reply

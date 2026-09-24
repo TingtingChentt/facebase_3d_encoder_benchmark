@@ -1,0 +1,69 @@
+% ============================================================================
+% numbers_perclass.tex — added 2026-08-18 for main_revised.tex Sec. 2.5
+%
+% Per-class decomposition of the softmax-vs-prototype contrast, supporting
+% Supplementary Figs. S1 and S2. Computed by
+%   scripts/paper_figs/figS1_perclass_head.py
+%   scripts/paper_figs/figS2_redistribution.py
+% from results/paper_reruns/predictions/{B1,B2}_corrected__pointnet2__
+% {softmax,proto}__subject__seed{0..4}.npz — five-seed mean per class.
+%
+% VALIDATION: recomputing from the raw prediction files reproduces every
+% published macro value exactly, which is why these figures can be trusted to
+% decompose them:
+%   33-class  F1 0.280 -> 0.341 (\dxFoneSubjSM/\dxFoneSubjPr),
+%             AUC 0.913 -> 0.897 (\dxAucSubjSM/\dxAucSubjPr)
+%   19-class  F1 0.326 -> 0.349, AUC 0.811 -> 0.812
+% ============================================================================
+
+% ── The "unchanged" band. READ THIS BEFORE QUOTING 14/9/10. ─────────────────
+% The manuscript's counts of improved / reduced / unchanged classes are NOT a
+% comparison against exact zero. Exact comparison gives 15 up, 11 down, 7 flat.
+% The published 14/9/10 corresponds to treating |dF1| <= 0.01 as unchanged, and
+% that threshold was previously undeclared anywhere in the text. It is now
+% stated in the prose and drawn on Fig. S1(a). Do not change the counts without
+% changing the band, and do not quote them without the band.
+\newcommand{\headBand}{0.01}
+\newcommand{\headClassesUpB}{14}
+\newcommand{\headClassesDownB}{9}
+\newcommand{\headClassesFlatB}{10}
+% Of the 10 unchanged classes, 7 score F1 = 0 under BOTH decision rules: the
+% model never places them first either way, so they are floor-bound rather than
+% genuinely tied. This distinction is the substantive part of the "no change"
+% count and is drawn as a separate series in Fig. S1(a).
+\newcommand{\headClassesZeroBoth}{7}
+\newcommand{\headClassesTrueTie}{3}
+
+% ── Magnitude of redistribution vs change in discrimination ────────────────
+% Mean absolute per-class change, prototype minus softmax. The ratio is the
+% quantitative form of "changed which diagnoses were classified well, while
+% leaving overall discrimination similar".
+\newcommand{\dxPerClassFoneMad}{0.091}
+\newcommand{\dxPerClassAucMad}{0.038}
+\newcommand{\dxPerClassRatio}{2.4}
+\newcommand{\synPerClassFoneMad}{0.045}
+\newcommand{\synPerClassAucMad}{0.026}
+\newcommand{\synPerClassRatio}{1.8}
+
+% ── Macro AUC under the head swap, prototype minus softmax ─────────────────
+% !! SIGN. contrast_tests.csv reads SOFTMAX MINUS PROTOTYPE; these are negated
+% to match the prose convention, exactly as \dxHeadAccDiff etc. in numbers.tex.
+% contrast_tests.csv | C1a_head_subject[pointnet2]
+%
+% The two tasks do NOT license the same statement and must not be merged:
+%   19-class  emitter verdict "TIE CONFIRMED, tight (CI within +/-2%)"
+%   33-class  emitter verdict "TIE NOT ESTABLISHED (CI contains 0 but is too
+%             wide to exclude a material difference)"
+% So discrimination is demonstrably preserved at 19 classes and merely not
+% distinguishable at 33. Writing "unchanged" for both would overclaim the 33.
+% \synHeadAucDiff, \synHeadAucCI, \dxHeadAucDiff and \dxHeadAucCI ALREADY EXIST
+% in numbers.tex (lines ~272 and ~286) and are NOT redefined here. Recomputing
+% them independently from the raw prediction files gave +0.1 / -1.6 pp with the
+% same intervals, i.e. the existing macros check out. numbers.tex lines 280-285
+% already carry the warning that only the 19-class AUC null is tight; the prose
+% added for Sec. 2.5 follows that rule rather than restating it.
+%
+% Only the two verdict phrases are new, so that the distinction is carried by a
+% macro instead of being re-worded each time it is needed.
+\newcommand{\synHeadAucVerdict}{confirmed as equivalent within a $\pm2$ percentage-point margin}
+\newcommand{\dxHeadAucVerdict}{not distinguishable from zero, though the interval is too wide to establish equivalence}
