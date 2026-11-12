@@ -1,0 +1,20 @@
+% numbers_static.tex — HAND-MAINTAINED values the manuscript uses that no script in
+% this repository emits from shipped files. (Corpus counts of Table 1 are generated:
+% facebench/evaluation/emit_numbers_corpus.py -> numbers_corpus.tex.)
+
+% Combined screening task: labelled manifest rows BEFORE dropping scans without a
+% point cloud. 24,973 rows; 361 of them (286 control-cohort, 65 cleft, 10 FB-TJ0
+% scans) have no point cloud, so the models were trained and tested on the 24,612
+% scans listed in data/splits/C_full_v3.csv. Recomputing it needs the labels.
+\newcommand{\combNScansTask}{24{,}973}
+
+% Values reported by published methods (Comparison table; literature, not computed)
+\newcommand{\litHallgAcc}{48.8\%}
+\newcommand{\litHallgNCls}{64}
+\newcommand{\litHallgTopTen}{87.2\%}
+\newcommand{\litBannisterAAcc}{71\%}
+\newcommand{\litBannisterASens}{43\%}
+\newcommand{\litBannisterANCls}{48}
+\newcommand{\litBannisterCAcc}{40.7\%}
+\newcommand{\litBannisterCNCls}{43}
+\newcommand{\litBannisterBAuc}{0.863}

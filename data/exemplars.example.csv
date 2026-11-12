@@ -1,0 +1,16 @@
+figure,key,id
+fig1,face_scan,<scan_id of a held-out FB-TJ0 scan, panels a-b>
+fig1,patient,<FB-TJ0 subject ID of a held-out patient with 2-4 scans, panel d>
+figS_overview,scan,<scan_id of one FB-TJ0 scan, panel e>
+fig_interp,Achondroplasia,<FB-TJ0 subject ID>
+fig_interp,Cockayne Syndrome,<FB-TJ0 subject ID>
+fig_interp,Down Syndrome,<FB-TJ0 subject ID>
+fig_interp,Pallister-Killian Syndrome,<FB-TJ0 subject ID>
+fig_interp,Rhizomelic Chondrodysplasia Punctata,<FB-TJ0 subject ID>
+fig_interp_wrong,A:Cardiofaciocutaneous Syndrome,<FB-TJ0 subject ID>
+fig_interp_wrong,A:Marfan Syndrome,<FB-TJ0 subject ID>
+fig_interp_wrong,B:Down Syndrome,<FB-TJ0 subject ID>
+fig_interp_wrong,C:Ehlers Danlos Syndrome,<FB-TJ0 subject ID>
+fig_interp_wrong,C:Williams-Beuren Syndrome,<FB-TJ0 subject ID>
+figS_overview,reg_subject,<scan_id: FB-TJ0 scan shown before/after template fitting>
+figS_overview,reg_template,<scan_id: control scan used as the normative template>

@@ -1,0 +1,281 @@
+task,encoder,head,level,seed,metric,value,n_units,n_subjects
+A1_fix_v3_ts1,geommlp,softmax,scan,0,accuracy,0.6627793974732751,1029,1029
+A1_fix_v3_ts1,geommlp,softmax,scan,0,macro_f1,0.3554229512631277,1029,1029
+A1_fix_v3_ts1,geommlp,softmax,scan,0,macro_auc,0.6759596079254199,1029,1029
+A1_fix_v3_ts1,geommlp,softmax,scan,0,f1_class::Unaffected,0.8078688524590164,1029,1029
+A1_fix_v3_ts1,geommlp,softmax,scan,0,f1_class::Cleft Lip,0.2222222222222222,1029,1029
+A1_fix_v3_ts1,geommlp,softmax,scan,0,f1_class::Cleft Palate,0.07547169811320754,1029,1029
+A1_fix_v3_ts1,geommlp,softmax,scan,0,f1_class::Cleft Lip and Palate,0.3161290322580645,1029,1029
+A1_fix_v3_ts1,pointnet,softmax,scan,0,accuracy,0.7696793002915452,1029,1029
+A1_fix_v3_ts1,pointnet,softmax,scan,0,macro_f1,0.2762412235215583,1029,1029
+A1_fix_v3_ts1,pointnet,softmax,scan,0,macro_auc,0.5548212080295549,1029,1029
+A1_fix_v3_ts1,pointnet,softmax,scan,0,f1_class::Unaffected,0.8706552706552707,1029,1029
+A1_fix_v3_ts1,pointnet,softmax,scan,0,f1_class::Cleft Lip,0.0,1029,1029
+A1_fix_v3_ts1,pointnet,softmax,scan,0,f1_class::Cleft Palate,0.0,1029,1029
+A1_fix_v3_ts1,pointnet,softmax,scan,0,f1_class::Cleft Lip and Palate,0.23430962343096234,1029,1029
+A1_fix_v3_ts1,dgcnn,softmax,scan,0,accuracy,0.6987366375121478,1029,1029
+A1_fix_v3_ts1,dgcnn,softmax,scan,0,macro_f1,0.35882789753819355,1029,1029
+A1_fix_v3_ts1,dgcnn,softmax,scan,0,macro_auc,0.7394314767484451,1029,1029
+A1_fix_v3_ts1,dgcnn,softmax,scan,0,f1_class::Unaffected,0.8275862068965517,1029,1029
+A1_fix_v3_ts1,dgcnn,softmax,scan,0,f1_class::Cleft Lip,0.18181818181818182,1029,1029
+A1_fix_v3_ts1,dgcnn,softmax,scan,0,f1_class::Cleft Palate,0.043478260869565216,1029,1029
+A1_fix_v3_ts1,dgcnn,softmax,scan,0,f1_class::Cleft Lip and Palate,0.38242894056847543,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,0,accuracy,0.7871720116618076,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,0,macro_f1,0.2674146886801456,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,0,macro_auc,0.5245571621066294,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,0,f1_class::Unaffected,0.8842929010620458,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,0,f1_class::Cleft Lip,0.0,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,0,f1_class::Cleft Palate,0.0,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,0,f1_class::Cleft Lip and Palate,0.18536585365853658,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,1,accuracy,0.7852283770651117,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,1,macro_f1,0.26695968890349436,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,1,macro_auc,0.5140575043432056,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,1,f1_class::Unaffected,0.8815642458100559,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,1,f1_class::Cleft Lip,0.0,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,1,f1_class::Cleft Palate,0.0,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,1,f1_class::Cleft Lip and Palate,0.18627450980392157,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,2,accuracy,0.7745383867832848,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,2,macro_f1,0.2626870742124795,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,2,macro_auc,0.5226610141237845,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,2,f1_class::Unaffected,0.8756330894766461,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,2,f1_class::Cleft Lip,0.0,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,2,f1_class::Cleft Palate,0.0,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,2,f1_class::Cleft Lip and Palate,0.17511520737327188,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,3,accuracy,0.7764820213799806,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,3,macro_f1,0.2597174755069492,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,3,macro_auc,0.5170508522773922,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,3,f1_class::Unaffected,0.8761904761904762,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,3,f1_class::Cleft Lip,0.0,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,3,f1_class::Cleft Palate,0.0,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,3,f1_class::Cleft Lip and Palate,0.16267942583732056,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,4,accuracy,0.7852283770651117,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,4,macro_f1,0.2706874137214694,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,4,macro_auc,0.5156609768417679,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,4,f1_class::Unaffected,0.8817927170868347,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,4,f1_class::Cleft Lip,0.0,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,4,f1_class::Cleft Palate,0.0,1029,1029
+A1_fix_v3_ts1,pointnet2,softmax,scan,4,f1_class::Cleft Lip and Palate,0.20095693779904306,1029,1029
+A1_fix_v3_ts2,geommlp,softmax,scan,0,accuracy,0.6258503401360545,1029,1029
+A1_fix_v3_ts2,geommlp,softmax,scan,0,macro_f1,0.30949398968103786,1029,1029
+A1_fix_v3_ts2,geommlp,softmax,scan,0,macro_auc,0.6665941941740955,1029,1029
+A1_fix_v3_ts2,geommlp,softmax,scan,0,f1_class::Unaffected,0.7762001352265044,1029,1029
+A1_fix_v3_ts2,geommlp,softmax,scan,0,f1_class::Cleft Lip,0.09395973154362416,1029,1029
+A1_fix_v3_ts2,geommlp,softmax,scan,0,f1_class::Cleft Palate,0.034482758620689655,1029,1029
+A1_fix_v3_ts2,geommlp,softmax,scan,0,f1_class::Cleft Lip and Palate,0.3333333333333333,1029,1029
+A1_fix_v3_ts2,pointnet,softmax,scan,0,accuracy,0.706511175898931,1029,1029
+A1_fix_v3_ts2,pointnet,softmax,scan,0,macro_f1,0.2539588726329399,1029,1029
+A1_fix_v3_ts2,pointnet,softmax,scan,0,macro_auc,0.5323146090297718,1029,1029
+A1_fix_v3_ts2,pointnet,softmax,scan,0,f1_class::Unaffected,0.8321596244131455,1029,1029
+A1_fix_v3_ts2,pointnet,softmax,scan,0,f1_class::Cleft Lip,0.06153846153846154,1029,1029
+A1_fix_v3_ts2,pointnet,softmax,scan,0,f1_class::Cleft Palate,0.0,1029,1029
+A1_fix_v3_ts2,pointnet,softmax,scan,0,f1_class::Cleft Lip and Palate,0.12213740458015267,1029,1029
+A1_fix_v3_ts2,dgcnn,softmax,scan,0,accuracy,0.7803692905733722,1029,1029
+A1_fix_v3_ts2,dgcnn,softmax,scan,0,macro_f1,0.3596195650563824,1029,1029
+A1_fix_v3_ts2,dgcnn,softmax,scan,0,macro_auc,0.7637956858720072,1029,1029
+A1_fix_v3_ts2,dgcnn,softmax,scan,0,f1_class::Unaffected,0.8882318154937907,1029,1029
+A1_fix_v3_ts2,dgcnn,softmax,scan,0,f1_class::Cleft Lip,0.06153846153846154,1029,1029
+A1_fix_v3_ts2,dgcnn,softmax,scan,0,f1_class::Cleft Palate,0.09375,1029,1029
+A1_fix_v3_ts2,dgcnn,softmax,scan,0,f1_class::Cleft Lip and Palate,0.3949579831932773,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,0,accuracy,0.6151603498542274,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,0,macro_f1,0.29239271831965996,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,0,macro_auc,0.7116584133636582,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,0,f1_class::Unaffected,0.7610993657505285,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,0,f1_class::Cleft Lip,0.022727272727272728,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,0,f1_class::Cleft Palate,0.0,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,0,f1_class::Cleft Lip and Palate,0.3857442348008386,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,1,accuracy,0.6122448979591837,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,1,macro_f1,0.30033161393917107,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,1,macro_auc,0.7007800049462841,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,1,f1_class::Unaffected,0.7550877192982456,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,1,f1_class::Cleft Lip,0.07228915662650602,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,1,f1_class::Cleft Palate,0.0,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,1,f1_class::Cleft Lip and Palate,0.3739495798319328,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,2,accuracy,0.6112730806608357,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,2,macro_f1,0.3155223440512328,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,2,macro_auc,0.6997088700803632,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,2,f1_class::Unaffected,0.7535612535612536,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,2,f1_class::Cleft Lip,0.07142857142857142,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,2,f1_class::Cleft Palate,0.056338028169014086,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,2,f1_class::Cleft Lip and Palate,0.3807615230460922,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,3,accuracy,0.6141885325558795,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,3,macro_f1,0.3059703005670745,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,3,macro_auc,0.7166589337744962,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,3,f1_class::Unaffected,0.7540751240255138,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,3,f1_class::Cleft Lip,0.046511627906976744,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,3,f1_class::Cleft Palate,0.028985507246376812,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,3,f1_class::Cleft Lip and Palate,0.3943089430894309,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,4,accuracy,0.5928085519922255,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,4,macro_f1,0.2916291045385245,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,4,macro_auc,0.6923575004818306,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,4,f1_class::Unaffected,0.7406340057636888,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,4,f1_class::Cleft Lip,0.0,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,4,f1_class::Cleft Palate,0.05063291139240506,1029,1029
+A1_fix_v3_ts2,pointnet2,softmax,scan,4,f1_class::Cleft Lip and Palate,0.37524950099800397,1029,1029
+A1_fix_v3_ts3,geommlp,softmax,scan,0,accuracy,0.6763848396501457,1029,1029
+A1_fix_v3_ts3,geommlp,softmax,scan,0,macro_f1,0.34495558893648864,1029,1029
+A1_fix_v3_ts3,geommlp,softmax,scan,0,macro_auc,0.6741465063964518,1029,1029
+A1_fix_v3_ts3,geommlp,softmax,scan,0,f1_class::Unaffected,0.8131021194605009,1029,1029
+A1_fix_v3_ts3,geommlp,softmax,scan,0,f1_class::Cleft Lip,0.18181818181818182,1029,1029
+A1_fix_v3_ts3,geommlp,softmax,scan,0,f1_class::Cleft Palate,0.05714285714285714,1029,1029
+A1_fix_v3_ts3,geommlp,softmax,scan,0,f1_class::Cleft Lip and Palate,0.3277591973244147,1029,1029
+A1_fix_v3_ts3,pointnet,softmax,scan,0,accuracy,0.521865889212828,1029,1029
+A1_fix_v3_ts3,pointnet,softmax,scan,0,macro_f1,0.2452081964897761,1029,1029
+A1_fix_v3_ts3,pointnet,softmax,scan,0,macro_auc,0.602073808286129,1029,1029
+A1_fix_v3_ts3,pointnet,softmax,scan,0,f1_class::Unaffected,0.6827485380116959,1029,1029
+A1_fix_v3_ts3,pointnet,softmax,scan,0,f1_class::Cleft Lip,0.04477611940298507,1029,1029
+A1_fix_v3_ts3,pointnet,softmax,scan,0,f1_class::Cleft Palate,0.0,1029,1029
+A1_fix_v3_ts3,pointnet,softmax,scan,0,f1_class::Cleft Lip and Palate,0.2533081285444234,1029,1029
+A1_fix_v3_ts3,dgcnn,softmax,scan,0,accuracy,0.6423712342079689,1029,1029
+A1_fix_v3_ts3,dgcnn,softmax,scan,0,macro_f1,0.34348655287969526,1029,1029
+A1_fix_v3_ts3,dgcnn,softmax,scan,0,macro_auc,0.756650116877337,1029,1029
+A1_fix_v3_ts3,dgcnn,softmax,scan,0,f1_class::Unaffected,0.7867494824016563,1029,1029
+A1_fix_v3_ts3,dgcnn,softmax,scan,0,f1_class::Cleft Lip,0.1553398058252427,1029,1029
+A1_fix_v3_ts3,dgcnn,softmax,scan,0,f1_class::Cleft Palate,0.047058823529411764,1029,1029
+A1_fix_v3_ts3,dgcnn,softmax,scan,0,f1_class::Cleft Lip and Palate,0.3847980997624703,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,0,accuracy,0.6802721088435374,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,0,macro_f1,0.3246045822821866,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,0,macro_auc,0.7155547957621174,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,0,f1_class::Unaffected,0.8108108108108109,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,0,f1_class::Cleft Lip,0.046511627906976744,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,0,f1_class::Cleft Palate,0.06666666666666667,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,0,f1_class::Cleft Lip and Palate,0.3744292237442922,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,1,accuracy,0.6802721088435374,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,1,macro_f1,0.31182549165176937,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,1,macro_auc,0.7207197538705493,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,1,f1_class::Unaffected,0.8115561391989494,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,1,f1_class::Cleft Lip,0.0,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,1,f1_class::Cleft Palate,0.06451612903225806,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,1,f1_class::Cleft Lip and Palate,0.37122969837587005,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,2,accuracy,0.7026239067055393,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,2,macro_f1,0.36628535090359265,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,2,macro_auc,0.7257727059237437,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,2,f1_class::Unaffected,0.8256041802743305,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,2,f1_class::Cleft Lip,0.13333333333333333,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,2,f1_class::Cleft Palate,0.10714285714285714,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,2,f1_class::Cleft Lip and Palate,0.39906103286384975,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,3,accuracy,0.6919339164237124,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,3,macro_f1,0.32783237854974967,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,3,macro_auc,0.7227646114558779,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,3,f1_class::Unaffected,0.8227599738391105,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,3,f1_class::Cleft Lip,0.04878048780487805,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,3,f1_class::Cleft Palate,0.06153846153846154,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,3,f1_class::Cleft Lip and Palate,0.37825059101654845,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,4,accuracy,0.6861030126336248,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,4,macro_f1,0.32720610810549183,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,4,macro_auc,0.7184189302133211,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,4,f1_class::Unaffected,0.8173455978975033,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,4,f1_class::Cleft Lip,0.0,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,4,f1_class::Cleft Palate,0.11764705882352941,1029,1029
+A1_fix_v3_ts3,pointnet2,softmax,scan,4,f1_class::Cleft Lip and Palate,0.37383177570093457,1029,1029
+A1_fix_v3_ts4,geommlp,softmax,scan,0,accuracy,0.5860058309037901,1029,1029
+A1_fix_v3_ts4,geommlp,softmax,scan,0,macro_f1,0.30836309882470364,1029,1029
+A1_fix_v3_ts4,geommlp,softmax,scan,0,macro_auc,0.6699813171212594,1029,1029
+A1_fix_v3_ts4,geommlp,softmax,scan,0,f1_class::Unaffected,0.7396491228070176,1029,1029
+A1_fix_v3_ts4,geommlp,softmax,scan,0,f1_class::Cleft Lip,0.11538461538461539,1029,1029
+A1_fix_v3_ts4,geommlp,softmax,scan,0,f1_class::Cleft Palate,0.04918032786885246,1029,1029
+A1_fix_v3_ts4,geommlp,softmax,scan,0,f1_class::Cleft Lip and Palate,0.32923832923832924,1029,1029
+A1_fix_v3_ts4,pointnet,softmax,scan,0,accuracy,0.7337220602526725,1029,1029
+A1_fix_v3_ts4,pointnet,softmax,scan,0,macro_f1,0.2647439253487728,1029,1029
+A1_fix_v3_ts4,pointnet,softmax,scan,0,macro_auc,0.5688026648499989,1029,1029
+A1_fix_v3_ts4,pointnet,softmax,scan,0,f1_class::Unaffected,0.8484493856056173,1029,1029
+A1_fix_v3_ts4,pointnet,softmax,scan,0,f1_class::Cleft Lip,0.0,1029,1029
+A1_fix_v3_ts4,pointnet,softmax,scan,0,f1_class::Cleft Palate,0.0,1029,1029
+A1_fix_v3_ts4,pointnet,softmax,scan,0,f1_class::Cleft Lip and Palate,0.21052631578947367,1029,1029
+A1_fix_v3_ts4,dgcnn,softmax,scan,0,accuracy,0.6627793974732751,1029,1029
+A1_fix_v3_ts4,dgcnn,softmax,scan,0,macro_f1,0.3078126255975704,1029,1029
+A1_fix_v3_ts4,dgcnn,softmax,scan,0,macro_auc,0.690404360089871,1029,1029
+A1_fix_v3_ts4,dgcnn,softmax,scan,0,f1_class::Unaffected,0.8023483365949119,1029,1029
+A1_fix_v3_ts4,dgcnn,softmax,scan,0,f1_class::Cleft Lip,0.0,1029,1029
+A1_fix_v3_ts4,dgcnn,softmax,scan,0,f1_class::Cleft Palate,0.12307692307692308,1029,1029
+A1_fix_v3_ts4,dgcnn,softmax,scan,0,f1_class::Cleft Lip and Palate,0.3058252427184466,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,0,accuracy,0.6122448979591837,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,0,macro_f1,0.32517974266574545,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,0,macro_auc,0.6972738024183783,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,0,f1_class::Unaffected,0.7586206896551724,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,0,f1_class::Cleft Lip,0.0963855421686747,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,0,f1_class::Cleft Palate,0.08247422680412371,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,0,f1_class::Cleft Lip and Palate,0.36323851203501095,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,1,accuracy,0.597667638483965,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,1,macro_f1,0.30299872669293443,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,1,macro_auc,0.69905264381891,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,1,f1_class::Unaffected,0.7457627118644068,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,1,f1_class::Cleft Lip,0.04597701149425287,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,1,f1_class::Cleft Palate,0.06060606060606061,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,1,f1_class::Cleft Lip and Palate,0.35964912280701755,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,2,accuracy,0.6122448979591837,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,2,macro_f1,0.3233514756113416,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,2,macro_auc,0.7022549671883817,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,2,f1_class::Unaffected,0.759493670886076,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,2,f1_class::Cleft Lip,0.07142857142857142,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,2,f1_class::Cleft Palate,0.09803921568627451,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,2,f1_class::Cleft Lip and Palate,0.36444444444444446,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,3,accuracy,0.6054421768707483,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,3,macro_f1,0.33221674491138525,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,3,macro_auc,0.7036292936728171,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,3,f1_class::Unaffected,0.7498238195912614,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,3,f1_class::Cleft Lip,0.14285714285714285,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,3,f1_class::Cleft Palate,0.08247422680412371,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,3,f1_class::Cleft Lip and Palate,0.3537117903930131,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,4,accuracy,0.6044703595724004,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,4,macro_f1,0.3212088502009535,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,4,macro_auc,0.7024871404059672,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,4,f1_class::Unaffected,0.7519434628975264,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,4,f1_class::Cleft Lip,0.0963855421686747,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,4,f1_class::Cleft Palate,0.07920792079207921,1029,1029
+A1_fix_v3_ts4,pointnet2,softmax,scan,4,f1_class::Cleft Lip and Palate,0.3572984749455338,1029,1029
+A1_fix_v3_ts5,geommlp,softmax,scan,0,accuracy,0.6171039844509232,1029,1029
+A1_fix_v3_ts5,geommlp,softmax,scan,0,macro_f1,0.3260863302218312,1029,1029
+A1_fix_v3_ts5,geommlp,softmax,scan,0,macro_auc,0.6575984755818165,1029,1029
+A1_fix_v3_ts5,geommlp,softmax,scan,0,f1_class::Unaffected,0.7697501688048616,1029,1029
+A1_fix_v3_ts5,geommlp,softmax,scan,0,f1_class::Cleft Lip,0.14705882352941177,1029,1029
+A1_fix_v3_ts5,geommlp,softmax,scan,0,f1_class::Cleft Palate,0.04316546762589928,1029,1029
+A1_fix_v3_ts5,geommlp,softmax,scan,0,f1_class::Cleft Lip and Palate,0.3443708609271523,1029,1029
+A1_fix_v3_ts5,pointnet,softmax,scan,0,accuracy,0.7405247813411079,1029,1029
+A1_fix_v3_ts5,pointnet,softmax,scan,0,macro_f1,0.2749223315036299,1029,1029
+A1_fix_v3_ts5,pointnet,softmax,scan,0,macro_auc,0.6648558496417953,1029,1029
+A1_fix_v3_ts5,pointnet,softmax,scan,0,f1_class::Unaffected,0.8531139835487661,1029,1029
+A1_fix_v3_ts5,pointnet,softmax,scan,0,f1_class::Cleft Lip,0.0,1029,1029
+A1_fix_v3_ts5,pointnet,softmax,scan,0,f1_class::Cleft Palate,0.0,1029,1029
+A1_fix_v3_ts5,pointnet,softmax,scan,0,f1_class::Cleft Lip and Palate,0.2465753424657534,1029,1029
+A1_fix_v3_ts5,dgcnn,softmax,scan,0,accuracy,0.5558794946550049,1029,1029
+A1_fix_v3_ts5,dgcnn,softmax,scan,0,macro_f1,0.27842060164222737,1029,1029
+A1_fix_v3_ts5,dgcnn,softmax,scan,0,macro_auc,0.6238970344834036,1029,1029
+A1_fix_v3_ts5,dgcnn,softmax,scan,0,f1_class::Unaffected,0.7111735769501054,1029,1029
+A1_fix_v3_ts5,dgcnn,softmax,scan,0,f1_class::Cleft Lip,0.058823529411764705,1029,1029
+A1_fix_v3_ts5,dgcnn,softmax,scan,0,f1_class::Cleft Palate,0.09523809523809523,1029,1029
+A1_fix_v3_ts5,dgcnn,softmax,scan,0,f1_class::Cleft Lip and Palate,0.2484472049689441,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,0,accuracy,0.7074829931972789,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,0,macro_f1,0.394757874217708,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,0,macro_auc,0.7653788524457302,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,0,f1_class::Unaffected,0.8333333333333334,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,0,f1_class::Cleft Lip,0.16,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,0,f1_class::Cleft Palate,0.1037037037037037,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,0,f1_class::Cleft Lip and Palate,0.481994459833795,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,1,accuracy,0.6880466472303207,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,1,macro_f1,0.3880731460190663,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,1,macro_auc,0.770495616383762,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,1,f1_class::Unaffected,0.8181818181818182,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,1,f1_class::Cleft Lip,0.1935483870967742,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,1,f1_class::Cleft Palate,0.07352941176470588,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,1,f1_class::Cleft Lip and Palate,0.46703296703296704,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,2,accuracy,0.6987366375121478,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,2,macro_f1,0.3712199663063217,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,2,macro_auc,0.7661408310544792,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,2,f1_class::Unaffected,0.8274044795783926,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,2,f1_class::Cleft Lip,0.10526315789473684,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,2,f1_class::Cleft Palate,0.09917355371900827,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,2,f1_class::Cleft Lip and Palate,0.4530386740331492,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,3,accuracy,0.7045675413022352,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,3,macro_f1,0.36563336969909277,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,3,macro_auc,0.7789762255836145,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,3,f1_class::Unaffected,0.8332234673698088,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,3,f1_class::Cleft Lip,0.08,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,3,f1_class::Cleft Palate,0.08064516129032258,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,3,f1_class::Cleft Lip and Palate,0.46866485013623976,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,4,accuracy,0.6812439261418853,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,4,macro_f1,0.3615266519725313,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,4,macro_auc,0.7669300763770306,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,4,f1_class::Unaffected,0.8168449197860963,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,4,f1_class::Cleft Lip,0.1016949152542373,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,4,f1_class::Cleft Palate,0.09090909090909091,1029,1029
+A1_fix_v3_ts5,pointnet2,softmax,scan,4,f1_class::Cleft Lip and Palate,0.4366576819407008,1029,1029

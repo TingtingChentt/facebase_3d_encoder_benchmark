@@ -1,0 +1,19 @@
+predictor,subset,auc,n,note
+cohort membership only,all,0.9115741170910224,2658,
+cohort membership only,FB-TJ0 only,0.5,648,
+cohort membership only,cleft cohorts (FB-5A + FB-56),0.551238549951048,1035,
+cohort membership only,FB-5A only,0.5,486,
+cohort membership only,FB-56 only,0.5,549,
+cohort membership only,affected cohorts only (no control-only cohorts),0.8241347298331593,1683,
+age only,all,0.7432239649828732,2012,subjects with age and sex recorded
+age only,FB-TJ0 only,0.7817056856187292,635,subjects with age and sex recorded
+age only,cleft cohorts (FB-5A + FB-56),0.8391930313962688,1035,subjects with age and sex recorded
+age only,FB-5A only,0.7849492521367522,486,subjects with age and sex recorded
+age only,FB-56 only,0.8852767994717147,549,subjects with age and sex recorded
+age only,affected cohorts only (no control-only cohorts),0.7513436750898368,1670,subjects with age and sex recorded
+age + sex,all,0.7470885613417835,2012,subjects with age and sex recorded
+age + sex,FB-TJ0 only,0.7827508361204014,635,subjects with age and sex recorded
+age + sex,cleft cohorts (FB-5A + FB-56),0.8496774539651032,1035,subjects with age and sex recorded
+age + sex,FB-5A only,0.801068376068376,486,subjects with age and sex recorded
+age + sex,FB-56 only,0.8866800572309046,549,subjects with age and sex recorded
+age + sex,affected cohorts only (no control-only cohorts),0.7544549161744658,1670,subjects with age and sex recorded

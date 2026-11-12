@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, please cite the paper below."
+title: "FaceBase 3D Encoder Benchmark: from screening to differential diagnosis"
+abstract: >-
+  Code, subject-level split manifests, and result tables for a registration-free
+  benchmark of 3D facial representations for craniofacial screening, cleft
+  subtyping and 49-class genetic syndrome diagnosis on six FaceBase cohorts,
+  evaluated over five training seeds, with region-occlusion interpretability.
+type: software
+license: MIT
+authors:
+  - family-names: Chen
+    given-names: Tingting
+    affiliation: "Children's Hospital of Philadelphia"
+  - family-names: Ahsan
+    given-names: Mian Umair
+    affiliation: "Children's Hospital of Philadelphia"
+  - family-names: Cotney
+    given-names: Justin
+    affiliation: "Children's Hospital of Philadelphia"
+  - family-names: Liao
+    given-names: Eric
+    affiliation: "Children's Hospital of Philadelphia"
+  - family-names: Wang
+    given-names: Kai
+    affiliation: "Children's Hospital of Philadelphia"
+preferred-citation:
+  type: article
+  title: >-
+    From Screening to Differential Diagnosis: Benchmarking 3D Facial
+    Representations Across Craniofacial Conditions
+  authors:
+    - family-names: Chen
+      given-names: Tingting
+    - family-names: Ahsan
+      given-names: Mian Umair
+    - family-names: Cotney
+      given-names: Justin
+    - family-names: Liao
+      given-names: Eric
+    - family-names: Wang
+      given-names: Kai
+  year: 2026

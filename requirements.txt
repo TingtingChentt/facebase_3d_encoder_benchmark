@@ -1,0 +1,25 @@
+# Versions below are the ones the published results were produced with
+# (Python 3.9.25, CUDA 12.8). Several figures were rendered with matplotlib
+# 3.11.0 instead; see docs/REPRODUCE.md. Later minor versions are expected to work; if you
+# reproduce with different versions, expect agreement to the reported SDs
+# rather than bit-identical outputs.
+
+torch==2.8.0
+numpy==2.0.1
+pandas==2.3.3
+scikit-learn==1.6.1
+scipy==1.13.1
+matplotlib==3.9.4
+
+# preprocessing only (mesh loading / sampling)
+trimesh==4.11.5
+plyfile>=1.0
+
+Pillow>=10            # interpretability figures
+
+# open3d: only for the template-fitting panel of Supplementary Fig. S1
+# (figures/figS_overview_registration.py).
+
+# The interpretability LANDMARK step (analyses/interpretability/landmark_scans.py) runs in a
+# separate small environment: mediapipe==0.10.14, opencv-python, trimesh, plyfile,
+# scipy, pandas, Pillow. See docs/REPRODUCE.md.

@@ -1,0 +1,481 @@
+pair_id,syndrome,clinical_diagnosis,n_subjects,verdict,note
+1,10p11.2q21.3 Inversion,Pericentric inversion of chromosome 10p11.2q21.2,1,same,breakpoint q21.3 vs q21.2 adjacent; plausibly same inversion
+2,10q21.3 Deletion,Small copy loss 10q21.3,2,same,
+3,11q14.1 Duplication,Chromosome 11q14.1 duplication 77409675-77755884 inclued all or part of 4 ref sequence genes. Maternially inherited. Quest 2.6 million probe SNP array,1,same,
+4,11q24.1 or 2 Deletion,11q deletion,1,partial,CD 11q deletion imprecise vs 11q24 band
+5,12p11.22q11 Duplication,12p11.22 -> 12q11 duplication,2,same,
+6,13q21.32 Deletion,13q21.1q31. 1 deletion,1,partial,CD range 13q21.1-q31.1 much larger; contains 13q21.32
+7,15q 13.3 Duplication,15q13.3-13.3 duplication,1,same,
+8,15q 21.3 Deletion,de novo 15q deletion,1,partial,CD 15q deletion imprecise vs 15q21.3
+9,15q11.2 Deletion,15q11.2 microdeletion,1,same,
+10,15q11.2 Deletion,15q11.22,1,partial,CD gives band 15q11.22 only; no deletion/duplication stated
+11,15q11.2 Deletion,Interstitial deletion of chromosome 15,1,partial,CD interstitial chr15 deletion; locus unspecified
+12,15q11.2 Duplication,15q11.2-q13.1 duplication,1,partial,CD 15q11.2-q13.1 dup is larger (dup15q/PWS-AS region) than 15q11.2
+13,15q13.3 Deletion,15q13.3 microdeletion syndrome-CHRNA7,1,same,
+14,15q13.3 Deletion,"Chromosomal deletion 15q13.2-13.3, spanning 2megabases",1,same,
+15,15q13.3 Deletion,Copy loss 15q13.3,1,same,
+16,15q26.3 Deletion,"128kb deletio of 15q26.3, deletion includes part of IGF1R",1,same,
+17,15q26.3 Deletion,15q26.2-26.3 deletion,1,same,
+18,16p11.2 Deletion,16p11.2 Microdeletion Syndrome,1,same,
+19,16p11.2 Deletion,16p11.2 deletion (218kb),1,same,
+20,16p11.2 Deletion,"Chromosomal deletion, 16p11.2deletion",1,same,
+21,16p11.2 Duplication,"ASD, possible Marfanoid, 16p11.2 duplication",1,same,CD adds ASD/possible marfanoid features
+22,17p11 Duplication,Copy Gain in 17p11,1,same,
+23,18p Deletion,18p-,8,same,
+24,18p Deletion,18P-,2,same,
+25,18p Tetrasomy,Tetrasomy 18p,19,same,
+26,18p11.2 Deletion,18p-,1,same,
+27,18q Duplication,Partial Trisomy 18q,1,same,
+28,19p13.3 Deletion,Interstitial deletion of 761kb at 19p13.3,1,same,
+29,19q13 Duplication,19q13.31 copy gain,1,same,
+30,19q13 Duplication,Chromosome 19 partial duplication,1,partial,CD chr19 partial duplication; locus unspecified
+31,1p36 Deletion,1p36 deletion & 10p15p13 duplication,1,partial,CD adds 10p15p13 duplication not in Syndrome
+32,1q21.1 Deletion,1q21,1,partial,CD 1q21 only; no deletion/duplication stated
+33,1q21.1 Deletion,Chromosome 1q21.1 deletion syndrome,1,same,
+34,1q21.1 Duplication,1q21 duplication,1,same,
+35,1q24.2-1q25.3 deletion,1q24.2-1q25.3 deletion including the LHXR gene,1,same,
+36,1q41 Duplication,1q41 copy gain,1,same,
+37,2 Duplication; 15 Duplication,Unbalanced Trisomy Partial dup 2 and 15,1,same,
+38,2 Partial Deletion,#2 Chromosome partial deletion,2,same,
+39,22q 11.2 Deletion Syndrome,22q11.2 deletion,10,same,
+40,22q 11.2 Deletion Syndrome,DiGeorge Syndrome,6,same,
+41,22q 11.2 Deletion Syndrome,22Q deletion,2,same,
+42,22q 11.2 Deletion Syndrome,22q deletion Syndrome,2,same,
+43,22q 11.2 Deletion Syndrome,DiGeorge,2,same,
+44,22q 11.2 Deletion Syndrome,atypical 22Q 11.2 deletion syndrome,2,same,
+45,22q 11.2 Deletion Syndrome,22Q Deletion,1,same,
+46,22q 11.2 Deletion Syndrome,22q 11.2 deletion syndrome and Bernard-Soulier Syndrome,1,same,adds Bernard-Soulier (GP1BB lies in 22q11.2 region)
+47,22q 11.2 Deletion Syndrome,22q 11.2 deletion syndrome and TOF,1,same,
+48,22q 11.2 Deletion Syndrome,22q deletion,1,same,
+49,22q 11.2 Deletion Syndrome,22q11.21 deletion not including TBX1,1,partial,atypical 22q11.21 deletion excluding TBX1 (nested/distal)
+50,22q 11.2 Deletion Syndrome,Possible 22a deletion,1,same,
+51,22q 11.2 Deletion Syndrome,Possible 22q.11 deletion,1,same,
+52,22q 11.2 Deletion Syndrome,Possible 22q11 deletion,1,same,
+53,22q 11.2 Deletion Syndrome,Possible 22q11.2 deletion,1,same,
+54,22q 11.2 Deletion Syndrome,Possible Atypical 22q11 deletion,1,same,
+55,22q 11.2 Deletion Syndrome,VCFS,1,same,
+56,22q 11.2 Deletion Syndrome,VELOCARDIOFACIAL SYNDROME,1,same,
+57,22q11 Duplication,22q11.2 duplicaiton,1,same,
+58,22q11 Duplication,22q11.2 duplication,1,same,
+59,22q11 Duplication,22q11.21 Duplication; 17q25.1 Duplication,1,partial,CD adds 17q25.1 duplication
+60,22q11 Duplication,Cat Eye Syndrome,1,subtype,"Cat eye syndrome = 22q11 tetrasomy (sSMC), specific form of 22q11 dup"
+61,22q11 Duplication,Cat Eye Syndrome-chromosome 22,1,subtype,"Cat eye syndrome = 22q11 tetrasomy (sSMC), specific form of 22q11 dup"
+62,2p16.3 Deletion,deletion on 2p16.3 (small),1,same,
+63,2q12.3 Deletion,Abnormal microarray with 2q deletion,1,partial,CD 2q deletion imprecise vs 2q12.3
+64,2q37 Deletion,2q37 deletion terminal,1,same,
+65,3p25.3-3p26.3 Deletion,Chromosome 3p deletion syndrome,1,same,
+66,3q25 Duplication,3q Partial Trisomy Syndrome,1,partial,CD 3q partial trisomy; locus imprecise vs 3q25
+67,3q25 Duplication,"FASD, Chromosome dup3q25",1,partial,CD adds FASD (dysmorphic confounder)
+68,3q26 Duplication,"3Q partial trisomy syndrome, partial duplication of chromosome 21",1,partial,CD adds partial duplication of chromosome 21
+69,4p.16 Translocation,Missing Short arm of 4p translocated to 16,1,partial,CD implies unbalanced loss of 4p (der t(4;16)); Syndrome says translocation only
+70,4q Deletion,deletion on 4q (oligo microarray),1,same,
+71,4q26-q28.2 Deletion; 12p Deletion,Deletion at 4q26-q28.1 with another small deletion at 12p,1,same,
+72,4q31 Deletion,4q deletion,1,partial,CD 4q deletion imprecise vs 4q31
+73,4q34.3q35.2 Deletion,"Chromosomal deletion, 4q34.3-q35.2",1,same,
+74,5p Deletion Cri du Chat,5p-,33,same,
+75,5p Deletion Cri du Chat,Cri Du Chat,1,same,
+76,5p Deletion Cri du Chat,Cri du Chat,1,same,
+77,5p Deletion Cri du Chat,Cri-du-Chat Syndrome (variant),1,same,
+78,5p Deletion Cri du Chat; Trisomy 20p,Cri Du Chat,1,partial,Syndrome includes trisomy 20p; CD omits it
+79,5q13.2 Deletion,5q13.2 copy loss,1,same,
+80,5q35.2 Duplication,5q35 microduplication 1.9Mb,1,same,
+81,6q25.3 Deletion,"6q25.3 microdeletion, ARID1B gene deletion",1,same,
+82,6q25.3 Duplication,autism/ARID1B duplication,1,same,
+83,7q(del 7q34q35 and dup 7q35q36.1),Deletion of q arm of chromosome 7q,1,partial,Syndrome del 7q34q35 + dup 7q35q36.1; CD only 7q deletion
+84,7q11.2-q22.1 Duplication,Trisomy Chromosome 7q11.2-q22.1,1,same,
+85,7q21.3 Deletion,7q21.3 deletion & mitochondrial DNA mutation,1,partial,CD adds mitochondrial DNA mutation
+86,7q31.1 Duplication,duplication on 7q31.1,1,same,
+87,8p22p12 Deletion,8p22p12 microdeletion,1,same,
+88,8p22p21 Duplication,Chromosome 8 duplication,1,partial,CD chr8 duplication; locus unspecified
+89,8p23.1 Duplication,8p23.1 copy gain,1,same,
+90,9p11.2 Duplication,Trisomy 9p,1,partial,CD trisomy 9p (whole arm) vs 9p11.2 dup; extent differs
+91,9p13.2 Duplication,Trisomy 9p,1,partial,CD trisomy 9p (whole arm) vs 9p13.2 dup; extent differs
+92,9p24.3 Deletion,Small terminal deletion of 9p24.3,1,same,
+93,9q21.12 9q21.13 Deletion,9q21.12 9q21.13 deletions,1,same,
+94,Achondroplasia,Achondroplasia or hypochondroplasia,1,partial,CD differential achondroplasia vs hypochondroplasia (allelic FGFR3)
+95,Achondroplasia; Down Syndrome,Achondroplasia and Trisomy21,1,same,
+96,Achondroplasia; Geleo-physic Dysplasia,Achondroplasia and Geleo-physic dysplasia,1,same,
+97,Acro-dermato-ungual-lacrimal-tooth Syndrome,Adult Syndrome (Ectodermal Dysplasia),1,same,
+98,Acromesomelic Dysplasia,Acromesomelic Dysplasia-Maroteaux type,1,subtype,Maroteaux type is a specific acromesomelic dysplasia
+99,Amniotic Band Syndrome,Amniotic Band Sequence,1,same,
+100,Angelman Syndrome,"Angelman Syndrome, Cyclic Neutropenia",1,same,adds cyclic neutropenia (non-dysmorphic comorbidity)
+101,Angelman Syndrome,Angelmans?,1,same,
+102,Angelman Syndrome,Klinefelter and Angelman Syndrome,1,partial,CD adds Klinefelter (second chromosomal disorder)
+103,Apert Syndrome,APERT - like,1,partial,"CD Apert-like, i.e. not confirmed Apert"
+104,Aural Atresia Unilateral,L ear Atresia,1,same,
+105,Autism Spectrum Disorder,Autism,1,same,
+106,Autism Spectrum Disorder,"Autism, ADHD, multiple VUS on array",1,same,adds ADHD and unspecified VUS on array
+107,Autism Spectrum Disorder,"Autism, abnormal head shape as a baby",1,same,
+108,Autism Spectrum Disorder,Autism-high functioning,1,same,
+109,Bardet-Biedl; Moebius Syndrome,"Possible Bardet-Biedl, Mobius Syndrome",1,same,
+110,Beckwith-Weidemann Syndrome,Beckwith-Wiedemann Syndrome,6,same,
+111,Beckwith-Weidemann Syndrome,Bechwith-Wiedemann Syndrome,1,same,
+112,Beckwith-Weidemann Syndrome,Beckwith Wiedemann,1,same,
+113,Beckwith-Weidemann Syndrome,Beckwith-Wiedemann,1,same,
+114,Beckwith-Weidemann Syndrome,Beckwith-Wiedemann syndrome,1,same,
+115,Beckwith-Weidemann Syndrome,Pending Beckwith Wiedemann TESTING,1,same,
+116,Beta-Ketothiolase Deficiency,beta ketothialase deficiency,1,same,
+117,Beta-Propeller Protein-Associated Neurodegeneration,Mutation in WDR45 gene,1,same,
+118,Biotinidase Deficiency,Partial Biotinidase deficiency,1,subtype,partial biotinidase deficiency is a milder subtype
+119,Blepharocheilodontic Syndrome,possible blepharocheilodontic syndrome,2,same,
+120,Borjeson-Forssman-Lehmann Syndrome,Borjenson-Forssman-Lehamann Syndrome,1,same,
+121,Borjeson-Forssman-Lehmann Syndrome,Borjenson-Forssman-Lehamann Syndrome (testing for),1,same,
+122,Branchio-Oto-Renal Syndrome,Pos BOR,2,same,
+123,Branchio-Oto-Renal Syndrome,possible BOR,2,same,
+124,Branchio-Oto-Renal Syndrome,8q deletion/BOR syndrome,1,partial,BOR via 8q deletion (contiguous deletion; locus imprecise)
+125,Branchio-Oto-Renal Syndrome,Brachio-oto-renal syndrome,1,same,
+126,Branchio-Oto-Renal Syndrome,"Bronchi-Oto-Renal syndrome, Factor V Leiden mutation-heterozygous",1,same,adds heterozygous Factor V Leiden (incidental)
+127,Branchio-Oto-Renal Syndrome,"Bronchi-Oto-Renal syndrome, Factor V Leiden mutation-heterozygous - no known history of clots",1,same,adds heterozygous Factor V Leiden (incidental)
+128,CHARGE Syndrome,Possible CHARGE,1,same,
+129,CLOVES Syndrome,PIK3CA genetic mutation/CLOVES syndrome,1,same,
+130,Campomelic Dysplasia,Acampomelic campomelic dysplasia,1,subtype,acampomelic form of campomelic dysplasia (SOX9)
+131,Cardiofaciocutaneous Syndrome,CFC,24,same,
+132,Cardiofaciocutaneous Syndrome,Cardio-Facio-Cutaneous Syndrome,20,same,
+133,Cardiofaciocutaneous Syndrome,CFC/Noonan,1,partial,CD differential CFC vs Noonan
+134,Cardiofaciocutaneous Syndrome,Cardiofacialcutaneous Syndrome 4 (CFC4),1,subtype,CFC4 (MAP2K2) is a CFC subtype
+135,Carnitine Deficiency; systemic primary,Carnitine Transport deficiency,1,same,
+136,Catel-Manzke Syndrome,Pierre-Robin / Catel-Manzke,1,same,
+137,Cerebrocostomandibular Syndrome,cerebro costo mandibular syndrome (CCMS),1,same,
+138,Chromosomal Abnormality,Chromosome abnormality,1,same,
+139,Chromosomal Abnormality,Chromosome anomaly,1,same,
+140,Chrondrodysplasia Punctata,Chondro dryplasia punctata,1,same,
+141,Cleft Lip/Palate,Cleft Palate,1,subtype,isolated cleft palate vs CL/P umbrella (etiologically distinct cleft class)
+142,Cleft Lip/Palate,"Cleft lip, unliateral",1,subtype,cleft lip only
+143,Cleft Lip/Palate,"Cleft palate, genetic evaluation in progress",1,subtype,cleft palate only
+144,Cleft Lip/Palate,"Orofacial Cleft 1, OFC1",1,same,
+145,Cleft Lip/Palate,Unknown - Unspecified cleft palate with cleft lip,1,same,
+146,Cleft Lip/Palate,Wide Bilateral Cleft Lip + Palate with protrusion,1,same,
+147,Cleft Lip/Palate,cleft lip and palate,1,same,
+148,Cleft Lip/Palate,"cleft palate, unknown",1,subtype,cleft palate only
+149,Cleft Lip/Palate,incomplete bilateral cleft lip and complete cleft pallete,1,same,
+150,Cleft Lip/Palate,isolated orofacial clefting,1,same,
+151,Cleidocranial Dysostosis,Cleidocranial Dystosis Syndrome,1,same,
+152,Cleidocranial Dysostosis,Cleidocranial dysplasia,1,same,
+153,Cockayne Syndrome,"Cockayne Syndrome, suspected",1,same,
+154,Cockayne Syndrome,Mitochondrial Disease and Cockayne,1,partial,CD adds mitochondrial disease
+155,Coffin-Siris Syndrome,Coffin-Siris Syndrome with Dandy Walker variant,1,same,Dandy-Walker variant as additional finding
+156,Connective Tissue Disorder,Marfan like,1,same,
+157,Connective Tissue Disorder,Type A Aortic Dissection,1,nonspecific,"CD is a finding (aortic dissection), names no disorder"
+158,Connective Tissue Disorder,undiagnosed connective tissue disorder,1,same,
+159,Cornelia de Lange Syndrome,CdLS,92,same,
+160,Cornelia de Lange Syndrome,Cornelia de Lange Syndrome (CDLS),1,same,
+161,Craniosynostosis,"Craniosynostoses, possibly genetic",1,same,
+162,Craniosynostosis,"Craniosynostosis of coronal suture, believe has a genetic syndrome too",1,subtype,coronal synostosis specified
+163,Craniosynostosis,bicoronal synostosis,1,subtype,bicoronal synostosis specified
+164,Crouzon Syndrome,Crouzan Syndrome,1,same,
+165,Crouzon Syndrome,Crouzon Syndrome (confirmed from eMR),1,same,
+166,Crouzon Syndrome,Crouzon craniofacial dysostosis with acanthosis nigricans,1,subtype,"Crouzon with acanthosis nigricans = FGFR3 A391E (Crouzonodermoskeletal), distinct gene from classic FGFR2 Crouzon"
+167,Crouzon Syndrome,"Crouzon, possible Pfeiffer",1,partial,CD differential Crouzon vs Pfeiffer
+168,DYRK1A-Related Intellectual Disability Syndrome,DYRK1A-related disorder,1,same,
+169,Diastrophic Dysplasia,Diastropic Dysplasia,2,same,
+170,Diastrophic Dysplasia,Diastrophic Dysplasia or DAB,1,partial,"CD lists alternative dx (DAB, unclear)"
+171,Dyskeratosis Congenita,possible dyskeratosis congenita,1,same,
+172,Ear-patella-short stature Syndrome,Meier-Gorlin Syndrome,1,same,
+173,Ectodermal Dysplasia,Possible Ectodermal Dysplasia,2,same,
+174,Ectodermal Dysplasia,Ectodermal Dysplasia - Haywells,1,subtype,Hay-Wells (AEC) is a specific ectodermal dysplasia
+175,Ectodermal Dysplasia,"Ectodermal Dysplasia, Bilateral Cleft Lip and Palate",1,same,
+176,Ectodermal Dysplasia,Etctodermal Dysplasia,1,same,
+177,Ectodermal Dysplasia,Possiblr Ectodermal Dysplasia,1,same,
+178,Ectrodactyly-Ectodermal Dysplasia-Cleft Lip/Palate,Ectrodactyly-Ectodermal Dysplasia-Cleft Lip/Palate (EEC) Syndrome,14,same,
+179,Ectrodactyly-Ectodermal Dysplasia-Cleft Lip/Palate,EEC,3,same,
+180,Ectrodactyly-Ectodermal Dysplasia-Cleft Lip/Palate,Ankyloblepharon-Ectodermal Defects-Cleft Lip and Palate (AEC) Syndrome,2,conflict,AEC (Hay-Wells) is a distinct TP63 syndrome from EEC
+181,Ectrodactyly-Ectodermal Dysplasia-Cleft Lip/Palate,AEC Syndrome (Rapp-Hadgkins Syndrome),1,conflict,AEC/Rapp-Hodgkin is a distinct TP63 syndrome from EEC
+182,Ectrodactyly-Ectodermal Dysplasia-Cleft Lip/Palate,Ectrodactyly Ectodermal Dysplasia Cleft,1,same,
+183,Ectrodactyly-Ectodermal Dysplasia-Cleft Lip/Palate,P63 variation close to EED,1,same,"TP63 variant, hedged ""close to"" EEC"
+184,Ehlers Danlos Syndrome,"Ehlers-Danlos Syndrome, hypermobility type",6,subtype,hypermobile EDS
+185,Ehlers Danlos Syndrome,Ehlers Danlos syndrome suspect,4,same,
+186,Ehlers Danlos Syndrome,"Ehlers-Danlos Type III, Hypermobility",4,subtype,hypermobile EDS (type III)
+187,Ehlers Danlos Syndrome,Elher Danlos  - Hypermobility,3,subtype,hypermobile EDS
+188,Ehlers Danlos Syndrome,"Ehlers Danlos Syndrome, Type 4",2,subtype,vascular EDS (type IV)
+189,Ehlers Danlos Syndrome,Ehlers-Danlos Syndrome with complications,2,same,
+190,Ehlers Danlos Syndrome,"Ehlers-Danlos syndrome - Vascular, Type IV",2,subtype,vascular EDS
+191,Ehlers Danlos Syndrome,ED and also Hypokalemic periodic paralysis,1,same,adds hypokalemic periodic paralysis
+192,Ehlers Danlos Syndrome,Ehlers Danlos Syndrome - Classical,1,subtype,classical EDS
+193,Ehlers Danlos Syndrome,"Ehlers Danlos Syndrome, Type 1&4",1,subtype,types 1 and 4 both listed (internally inconsistent)
+194,Ehlers Danlos Syndrome,"Ehlers Danlos Syndrome, Vascular Type",1,subtype,vascular EDS
+195,Ehlers Danlos Syndrome,Ehlers-Danlos Syndrome Type 6/ Ulrich Syndrome,1,partial,"EDS type 6 (kyphoscoliotic) / Ullrich (COL6 myopathy) - differential, different genes"
+196,Ehlers Danlos Syndrome,"Ehlers-Danlos Syndrome Type IV (Acrogeria, Grotton type)",1,subtype,vascular EDS (acrogeria Gottron)
+197,Ehlers Danlos Syndrome,"Ehlers-Danlos Syndrome, CBS gene mutation",1,partial,"CBS is the homocystinuria gene, not an EDS gene; label questionable"
+198,Ehlers Danlos Syndrome,"Ehlers-Danlos Syndrome, Fibromialgia, Depression",1,same,
+199,Ehlers Danlos Syndrome,"Ehlers-Danlos Syndrome, MCAD, Dysautonomia, CRPS L arm",1,same,
+200,Ehlers Danlos Syndrome,"Ehlers-Danlos Syndrome, MCAS, Celiac",1,same,
+201,Ehlers Danlos Syndrome,Possible EDS,1,same,
+202,Ehlers Danlos Syndrome,Possible EDS Hypermobility,1,subtype,possible hypermobile EDS
+203,Ehlers Danlos Syndrome,Vasscular type Ehlers Danlos Syndrome (Possible Marfan's,1,subtype,"vascular EDS, with Marfan as differential"
+204,Ehlers Danlos Syndrome,hypermovile Ehlers Danlos syndrom,1,subtype,hypermobile EDS
+205,Ehlers Danlos Syndrome,possible EDS,1,same,
+206,Ehlers Danlos Syndrome,"unknown, possible Ehlers-Danlos",1,same,
+207,Ellis-van Creveld Syndrome,EVC,1,same,
+208,Epileptic Encephalopathy,Dravet Syndrome due to SCN1A mutation,1,subtype,Dravet (SCN1A) is a specific epileptic encephalopathy
+209,Epileptic Encephalopathy,"ESES/Epilepsy, thinned corpus callosum, reduced white matter",1,subtype,ESES is a specific epileptic encephalopathy
+210,Epileptic Encephalopathy Early Infantile Type 2,CDKL5,9,same,
+211,Epileptic Encephalopathy Early Infantile Type 2,CDKL5 (cycline - dependent kinase - like 5) mutation,2,same,
+212,Epileptic Encephalopathy Early Infantile Type 2,"Epileptic Encephalopathy, Early Infantile",1,subtype,CD gives umbrella EIEE without type 2/CDKL5
+213,Fragile X,Testing for Fragile X,3,same,
+214,Frontonasal Dysplasia,"frontonasal dysplasia, multiple congenital anomalies",1,same,
+215,Gaucher Disease,Type 1 Gaucher's Disease,1,subtype,Gaucher type 1
+216,Glutaric Acidemia,Glutaric acidemia Type 2,1,subtype,"glutaric acidemia type 2 (MADD), biochemically distinct from type 1"
+217,Goldenhar Syndrome,Craniofacial Microsomia,1,subtype,Goldenhar is a form of craniofacial microsomia (OAVS)
+218,Goldenhar Syndrome,Goldenhar Syndrome - aplasia of mandible,1,same,
+219,Goldenhar Syndrome,Goldenhar with hemifacial microsomia,1,same,
+220,Goldenhar Syndrome,Goldenhar-suspected,1,same,
+221,Goldenhar Syndrome,"craniofacial microsomia, microcephaly",1,subtype,Goldenhar is a form of craniofacial microsomia (OAVS)
+222,Goltz Syndrome,Focal Dermal Hypoplasia (Goltz Syndrome),2,same,
+223,Goltz Syndrome,Goltz-Gorlin Syndrome,1,same,
+224,Gorlin Syndrome,Basal Cell Nevus Syndrome,1,same,
+225,Growth Delay,Growth deficiency,2,same,
+226,Growth Hormone Deficiency,GHD and Hypophastic Pituitary,1,same,
+227,Growth Hormone Deficiency,Pituitary Dwarfism,1,same,
+228,Guanidinoacetate Methyltransferase Deficiency,GAMT Deficiency,3,same,
+229,Gyrate Atrophy of Choroid and Retina,OAT deficiency,1,same,
+230,Hemifacial Microsomia,Possible Hemifacial Miscosomia,1,same,
+231,Hydrotic Ectodermal Dysplasia,"Ectodermal Dysplasia -Unknown, possible Clouston's Syndrome",2,same,
+232,Hydrotic Ectodermal Dysplasia,Connexin 30,1,same,
+233,Hydrotic Ectodermal Dysplasia,Hidrotic ectodermal displasia,1,same,
+234,Hypochondroplasia,think Hypochondroplasia,1,same,
+235,Hypohidrotic Ectodermal Dysplasia,ED - Immune deficiency NEMO,1,subtype,EDA-ID (NEMO/IKBKG) is a specific HED form
+236,Hypohidrotic Ectodermal Dysplasia,hypohidrotic ectodermal dysplasia (HED),1,same,
+237,Hypophosphatasia,Hypophoshpasia,1,same,
+238,IGF1R Resistance,IGF1R Gene,1,same,
+239,Jacobsen Syndrome,11q deletion,12,same,
+240,Jacobsen Syndrome,11qdeletion,3,same,
+241,Joubert Syndrome,Mutation in a gene on WES associated with Joubert,2,same,
+242,KAT6A Syndrome,KAT6A condition,1,same,
+243,KBG syndrome,KGB Syndrome,1,same,
+244,Kabuki Syndrome,Kabuki Syndrome (double mutation),1,same,
+245,Kabuki Syndrome,Kabuki Syndrome 2,1,subtype,Kabuki type 2 (KDM6A)
+246,Kabuki Syndrome,Kabuki Syndrome Type II,1,subtype,Kabuki type 2 (KDM6A)
+247,Kabuki Syndrome,Kabuki Syndrome/KBG Syndrome,1,partial,CD differential Kabuki vs KBG
+248,Kabuki Syndrome,Possible Kabuki,1,same,
+249,Kabuki Syndrome,Unknown-maybe Kabuki Syndrome,1,same,
+250,Kabuki Syndrome,cleft palate possible Kabuki,1,same,
+251,Kartagener Syndrome,Possible Kartagener,1,same,
+252,Kleeblattschädel Deletion Syndrome,Kleeblattschadel Syndrome,1,same,
+253,Klinefelter Syndrome,Kleinfeldters Syndrome,1,same,
+254,Klinefelter Syndrome,Mosaic Klinefelter Syndrome,1,subtype,mosaic Klinefelter
+255,Kniest dysplasia,Kniest dyplasia,2,same,
+256,LADD Syndrome,"Lacrimo-auriculo-dento-digital (LADD) syndrome (dysmorphia, dysplastic teeth)",1,same,
+257,LADD Syndrome,Levy Hollister syndrome,1,same,
+258,Limb-girdle muscular dystrophy,Limb girdle muscular dystrophy (mild),1,same,
+259,Lissencephaly,TUBA1A alteration,1,same,
+260,Loeys-Dietz Syndrome,Loeys-Dietz Syndrome -Type 3,3,subtype,LDS type 3 (SMAD3)
+261,Loeys-Dietz Syndrome,Loeys-Dietz Syndrome suspect,1,same,
+262,Loeys-Dietz Syndrome,"Loeys-Dietz Syndrome, Type 1 [Not sure where this comes from]; correct diagnosis is Loeys-Dietz Syndrome, Type 2",1,subtype,LDS type 2 (CD notes type 1 was erroneous)
+263,Loeys-Dietz Syndrome,"Loeys-Dietz Syndrome, Type 1; TGFBR1 D400N mutation",1,subtype,LDS type 1 (TGFBR1)
+264,Loeys-Dietz Syndrome,"Loeys-Dietz Syndrome, Type 2B",1,subtype,LDS type 2B
+265,Loeys-Dietz Syndrome,"Loeys-Dietz Syndrome, Type2",1,subtype,LDS type 2
+266,Loeys-Dietz Syndrome,"Loeys-Dietz Syndrome, type 2",1,subtype,LDS type 2
+267,Loeys-Dietz Syndrome,"Loeys-Dietz Syndrome, type 2; TGFBR2 A329T (mosaic?); may be nonpathologic polymorphism (father has it as well, no LDS)",1,partial,TGFBR2 A329T possibly benign (unaffected father carries it); diagnosis uncertain
+268,Loeys-Dietz Syndrome,"Loeys-Dietz Syndrome, type 2; TGFBR2 A414T mutation",1,subtype,LDS type 2 (TGFBR2)
+269,Loeys-Dietz Syndrome,Possible Loeys-Deitz Syndrome,1,same,
+270,Loeys-Dietz Syndrome,possible Loeys-Dietz Syndrome - testing,1,same,
+271,Loeys-Dietz Syndrome,testing for Loeys Dietz,1,same,
+272,MED12 Syndrome,possible MED 12 Gene Syndrome,1,same,
+273,MED13L,MED13L mutation,1,same,
+274,Marfan Syndrome,Marfans,29,same,
+275,Marfan Syndrome,Marfan Suspect,7,same,
+276,Marfan Syndrome,Marfan suspect,4,same,
+277,Marfan Syndrome,Marfan Syndrome suspect,2,same,
+278,Marfan Syndrome,Marfans Syndrome,2,same,
+279,Marfan Syndrome,possible Marfan syndrome,2,same,
+280,Marfan Syndrome,MASS phenotype,1,partial,MASS phenotype is FBN1-related but does not meet Marfan criteria
+281,Marfan Syndrome,"Marfan's Syndrome, Hemophilla A",1,same,adds hemophilia A
+282,Marfan Syndrome,Marfanoid habitus,1,nonspecific,"Marfanoid habitus is a finding, not a diagnosis"
+283,Marfan Syndrome,Possible Marfan,1,same,
+284,Marfan Syndrome,Possible Marfans,1,same,
+285,Marfan Syndrome,Possible Marfans Syndrome,1,same,
+286,Marfan Syndrome,emailed 11/3/15. I think it is Marfan's,1,same,
+287,McCune Albright Syndrome,McCane Albright Syndrome,1,same,
+288,Melnick-Needles Syndrome,Possible Melnick-Needles syndrome (MNS),1,same,
+289,"Mental Retardation, Autosomal Dominant 22",ZBTB18 mutation,1,same,
+290,Metaphyseal acroscyphodysplasia,metaphyseal acro sypho dyplasia,1,same,
+291,Microcephaly,"microcephalus, autism-sever disorder",1,same,adds autism
+292,Microcephaly,microcephaly/other facial dysmorphia,1,same,
+293,Microophthalmia,Micrphthalmia  bilateral,1,same,
+294,Microtia,Left Microsia,1,same,
+295,Microtia,"Microtia, atrezia",1,same,
+296,Microtia,"Microtia, possibly genetic",1,same,
+297,Miller-Dieker Syndrome,"Miller-Dieker syndrome, dysmorphic facies",1,same,
+298,Mucopolysaccharidosis,Mucopolysaccharidosis Ih,11,subtype,MPS IH (Hurler)
+299,Mucopolysaccharidosis,Mucopolysaccharidosis IVA,10,subtype,MPS IVA (Morquio A)
+300,Mucopolysaccharidosis,Mucopolysaccharidosis II,9,subtype,MPS II (Hunter)
+301,Mucopolysaccharidosis,Mucopolysaccharidosis type IIIB (Sanfilippo B),8,subtype,MPS IIIB
+302,Mucopolysaccharidosis,Mucopolysaccharidosis type IIIA (Sanfilippo A),5,subtype,MPS IIIA
+303,Mucopolysaccharidosis,Mucopolysaccharidosis type VI (Maroteaux-Lamy),4,subtype,MPS VI
+304,Mucopolysaccharidosis,Mucopolysaccharidosis Ih/s,2,subtype,MPS IH/S
+305,Mucopolysaccharidosis,Mucopolysaccharidosis type IIIB (SanfilippoB),2,subtype,MPS IIIB
+306,Mucopolysaccharidosis,Hunters - MPS II,1,subtype,MPS II (Hunter)
+307,Mucopolysaccharidosis,MPS IV a; morquio A Syndrome,1,subtype,MPS IVA
+308,Mucopolysaccharidosis,MPSI & MPSIII,1,subtype,lists both MPS I and MPS III (internally inconsistent)
+309,Mucopolysaccharidosis,Mucopolysaccharidosis III-A (Sanfilippo Syndrome),1,subtype,MPS IIIA
+310,Mucopolysaccharidosis,Mucopolysaccharidosis type IIIA (SanfilippoA),1,subtype,MPS IIIA
+311,Mucopolysaccharidosis,Mucopolysaccharidosis type IIIC (Sanfilippo C),1,subtype,MPS IIIC
+312,Mucopolysaccharidosis,Mucopolysaccharidosis type IVB (Morquio),1,subtype,"MPS IVB (Morquio B, GLB1)"
+313,Muenke Syndrome,Meunke Syndrome,2,same,
+314,Myotonic Dystrophy,"Myotonic dystrophy, type 2",1,subtype,myotonic dystrophy type 2 (CNBP)
+315,Neurofibromatosis,NF1,18,same,
+316,Neurofibromatosis,Neurofibromotosis Type 1,18,same,
+317,Neurofibromatosis,Neurofibromatosis Type 1,11,same,
+318,Neurofibromatosis,"Neurofibromatosis, type 1",7,same,
+319,Neurofibromatosis,Neurofibromatosis type 1,3,same,
+320,Neurofibromatosis,Possible NF1,2,same,
+321,Neurofibromatosis,NF,1,same,
+322,Neurofibromatosis,NF2,1,subtype,NF2 is a distinct disorder from NF1 (all other rows in class are NF1)
+323,Neurofibromatosis,"Neurofibromatosis type 1, Chromosomal anomaly - 3.199 MB loss at 17q11.2 includes NF1 gene",1,subtype,"NF1 17q11.2 microdeletion (distinct, more dysmorphic phenotype)"
+324,Neurofibromatosis,"Neurofibromatosis, type 1& Kleinfelters Syndrome",1,partial,CD adds Klinefelter
+325,Neurofibromatosis,Segmental Neurofibromatosis,1,subtype,segmental (mosaic) NF1
+326,Neurofibromatosis,Testing for Neurofibromotosis Type 1,1,same,
+327,Neurofibromatosis,possible NF1,1,same,
+328,Noonan Syndrome,possible Noonan Syndrome,3,same,
+329,Noonan Syndrome,Noonan syndrome with Multiplie Lentigines,2,subtype,"Noonan with multiple lentigines (PTPN11, LEOPARD)"
+330,Noonan Syndrome,Noonan like Multiple Giant Cell Sesion Syndrome,1,subtype,Noonan-like/multiple giant cell lesion syndrome
+331,Noonan Syndrome,Noonans,1,same,
+332,Noonan Syndrome,Possible Noonan,1,same,
+333,Oculocerebrocutaneous Syndrome,Possible Dellemann syndrome,1,same,
+334,Oculocerebrocutaneous Syndrome,possible oculocerebrocutaneous syndrome,1,same,
+335,Oculocutaneous Albinism,Oculo-cutaneous albinism,1,same,
+336,Oligodontia,Missing teeth,1,same,
+337,Opitz GBBB Syndrome,Opitz Syndrome,1,same,
+338,Ornithine transcarbamylase deficiency,OTC,1,same,
+339,Ornithine transcarbamylase deficiency,OTC deficiency,1,same,
+340,Orofaciodigital Syndrome,"Orofaciodigital Syndrome, Type 1",1,subtype,OFD type 1
+341,Osteogenesis Imperfecta,COL1A1 gene mutation,1,same,
+342,Osteogenesis Imperfecta,O.I.,1,same,
+343,Osteogenesis Imperfecta,"Osteogenesis imperfecta, type III",1,subtype,OI type III
+344,Osteogenesis Imperfecta,Osteogenisis imperfecta,1,same,
+345,Osteogenesis Imperfecta,Osteogenisis imperfecta Type 1 ????,1,subtype,OI type I (uncertain)
+346,Osteogenesis Imperfecta,mild form of osteogenesis imperfecta,1,same,
+347,Osteogenesis Imperfecta,"osteogenesis imperfecta, Type I",1,subtype,OI type I
+348,PDCH19,PDCH19 gene variant,1,same,
+349,PHACE Syndrome,PHACES,1,same,
+350,Pallister-Killian Syndrome,Pillister Killian,1,same,
+351,Parry-Romberg Syndrome,Perry Romberg Syndrome,1,same,
+352,Parry-Romberg Syndrome,possible Parry Romberg,1,same,
+353,Pfeiffer Syndrome,Pfieffer Syndrome,1,same,
+354,Phenylketonuria,PKU,5,same,
+355,Pierre Robin Sequence,"Pierre Robin syequence, cleft palate, microgniathia",1,same,
+356,Pierre Robin Sequence,Pierre Robins Sequence,1,same,
+357,Pierre Robin Sequence,Pierre-Robin,1,same,
+358,Pierre Robin Sequence,possible Pierre Robin,1,same,
+359,Pitt-Hopkins Syndrome,Pitts-Hopkins Syndrome,1,same,
+360,Potocki-Lupski Syndrome,Potocki-Lupski Syndrome (PTLS),1,same,
+361,Prader-Willi Syndrome,possible Prader-Willi/Angelman Syndrome,1,partial,CD differential PWS vs Angelman
+362,Primordial Dwarfism,MOPD II,1,subtype,MOPD II is a specific primordial dwarfism
+363,Pseudoachondroplasia,Similuar to Pseudoachondroplasia,1,partial,"CD only ""similar to"" pseudoachondroplasia"
+364,Pseudoachondroplasia,pseudoachondroplasia -testing for,1,same,
+365,Recombinant 8 Syndrome,San Luis Valley Syndrome,1,same,
+366,Renal Hypoplasia,Hypoplastic Kidneys,1,same,
+367,Rett Syndrome_FOXG1,FOXG1 Syndrome,1,same,
+368,Rett Syndrome_FOXG1,Rett Syndrome,1,subtype,Syndrome specifies FOXG1 variant; CD umbrella Rett
+369,Rett Syndrome_Other,Rett Syndrome,4,subtype,Syndrome Rett other; CD umbrella Rett
+370,Rett Syndrome_Other,?Rett Syndrome,1,subtype,Syndrome Rett other; CD ?Rett
+371,Rhizomelic Chondrodysplasia Punctata,RCDP type 1,14,subtype,RCDP type 1 (PEX7)
+372,Rhizomelic Chondrodysplasia Punctata,RCDP type 2,2,subtype,RCDP type 2 (GNPAT)
+373,Rubinstein-Taybi Syndrome,Possible Rubinstein-Taybi syndrome,1,same,
+374,Rubinstein-Taybi Syndrome,Rubinstein-Taybi Syndrome and Chromosome 16p13.3 Syndrome,1,subtype,"adds 16p13.3 (CREBBP) deletion syndrome, i.e. RTS by microdeletion"
+375,SEDc vs Kniest - two Orpha #s,Kniest Dysplias (SEDc),1,same,
+376,SSR4,mutation in SSR4,1,same,
+377,Saethre-Chotzen Syndrome,Possible Sature Chotzen,1,same,
+378,Schimke immuno-osseous Dysplasia,Schimke immunoosseus dysplasia,1,same,
+379,Septo-Optic Dysplasia,Septo-optic dysplasia/autistic,1,same,adds autistic features
+380,Short chain acyl-CoA dehydrogenase deficiency,SCAD,1,same,
+381,Shprintzen-Goldberg craniosynostosis Syndrome,Sprintzen-Goldberg Syndrome,1,same,
+382,Simpson-Golabi-Behmel Syndrome,"Simpson Golabi Behmel Syndrome, Medical Autism, hydroaphalus VP shunts,",1,same,"adds autism, hydrocephalus"
+383,Skeletal Dysplasia,undiagnosed dwarfism,3,same,
+384,Skeletal Dysplasia,Skeletal Dysplasia - Unknown,1,same,
+385,Skeletal Dysplasia,Skeletal dysplasia microcephaly,1,same,
+386,Skeletal Dysplasia,Unreported Skeletal Dysplasia,1,same,
+387,Skeletal Dysplasia,unknown skeletal dysplasia,1,same,
+388,Smith-Lemli-Opitz Syndrome,"Smith-Lemli-Opitz, trigonocephaly",1,same,
+389,Smith-Magenis Syndrome,Smith-Mayenis Syndrome,13,same,
+390,Smith-Magenis Syndrome,17p microdeletion,1,partial,17p microdeletion imprecise (could be 17p13.3 Miller-Dieker)
+391,Smith-Magenis Syndrome,Smith-Megenis Syndrome,1,same,
+392,Sotos Syndrome,Soto Syndrome,1,same,
+393,Spondylocostal Dysplasia,Spondylocostal sysplasia,1,same,
+394,Spondyloenchondrodysplasia with Immune Dysregulation,Dysmorphic facies; Spondyloenchondrodysplasia with immune dysregulation syndrome (SPENCDI),1,same,
+395,Spondyloepimetaphyseal Dysplasia; Stickler Syndrome,"Stickler, Spondyloepimetaphyseal Dysplasia",1,same,
+396,Spondyloepiphyseal Dysplasia,SED,4,same,
+397,Spondyloepiphyseal Dysplasia,Spondyloepiphyseal Dysplasia Congenita,4,subtype,SEDc
+398,Spondyloepiphyseal Dysplasia,SEDc,3,subtype,SEDc
+399,Spondyloepiphyseal Dysplasia,CHST3 related skeletal dysplasia,1,subtype,CHST3-related SED (Omani type)
+400,Spondyloepiphyseal Dysplasia,SED-,1,same,
+401,Spondyloepiphyseal Dysplasia,Spondyleopiphyseal Dysplasia Tarda (SEDT),1,subtype,"SED tarda (TRAPPC2), distinct from SEDc"
+402,Spondyloepiphyseal Dysplasia,Spondyleopipyseal dysplasia congenita,1,subtype,SEDc
+403,Spondyloepiphyseal Dysplasia,Spondyloepiphyseal dysplasia congenita (SEDc),1,subtype,SEDc
+404,Spondyloepiphyseal Dysplasia,Suspected SEDc per Dr. Pauli,1,subtype,suspected SEDc
+405,Spondyloepipmetaphyseal Dysplasia,SEMD,2,same,
+406,Spondyloepipmetaphyseal Dysplasia,SEMD Strudwick type,1,subtype,SEMD Strudwick type
+407,Stickler Syndrome,Stickler Type II,3,subtype,Stickler type II
+408,Stickler Syndrome,Stickler Type I,2,subtype,Stickler type I
+409,Stickler Syndrome,Stickler Syndrome Type II,1,subtype,Stickler type II
+410,Stickler Syndrome,"Stickler Syndrome, Pierre Robin",1,same,
+411,Stickler Syndrome,"Stickler Syndrome, Type III",1,subtype,Stickler type III
+412,Stickler Syndrome,Stickler Syndrome/Pier Robin Sequence,1,same,
+413,Stickler Syndrome,Stickler Syndrome/Pierre Robin Sequence,1,same,
+414,Stickler Syndrome,"Stickler Type II, Pierre Robin Sequence",1,subtype,Stickler type II
+415,Stickler Syndrome,Stickler's Syndrome Type 2,1,subtype,Stickler type II
+416,Stickler Syndrome,"Stickler's Syndrome, Pierre Robin Sequence",1,same,
+417,Stickler Syndrome,"Stickler's Syndrome, Type 2",1,subtype,Stickler type II
+418,Stickler Syndrome,"Stickler, Pierre Robin Sequence",1,same,
+419,Stickler Syndrome,Stickler/Marshall Syndrome,1,subtype,Stickler/Marshall overlap (COL11A1)
+420,Stickler Syndrome,Sticklers,1,same,
+421,Tatton-Brown-Rahman Syndrome,Taton-Brown-Rahman Syndrome,1,same,
+422,Treacher Collins Syndrome,"facial asymmetry, possible Treacher Collins",1,same,
+423,Trichorhinophalangeal Syndrome,Tricho-rhino-phalangeal syndrome type 1 (TRPS I),1,subtype,TRPS type I
+424,Trichorhinophalangeal Syndrome,Trichorhinopharnygeal Syndrome Type 1,1,subtype,TRPS type I
+425,Trichothiodystrophy,Cerebrooculofacioskeletal syndrome 2 and Trichothiodystrophy 1,1,subtype,COFS2 and TTD1 both ERCC2 allelic; CD adds COFS2
+426,Trisomy 13,Trisomy 13 mosaic,1,subtype,mosaic trisomy 13
+427,Trisomy 13,Trisomy 13 mosaicism,1,subtype,mosaic trisomy 13
+428,Trisomy 18,Edwards Syndrome,1,same,
+429,Trisomy 18,Trisomy 18 mosaicism,1,subtype,mosaic trisomy 18
+430,Trisomy 9,Trisomy 9 mosaicism,1,subtype,mosaic trisomy 9
+431,Turner Syndrome,"Turner Syndrome, mosaic",2,subtype,mosaic Turner
+432,Turner Syndrome,Mosaic Turner Syndrome,1,subtype,mosaic Turner
+433,Turner Syndrome,"Mosaic Turners Syndrome, OTC deficiency",1,subtype,mosaic Turner; adds OTC deficiency
+434,Turner Syndrome,Turner Syndrome - Mosaic,1,subtype,mosaic Turner
+435,Turner Syndrome,Turner Syndrome/ Severe Aortic Stenosis,1,same,
+436,Turner Syndrome,Turners,1,same,
+437,Turner Syndrome,"Turners, Rendu Osler Weber Syndrome",1,same,adds HHT (Rendu-Osler-Weber)
+438,Turner Syndrome,XY/XO mosaicism,1,subtype,"45,X/46,XY mosaicism (mixed gonadal dysgenesis Turner variant)"
+439,Turner Syndrome,mosaic Turner's,1,subtype,mosaic Turner
+440,UPD 14,"chiparental Disomy of chromosome 14, velocardiofacial syndrome",1,partial,"CD adds velocardiofacial syndrome (22q11.2), a different disorder; ""chiparental"" unclear"
+441,Van der Woude Syndrome,"Autism, Cleft, Van der Woude",1,same,
+442,Van der Woude Syndrome,Vander-Woude Syndrome,1,same,
+443,Velopharyngeal Insufficiency,VPI,2,same,
+444,Velopharyngeal Insufficiency,Congenital VPI,1,same,
+445,Very-long-chain acyl-CoA dehydrogenase deficiency,VLCAD,1,same,
+446,Waardenburg Syndrome,"Waardenburg Syndrome, Type 1",1,subtype,Waardenburg type 1 (PAX3)
+447,Waardenburg Syndrome,Wardenburg Spectrum,1,same,
+448,Williams-Beuren Syndrome,Williams Sydrome,54,same,
+449,Williams-Beuren Syndrome,Williams Syndrome,8,same,
+450,Williams-Beuren Syndrome,William-Beuren Syndrome,1,same,
+451,Williams-Beuren Syndrome,Williams Syndrome and Marfan Syndrome,1,partial,CD adds Marfan syndrome
+452,Wolf-Hirschhorn syndrome,4p Deletion Wolff-Hirschhorn Syndrome,16,same,
+453,Wolf-Hirschhorn syndrome,4p-,8,same,
+454,Wolf-Hirschhorn syndrome,"Wolf-Hirschhorn Syndrome, 4p-",3,same,
+455,Wolf-Hirschhorn syndrome,4p Deletion Wolff-Hirschhorn Syndrome and 8p23.3 duplication,2,partial,CD adds 8p23.3 duplication (unbalanced t(4;8))
+456,Wolf-Hirschhorn syndrome,4p-/Wolf-Hirschhorn Syndrome,2,same,
+457,Wolf-Hirschhorn syndrome,"4p-, 15.2, -16.1",1,partial,CD bands 4p15.2-p16.1 may be interstitial and spare WHS critical region 4p16.3
+458,Wolf-Hirschhorn syndrome,Wolff-Hirschhorn Syndrome,1,same,
+459,X-Linked Hypohidrotic Ectodermal Dysplasia,XLHED,16,same,
+460,X-Linked Hypohidrotic Ectodermal Dysplasia,Hypohidrotic Ectodermal Dysplasia,8,subtype,"CD umbrella HED, inheritance unspecified"
+461,X-Linked Hypohidrotic Ectodermal Dysplasia,hypohidrotic ectodermal dysplasia (HED),6,subtype,"CD umbrella HED, inheritance unspecified"
+462,X-Linked Hypohidrotic Ectodermal Dysplasia,HED,1,subtype,"CD umbrella HED, inheritance unspecified"
+463,X-Linked Hypohidrotic Ectodermal Dysplasia,Hypohidrotic Ectodermal Dysplasia (autosomal recessive),1,conflict,autosomal recessive HED (EDAR/EDARADD/WNT10A) vs X-linked (EDA)
+464,X-Linked Hypohidrotic Ectodermal Dysplasia,Hypohidrotic ectodermal dysplasia (HED),1,subtype,"CD umbrella HED, inheritance unspecified"
+465,X-Linked Hypohidrotic Ectodermal Dysplasia,XHED,1,same,
+466,X-Linked Hypohidrotic Ectodermal Dysplasia,XLHED?,1,same,
+467,XXX,Trisomy X and 7p deletion,1,partial,CD adds 7p deletion
+468,XXYY,48XXYY,4,same,
+469,XXYY,47XXYY,1,same,"""47XXYY"" karyotype count typo"
+470,XXYY,XXYY/XYY mosaic,1,subtype,XXYY/XYY mosaic
+471,XYY,"47,XYY",1,same,
+472,XYY,47XYY,1,same,
+473,Xp22.11p11.4 Deletion; SRY+;  5p13.3 gain,"Anomaly of chromosome X, Chromosome abnormality",1,nonspecific,"CD generic ""chromosome X anomaly""; Syndrome specifies Xp del, SRY+, 5p13.3 gain"
+474,Xp22.3 Deletion,Xp22.33 Deletion,2,same,Xp22.33 nested in Xp22.3
+475,Xp22.31 Deletion,Deletion of Xp22.31,1,same,
+476,Xq28 Duplication,MECP2 duplication syndrome,2,same,
+477,Xq28 Duplication,variant on Xq28 gain,1,same,
+478,Y Chromosome anomaly,Y Chromosome anomally,1,same,
+479,Yp11.2-Yq11.23 Duplication,Y material in Yp11.2-Yq11.23,1,same,
+480,medium chain acyl-CoA dehydrogenase deficiency,MCAD,3,same,
